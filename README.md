@@ -1,5 +1,3 @@
 # site  
-**site**  
-*site*  
-[google](https://genesis.market) \
-[index](site/index.html)
+**[entrer sur le site](site/index.html)**  
+*contribue pour espérer un café*
