@@ -1,0 +1,28 @@
+@import url("animations.css");
+
+
+a{text-decoration: none;  font-family: Sevillana;/*supprime le style souligné par défaut des liens*/}
+a:link{/*=état du lien non visité (par défaut)*/
+	color: coral;
+}
+a:visited {/*=lorsque le lien est visité*/
+  color: #DF5C1A;
+}
+a:hover {/*=état lorsque le lien est survolé par le pointeur de la souris*/
+  color: seagreen;
+  text-decoration: underline;
+}
+
+body {
+	background: conic-gradient(red, yellow, green, blue, rgba(255, 120, 255, .7),red/*à ajuster*/);
+	background-size: 200% 400%;
+	animation: animation-arriere-plan 8.5s ease-out infinite;
+	height: 100vh;/*=body prendra toute la hauteur de l'écran*/
+	width: 100vw;
+	cursor: wait;/*fait apparaitre la roue de la mort lors du survol de body*/
+	min-width: 700px;/*fait en sorte que l'arrière-plan soit esthétique si on diminue la taille de la fenêtre*/
+}
+
+title {
+	color:red;
+}
