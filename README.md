@@ -1,11 +1,11 @@
 # site  
 
-![image très intéressante et bien dessinée](/site/ressources/favicon/android-icon-192x192.png "titre")
 **[entrer sur le site](site/index.html)**  
+![image très intéressante et bien dessinée](/site/ressources/favicon/android-icon-192x192.png "titre")  
 ```
-_contribue pour espérer un café_
+merci de remplacer cette image par autre chose que du picasso
 ```
-
+contribue pour espérer un café  
 
 > ## à implémenter : 
 	1. page de `minuteurs` pour faire son café en fonction de divers paramètres  
@@ -22,4 +22,4 @@ _contribue pour espérer un café_
 | .github/workflows/static.yaml      | ne pas toucher svp, tâches de déploiement     |
 
 
-vous pouvez formater cette page en utilisant la [syntaxe markdown](https://markdownlivepreview.com/)
+_vous pouvez formater cette page en utilisant la [syntaxe markdown](https://markdownlivepreview.com/)_
