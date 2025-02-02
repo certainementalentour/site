@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "veuiller donner un dossier en argument"
+  exit 1
+fi
+
+if [ ! -d "$1" ]; then
+  echo "Le dossier n'existe pas."
+  exit 1
+fi
+
+for file in "$1"/*; do
+  if [ -f "$file" ]; then
+
+  base_nom=$(basename "$file")
+  nouveau_nom="${base_nom:0:8}.png"
+
+  mv "$file" "$1/$nouveau_nom"
+echo "Renommé : $file -> $nouveau_nom"
+  fi
+done
+

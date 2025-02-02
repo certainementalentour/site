@@ -1,6 +1,6 @@
 # site  
 
-#**[entrer sur le site](site/index.html)**  
+**[entrer sur le site](site/index.html)**  
 ![image très intéressante et bien dessinée](site/ressources/favicon/android-icon-192x192.png "titre")  
 ```
 merci de remplacer cette image par autre chose que du picasso
@@ -13,7 +13,7 @@ contribue pour espérer un café
 	3.  
   
 ## notes :
-* !#f03c15 essayez au maximum de faire les pop-up en css afin de ne pas se faire bloquer par les navigateurs intelligents
+* essayez au maximum de faire les pop-up en css afin de ne pas se faire bloquer par les navigateurs intelligents
 
 ## plan  
 
