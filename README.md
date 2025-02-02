@@ -9,7 +9,7 @@ contribue pour espérer un café
 
 ## à implémenter : 
 	1. page de `minuteurs` pour faire son café en fonction de divers paramètres  
-	2.  
+	2. mettre un jeu du type [password purgatory]() en page de connexion et si l'utilisateur le réussit, le faire recommencer car le mot de passe est déjà pris 
 	3.  
   
 ## notes :
