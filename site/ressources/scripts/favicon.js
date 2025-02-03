@@ -108,11 +108,11 @@ function majFavicon() {
 	let newLink = document.createElement("link");
 	newLink.rel = "icon";
 	newLink.type = "image/png";
-	newLink.sizes = "400x299"
+	newLink.sizes = "400x299";
 	newLink.href = imagesActives[image_active] + "?t=" + new Date().getTime();
 	// Remplace l'ancien favicon
 	document.head.querySelectorAll("link[rel='icon']").forEach(e => e.remove());
 	document.head.appendChild(newLink);
 	image_active = (image_active + 1) % imagesActives.length;
 
-} setInterval(majFavicon, 500)
+} setInterval(majFavicon, 500);
