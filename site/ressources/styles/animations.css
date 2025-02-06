@@ -9,8 +9,21 @@
 	  background-position: 0% 100%;
 	}
   }
-
-  
+/*
+@keyframes animationFondImages {
+	0%{	background-position: 0% 100%; background: linear-gradient(to right,orange,yellow,blue, red,indigo,violet, green)}
+	25%{background-position: 75% 0%;background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet)}
+	50%{background-position: 50% 50%;background: linear-gradient(to right,red, blue,orange,indigo,yellow,green,violet)}
+	75%{background-position: 0% 75%;background: linear-gradient(to right,orange,green,blue,indigo,red,violet, yellow)}
+	100%{background-position: 100% 0%;background: linear-gradient(to left,red,orange,indigo,yellow,green, blue,violet)}
+} */
+@keyframes animationFondImages {
+	0%{	background-position: 0% 100%;}
+	25%{background-position: 75% 0%;}
+	50%{background-position: 50% 50%;}
+	75%{background-position: 0% 75%;}
+	100%{background-position: 100% 0%;}
+}
   /*
   
 										   ___

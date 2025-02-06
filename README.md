@@ -9,8 +9,9 @@ contribue pour espérer un café
 
 ## à implémenter : 
 	1. Page de `minuteurs` pour faire son café en fonction de divers paramètres  
-	2. Mettre un jeu du type [password purgatory]() en page de connexion et si l'utilisateur le réussit, le faire recommencer car le mot de passe est déjà pris 
+	2. Mettre un jeu du type [password purgatory](https://password-purgatory.pages.dev/) en page de connexion et si l'utilisateur le réussit, le faire recommencer car le mot de passe est déjà pris 
 	3. Faire une machine à café interactive
+	4. ne pas oublier de tout mettre sous flexbox
   
 ## notes :
 * essayez au maximum de faire les pop-up en css afin de ne pas se faire bloquer par les navigateurs intelligents
