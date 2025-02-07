@@ -27,6 +27,10 @@ h1 {
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-size: 80px;
 }
+.popup h1 {
+  color: blue;
+  font-size: 30px;
+}
 
 h3 {
 	color: #bfff50;
@@ -35,7 +39,7 @@ h3 {
     font-size: 30px;
 }
 
-p {
+/*p {
 	color: #333333;
     text-align: justify;
     font-family: 'Sevillana';
@@ -43,7 +47,7 @@ p {
     margin-bottom: 5px;
 	margin-left: 5%;
 	margin-right: 5%;
-}
+}*/ /* ne pas définir pour tous les paragraphes de la page */
 
 #elementCasse {
 	display: none; /* Sinon on a un énorme blanc en plein milieu */
