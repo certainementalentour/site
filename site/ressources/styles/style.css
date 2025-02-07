@@ -1,13 +1,19 @@
 @import url("animations.css");
 
 
-a{text-decoration: none; font-family: Arial, Helvetica, sans-serif;}
-a:link{
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link {
 	color: coral;
 }
+
 a:visited {
   color: coral;
 }
+
 footer a:hover {/*=état lorsque le lien est survolé par le pointeur de la souris*/
   color: rgb(211, 72, 22);
   transform: scale(1.1, 1.3);
@@ -43,11 +49,11 @@ h3 {
     font-size: 30px;
 }
 
-/*p {
+.ParagraphesInfo {
 	color: #333333;
     text-align: justify;
     font-family: 'Sevillana';
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 5px;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -73,16 +79,71 @@ footer {
 	flex-shrink: 0;
 	align-items: center;
 }
-.content{
+
+.content {
 	display: flex;
 	align-items: center;
 }
-body{
-	width: 100vw;
+
+body {
+	width: 100%;
 	height: 100vh;
 	font-family: Salsa;
-	font-display: block;/*bloque le chargement de la page tant que la police n'est pas téléchargée*/
-	overflow: hidden;/*empêche le défilement*/
+	font-display: block; /*bloque le chargement de la page tant que la police n'est pas téléchargée*/
+	overflow-x: hidden; /*empêche le défilement horizontal*/
+  margin: 0;
+  padding: 0;
+}
+
+.TableauBoutons {
+	width: 100%;
+	border-collapse: collapse;
+  margin: 10%;
+  padding: 10%;
+  text-align: center;
+  background: transparent;
+  border: none;
+}
+
+.TableauBoutons tr,
+.TableauBoutons td {
+  border: none;
+  padding: 10px;
+}
+
+.TableauInvisible {
+  width: 90%;
+  max-width: 95vw;
+  border-collapse: collapse;
+  margin: auto;
+  /*padding: 10%;*/
+  text-align: center;
+  background: transparent;
+  border: none;
+}
+
+.TableauInvisible tr,
+.TableauInvisible td {
+  border: none;
+  padding: 10px;
+}
+
+.ColInvisible {
+	text-align: center; /* Centre le texte horizontalement */
+	vertical-align: middle; /* Centre le texte verticalement */
+	height: auto; /* Hauteur des cellules */
+}
+
+.LigneInvisible {
+	text-align: center; /* Centre le texte horizontalement pour les en-têtes */
+}
+
+.TableauInvisible td img {
+  display: block;
+  width: 100%; /* Remplit toute la largeur de la cellule */
+  height: 500px; /* Hauteur uniforme */
+  object-fit: cover; /* Coupe l’image pour l’adapter sans déformation */
+  border-radius: 50px; /* Coins arrondis pour un meilleur rendu */
 }
 
 
@@ -91,26 +152,33 @@ body{
 
 
 
-
-
-
-h4{
+h4 {
   font-family: Salsa;
   text-align: center;
   color: floralwhite;
 }
 
-li{text-align: center;margin-top: .5em;margin-bottom: .5em;}
+li {
+  text-align: center;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
 
-
-table{
+table {
   background: radial-gradient(circle, rgba(0,80,255,.1) 0%, rgba(20,9,110,.4) 35%, rgba(30,25,36,1) 100%);  text-align: center;
   border-radius: 7px;
   border: thick double green;
   border-collapse: collapse;
 }
-th{color: antiquewhite;}
-td{border: dashed black;}
+
+th {
+  color: antiquewhite;
+}
+
+td {
+  border: dashed black;
+}
+
 ul {
   list-style-type: none;/*supprime les puces des listes non ordonnées*/
   text-align: center;
@@ -129,10 +197,12 @@ ul {
   background: rgba(77, 77, 77, 0.9);/*niveaux de rouge,vert,bleu,transparence*/
   height: 100vh;
 }
+
 .popup:target {/*sert à détecter le clic*/
   visibility: hidden;
   opacity: 0;
 }
+
 .contenu{
   border-radius: 7px;
   position: relative;
@@ -141,8 +211,12 @@ ul {
   padding: 24px 32px;
   color: white;
 }
-.fermer {text-decoration: none;}
-#croix{
+
+.fermer {
+  text-decoration: none;
+}
+
+#croix {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -156,11 +230,15 @@ ul {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#croix:hover{
+
+#croix:hover {
   background-color: #04AA6D;
   color: #131416;
 }
-#peut-être{color: black;}
+
+#peut-être{
+  color: black;
+}
 
 #bouton1{
   text-align: center;
@@ -171,16 +249,19 @@ ul {
   background: green;
   box-shadow: 2px 4px #59595F;
 }
+
 #bouton1:hover{background: darkgreen;
   box-shadow: 2px 4px #313132;
   transition-duration: .4s;
 }
-#bouton1:active{
+
+#bouton1:active {
   box-shadow: 1px 2px #313132;
   display: inline-block;/*impératif pour que l'animation marche*/
   translate: 1px 2px;
 }
-#p2{
+
+#p2 {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -191,11 +272,14 @@ ul {
   background: rgba(77, 77, 77, 1);
   height: 100vh;
 }
+
 #p2:target {
   visibility: visible;
   opacity: 1;
 }
-.fond{
+
+.fond
+{
   border-radius: 7px;
   position: relative;
   width: 500px;
@@ -203,7 +287,8 @@ ul {
   padding: 24px 32px;
   color: white;
 }
-#non{
+
+#non {
 	position: absolute;
   bottom: 10px;
   left: 7px;
@@ -221,11 +306,13 @@ ul {
   margin-left: 4%;
   transition-duration: .4s;
 }
-#non:active{
+
+#non:active {
 	background:darkred;
 	box-shadow: 0px 5px #313132;
 	transform: translateY(3px);
 }
+
 #oui {
 	position: absolute;
 	bottom: 10px;
@@ -245,6 +332,7 @@ ul {
   margin-right: 4%;
 	transition-duration: .3s;
   }
+
   #oui:active {
 	background:darkred;
 	box-shadow: 0px 5px #313132;
