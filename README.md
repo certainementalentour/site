@@ -12,6 +12,8 @@ contribue pour espérer un café
 	2. Mettre un jeu du type [password purgatory](https://password-purgatory.pages.dev/) en page de connexion et si l'utilisateur le réussit, le faire recommencer car le mot de passe est déjà pris 
 	3. Faire une machine à café interactive
 	4. ne pas oublier de tout mettre sous flexbox
+	5. Faire une page sur la pousse du café, une sur sa récolte, une sur des fun fact
+	6. Relier ces pages avec des boutons suivant/précédent
   
 ## notes :
 * essayez au maximum de faire les pop-up en css afin de ne pas se faire bloquer par les navigateurs intelligents
