@@ -46,7 +46,8 @@ h3 {
 	color: #bfff50;
     text-align: center;
     font-family: 'Sevillana';
-    font-size: 30px;
+    font-size: 40px;
+    text-decoration: underline; /* Avoir si c'est pas mieux sans */
 }
 
 .ParagraphesInfo {
@@ -57,7 +58,7 @@ h3 {
     margin-bottom: 5px;
 	margin-left: 5%;
 	margin-right: 5%;
-}*/ /* ne pas définir pour tous les paragraphes de la page */
+} /* ne pas définir pour tous les paragraphes de la page */
 
 #elementCasse {
 	display: none; /* Sinon on a un énorme blanc en plein milieu */
