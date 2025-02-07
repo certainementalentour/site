@@ -12,6 +12,14 @@ a:hover {/*=état lorsque le lien est survolé par le pointeur de la souris*/
   color: rgb(211, 72, 22);
   transform: scale();
 }
+a.BoutonPageInterne:hover {/*=état lorsque le lien est survolé par le pointeur de la souris*/
+	color: rgb(211, 72, 22);
+	transform: scale();
+}
+
+.FondClassique {
+	background-color: #b3a267
+}
 
 #bodyBizarre {
 	background: conic-gradient(red, yellow, green, blue, rgba(255, 120, 255, .7),red/*à ajuster*/);
@@ -25,6 +33,24 @@ h1 {
 	color:rgb(68, 0, 255);
 	text-align: center;
 	font-family: 'Sevillana';
+	font-size: 80px;
+}
+
+h3 {
+	color: #bfff50;
+    text-align: center;
+    font-family: 'Sevillana';
+    font-size: 30px;
+}
+
+p {
+	color: #333333;
+    text-align: justify;
+    font-family: 'Sevillana';
+    font-size: 20px;
+    margin-bottom: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 #elementCasse {
@@ -38,4 +64,26 @@ h1 {
 	padding: 11px;
 	animation: animationFondImages 14s ease infinite;
 	background-size: 800% 800%;
+}
+
+.TableCorps {
+	width: 100%;
+    border-collapse: collapse;
+	margin: 10%;
+	padding: 10%;
+}
+
+.TableBoutons {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center; /* Centre le texte horizontalement */
+	vertical-align: middle; /* Centre le texte verticalement */
+	height: auto; /* Hauteur des cellules */
+}
+
+th {
+	text-align: center; /* Centre le texte horizontalement pour les en-têtes */
 }
