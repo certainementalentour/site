@@ -13,6 +13,10 @@ footer a:hover {/*=état lorsque le lien est survolé par le pointeur de la sour
   transform: scale(1.1, 1.3);
 }
 
+.FondClassique {
+	background-color: #b3a267
+}
+
 #bodyBizarre {
 	background: conic-gradient(red, yellow, green, blue, rgba(255, 120, 255, .7),red/*à ajuster*/);
 	background-size: 100% 120%;
