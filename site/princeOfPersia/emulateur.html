@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<!-- Dsl pour ceux qui vont lire, mais flemme de faire un fichier pour une propriété css et une fonction js-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Of Persia</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            margin: 0;
+            color: white;
+            font-family: sans-serif;
+        }
+        canvas {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prince Of Persia en wasm</h1>
+    <canvas id="nesCanvas" width="256" height="240"></canvas>
+    <script>
+        // Charger le module WASM de l'émulateur
+        var Module = {
+            onRuntimeInitialized: function() { // === lorsque c'est chargé
+                console.log("WASM chargé");
+                // Initialiser l'émulateur avec une ROM
+                const romPath = 'POP.nes'; // à demander à l'utilisateur ?
+                Module._init_emulator(romPath);
+                // Lancer l'émulateur
+                function runEmulator() {
+                    // Redessiner chaque image à l'écran (synchronisation de l'affichage)
+                    Module._render_frame();
+                    requestAnimationFrame(runEmulator);
+                }
+
+                // Démarrer l'émulateur
+                runEmulator();
+            }
+        };
+    </script>
+
+    <!-- Penser à charger le fichier généré par Emscripten (emulator.js) -->
+    <script src="emulator.js"></script>
+</body>
+</html>
