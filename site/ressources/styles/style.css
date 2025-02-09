@@ -32,8 +32,8 @@ h1 {
 	font-size: 80px;
 }
 .popup h1 {
-  color: blue;
-  font-size: 30px;
+  color: white;
+  font-size: 25px;
 }
 
 h3 {
@@ -104,17 +104,14 @@ li{text-align: center;margin-top: .5em;margin-bottom: .5em;}
 
 
 table{
-  background: radial-gradient(circle, rgba(0,80,255,.1) 0%, rgba(20,9,110,.4) 35%, rgba(30,25,36,1) 100%);  text-align: center;
+  background: radial-gradient(circle, rgba(1, 43, 136, 0.1) 0%, rgba(63, 56, 56, 0.4) 35%, rgb(49, 49, 48) 100%);  text-align: center;
   border-radius: 7px;
-  border: thick double green;
+  border: thick simple green;
   border-collapse: collapse;
 }
 th{color: antiquewhite;}
-td{border: dashed black;}
-ul {
-  list-style-type: none;/*supprime les puces des listes non ordonnées*/
-  text-align: center;
-}
+td{border: none;}
+td a{color: inherit; size: .9em;}
 
 
 .popup {
@@ -126,35 +123,27 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(77, 77, 77, 0.9);/*niveaux de rouge,vert,bleu,transparence*/
-  height: 100vh;
+  background: rgba(77, 77, 77, 1); 
 }
 .popup:target {/*sert à détecter le clic*/
   visibility: hidden;
   opacity: 0;
 }
-.contenu{
-  border-radius: 7px;
-  position: relative;
-  width: 500px;
-  background: #131416;
-  padding: 24px 32px;
-  color: white;
-}
 .fermer {text-decoration: none;}
 #croix{
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 2em;
+  right: 2em;
   color: green;
   background-color: #131416;
   transition-duration: 0.8s;
   border-radius: 20px;
   text-decoration: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: xx-small;
 }
 #croix:hover{
   background-color: #04AA6D;
@@ -170,6 +159,7 @@ ul {
   padding: 10px;
   background: green;
   box-shadow: 2px 4px #59595F;
+  display: block;
 }
 #bouton1:hover{background: darkgreen;
   box-shadow: 2px 4px #313132;
@@ -177,7 +167,6 @@ ul {
 }
 #bouton1:active{
   box-shadow: 1px 2px #313132;
-  display: inline-block;/*impératif pour que l'animation marche*/
   translate: 1px 2px;
 }
 #p2{
@@ -195,9 +184,12 @@ ul {
   visibility: visible;
   opacity: 1;
 }
-.fond{
+.contenu{
   border-radius: 7px;
   position: relative;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  height: 80%;
   width: 500px;
   background: #131416;
   padding: 24px 32px;
@@ -250,3 +242,8 @@ ul {
 	box-shadow: 0px 5px #313132;
 	transform: translateY(3px);/*effet d'appui*/
   }
+
+.contenu.defilement{
+  height: 20%;
+  overflow: hidden;
+}
