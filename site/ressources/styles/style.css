@@ -14,7 +14,7 @@ a:visited {
   color: coral;
 }
 
-footer a:hover {/*=état lorsque le lien est survolé par le pointeur de la souris*/
+footer a:hover {
   color: rgb(211, 72, 22);
   transform: scale(1.1, 1.3);
 }
@@ -24,10 +24,10 @@ footer a:hover {/*=état lorsque le lien est survolé par le pointeur de la sour
 }
 
 #bodyBizarre {
-	background: conic-gradient(red, yellow, green, blue, rgba(255, 120, 255, .7),red/*à ajuster*/);
+	background: conic-gradient(red, yellow, green, blue, rgba(255, 120, 255, .7),red);
 	background-size: 100% 120%;
 	/*  animation: translationHorizontale 200ms ease-in-out infinite;  */
-	height: 100vh;/*=body prendra toute la hauteur de l'écran*/
+	height: 100vh;
 	width: 100vw;
 }
 
@@ -47,7 +47,7 @@ h3 {
     text-align: center;
     font-family: 'Sevillana';
     font-size: 40px;
-    text-decoration: underline; /* Avoir si c'est pas mieux sans */
+    text-decoration: underline; /* vérifier si c'est pas mieux sans */
 }
 
 .ParagraphesInfo {
@@ -149,10 +149,6 @@ body {
 
 
 
-
-
-
-
 h4 {
   font-family: Salsa;
   text-align: center;
@@ -165,7 +161,7 @@ li {
   margin-bottom: .5em;
 }
 
-table{
+table {
   background: radial-gradient(circle, rgba(1, 43, 136, 0.1) 0%, rgba(63, 56, 56, 0.4) 35%, rgb(49, 49, 48) 100%);  text-align: center;
   border-radius: 7px;
   border: thick simple green;
@@ -193,7 +189,7 @@ td a{color: inherit; size: .9em;}
   opacity: 0;
 }
 .fermer {text-decoration: none;}
-#croix{
+#croix {
   position: absolute;
   top: 2em;
   right: 2em;
@@ -208,16 +204,16 @@ td a{color: inherit; size: .9em;}
   padding-bottom: 20px;
   font-size: xx-small;
 }
-#croix:hover{
+#croix:hover {
   background-color: #04AA6D;
   color: #131416;
 }
 
-#peut-être{
+#peut-être {
   color: black;
 }
 
-#bouton1{
+#bouton1 {
   text-align: center;
   text-decoration: none;
   color: ghostwhite;
@@ -228,7 +224,8 @@ td a{color: inherit; size: .9em;}
   display: block;
 }
 
-#bouton1:hover{background: darkgreen;
+#bouton1:hover {
+  background: darkgreen;
   box-shadow: 2px 4px #313132;
   transition-duration: .4s;
 }
@@ -254,7 +251,7 @@ td a{color: inherit; size: .9em;}
   visibility: visible;
   opacity: 1;
 }
-.contenu{
+.contenu {
   border-radius: 7px;
   position: relative;
   margin-top: 10%;
@@ -317,7 +314,7 @@ td a{color: inherit; size: .9em;}
 	transform: translateY(3px);/*effet d'appui*/
   }
 
-.contenu.defilement{
+.contenu.defilement {
   height: 20%;
   overflow: hidden;
 }
