@@ -175,8 +175,8 @@ td a{color: inherit; size: .9em;}
 .popup {
   visibility: visible;
   opacity: 1;
-  position: absolute;
-  top: 0; right: 0;
+  position: sticky;
+  top: 10; right: 0;
   bottom: 0; left: 0;
   display: flex;
   align-items: center;
@@ -253,11 +253,12 @@ td a{color: inherit; size: .9em;}
 }
 .contenu {
   border-radius: 7px;
-  position: relative;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  height: 80%;
-  width: 500px;
+  position: sticky;
+  top: 10px;
+  /*margin-top: 10%;
+  margin-bottom: 10%;*/
+  height: 650px;
+  width: 600px;
   background: #131416;
   padding: 24px 32px;
   color: white;
