@@ -1,0 +1,33 @@
+.TableCerise {
+    width: 90%;
+    max-width: 95vw;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+
+.TableCerise tr {
+    border: none;
+    padding: 10px;
+    text-align: justify;
+}
+
+.TableCerise td img {
+    display: block;
+    width: 100%; /* Remplit toute la largeur de la cellule */
+    height: 50px; /* Hauteur uniforme */
+    object-fit: cover; /* Coupe l’image pour l’adapter sans déformation */
+    border-radius: 50px; /* Coins arrondis pour un meilleur rendu */
+}
+
+.TableCerise p {
+	color: #333333;
+  text-align: justify;
+  font-family: 'Sevillana';
+  font-size: 20px;
+  margin-bottom: 5px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
