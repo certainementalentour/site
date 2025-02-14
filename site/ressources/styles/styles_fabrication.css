@@ -1,33 +1,71 @@
-.TableCerise {
-    width: 90%;
-    max-width: 95vw;
-    border-collapse: collapse;
-    margin: auto;
+h3 {
+	color: #bfff50;
     text-align: center;
-    background: transparent;
-    border: none;
+    font-family: 'Sevillana';
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 8px;
 }
 
-.TableCerise tr {
+.DivLavage {
+    width: 40%; /* |--30%--|---40%---|--30%--| = 100% */
+    background: #eeeeff;
     border: none;
-    padding: 10px;
+    border-radius: 20px;
+
+    position: relative;
+    left: 30%; /* |--30%--|---40%---|--30%--| = 100% */
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.FlexLigne {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 15px;
+}
+
+.DivLavageTexte {
     text-align: justify;
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
 }
 
-.TableCerise td img {
-    display: block;
-    width: 100%; /* Remplit toute la largeur de la cellule */
-    height: 50px; /* Hauteur uniforme */
+.DivLavageImage {
+    width: 30%;
+    text-align: center;
+    border: none;
+}
+
+.DivLavageImage img {
+    width: 100%;
+    height: 100%;
     object-fit: cover; /* Coupe l’image pour l’adapter sans déformation */
-    border-radius: 50px; /* Coins arrondis pour un meilleur rendu */
+    border-radius: 20px; /* Coins arrondis pour un meilleur rendu */
 }
 
-.TableCerise p {
-	color: #333333;
-  text-align: justify;
-  font-family: 'Sevillana';
-  font-size: 20px;
-  margin-bottom: 5px;
-	margin-left: 5%;
-	margin-right: 5%;
+.TexteInfo {
+    color: #333333;
+    text-align: justify;
+    font-family: 'Sevillana';
+    font-size: 20px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.TitreInfo {
+    color: #b3a267; /* Couleur du fond */
+    text-align: center;
+    font-family: 'Sevillana';
+    font-size: 30px;
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 2px;
 }

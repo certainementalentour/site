@@ -7,28 +7,37 @@
 <body class="FondClassique">
     <header><h1>La fabrication du café</h1></header>
 
-    <table class="TableCerise">
-        <tr>
-            <td rowspan="2"><img src="ressources/Images/ImagesFabrication/xxx" alt="Image 1"></td>
-            <td><h3>Le traitement humide (lavé)</h3>
-                <p>
-                    Cette méthode consiste à enlever la pulpe des cerises de café à l'aide d'eau (la pulpe est retirée mécaniquement).
-                    Ensuite, les grains sont fermentés pour enlever le mucilage, une couche visqueuse qui recouvre les grains.
-                    Après la fermentation, les grains sont lavés, séchés et triés. Ce processus donne un café souvent plus acide et fruité.
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="2"><img src="ressources/Images/ImagesFabrication/xxx" alt="Image 2"></td>
-            <td><h3>Le traitement semi-sec (pulpé-naturel)</h3>
-                <p>
-                    Une combinaison des deux méthodes précédentes. Les cerises sont d'abord dé-pulpées (la pulpe est enlevée), mais les grains                     restent en contact avec le mucilage pendant quelques jours avant d'être séchés au soleil.
-                    Cela donne un café plus doux que le café traité sec, mais moins acide que le café traité humide.
+    <div class="DivLavage">
+        <div class="FlexLigne">
+            <div class="DivLavageImage">
+                <img src="ressources/Images/ImagesFabrication/LavageSec.jpeg" alt="Image lavage sec">
+            </div>
 
+            <div class="DivLavageTexte">
+                <h3 class="TitreInfo">Le traitement sec (naturel)</h3>
+                <p class="TexteInfo">
+                    Cette méthode consiste à laisser sécher les cerises entières au soleil, sans retirer la pulpe. Les cerises sont étalées sur des lits de séchage ou des patios et retournées régulièrement pour assurer un séchage uniforme.
+                    Cette méthode est plus simple, mais prend plus de temps. Elle donne un café plus sucré et parfois plus corpulent, avec un profil gustatif plus complexe.
                 </p>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+
+        <div class="FlexLigne">
+            <div class="DivLavageImage">
+                <img src="ressources/Images/ImagesFabrication/LavageHumide.jpeg" alt="Image lavage sec">
+            </div>
+
+            <div class="DivLavageTexte">
+                <h3 class="TitreInfo">Le traitement humide (lavé)</h3>
+                <p class="TexteInfo">
+                    Cette méthode consiste à enlever la pulpe (la chair) des cerises de café à l'aide d'eau. Les cerises sont d'abord triées pour enlever les fruits abîmés, puis plongées dans des réservoirs d'eau où elles sont pulées (la pulpe est retirée mécaniquement). 
+                    Ensuite, les grains sont fermentés pour enlever le mucilage, une couche visqueuse qui recouvre les grains.
+                    Après la fermentation, les grains sont lavés, séchés et triés. Ce processus donne un café au goût plus net, souvent plus acide et fruité.
+                </p>
+            </div>
+        </div>
+    </div>
+
 
 <!-- Pour cette page je pensais à faire une sorte de terminal linux avec des commandes custom pour
  déplacer les graines entre les étapes de fabrication. (l'image déplacée change évidement entre chaque étape).
