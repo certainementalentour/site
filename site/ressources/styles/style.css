@@ -52,13 +52,23 @@ h3 {
 
 .ParagraphesInfo {
 	color: #333333;
-    text-align: justify;
-    font-family: 'Sevillana';
-    font-size: 30px;
-    margin-bottom: 5px;
+  text-align: justify;
+  font-family: 'Sevillana';
+  font-size: 30px;
+  margin-bottom: 5px;
 	margin-left: 5%;
 	margin-right: 5%;
-} /* ne pas définir pour tous les paragraphes de la page */
+}
+
+.ParagraphesInfo2 { /* car le premier n'est pas compatible avec la page Récolte */
+	color: #333333;
+  text-align: justify;
+  font-family: 'Sevillana';
+  font-size: 28px;
+  margin-bottom: 5px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
 
 #elementCasse {
 	display: none; /* Sinon on a un énorme blanc en plein milieu */
@@ -127,16 +137,6 @@ body {
 .TableauInvisible td {
   border: none;
   padding: 10px;
-}
-
-.ColInvisible {
-	text-align: center; /* Centre le texte horizontalement */
-	vertical-align: middle; /* Centre le texte verticalement */
-	height: auto; /* Hauteur des cellules */
-}
-
-.LigneInvisible {
-	text-align: center; /* Centre le texte horizontalement pour les en-têtes */
 }
 
 .TableauInvisible td img {
@@ -255,8 +255,6 @@ td a{color: inherit; size: .9em;}
   border-radius: 7px;
   position: sticky;
   top: 10px;
-  /*margin-top: 10%;
-  margin-bottom: 10%;*/
   height: 650px;
   width: 600px;
   background: #131416;
