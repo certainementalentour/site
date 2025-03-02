@@ -26,6 +26,7 @@
 	<meta name="msapplication-TileImage" content="ressources/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="ressources/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="ressources/styles/popup.css">
 	<link rel="license" href="../LICENSE"><!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
 	<script src="ressources/scripts/cookies.js" type="text/javascript"></script><!--il est recommandé pour certains navigateurs de lier les 
 	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page-->
@@ -40,31 +41,24 @@
 	<div id="elementCasse">
 		<p>Réparer le site en appuyant sur <kbd>Alt + F4</kbd></p>
 	</div>
-	<div id="content">
+
+<main>
+
 	<img class="contours" src="ressources/favicon/android-icon-192x192.png" alt="image bidon pour tester les styles" width="500" height="600">
-	</div>
-	
+</main>
 
 
 
-
-
-
-
-
-
-	<!--arrière-plan pop-up grisé-->
-	<div id="fermeture" class="popup">
+	<div id="fermeture" class="popup" popover>	<!--arrière-plan pop-up grisé-->
 		<!--corps de la pop-up-->
 	  <div class="contenu">
 		<h1>Nous respectons votre vie privée</h1>
 		<div class="defilement">	
 			<h4>Introduction</h4>
-			<p>Notre site web, < !--insérer un nom --> (ci-après : « notre site web ») peut utiliser des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.</p><h4>Que sont les cookies ?</h4>
+			<p>Notre site web, &lt;!-- insérer un nom --&gt; (ci-après : « notre site web ») peut utiliser des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.</p><h4>Que sont les cookies ?</h4>
 			<p>Un cookie est un petit fichier simple envoyé avec les pages de ce site web et stocké par votre navigateur sur le disque dur de votre ordinateur ou d’un autre appareil. Les informations qui y sont stockées peuvent être renvoyées à nos serveurs ou aux serveurs des tierces parties concernées lors d’une visite ultérieure.</p><p>Votre activité sur ce service peut être utilisée pour créer ou améliorer un profil vous concernant à des fins de publicité ou de contenu personnalisé. Les performances de la publicité et du contenu peuvent être mesurées. Des rapports peuvent être générés en fonction de votre activité et de celle des autres. Certains partenaires ne demandent pas votre consentement pour le traitement de vos données, et s'appuient plutôt sur leur intérêt légitime. Consultez notre liste de partenaires pour voir les finalités pour lesquelles ils pensent avoir un intérêt légitime et comment vous pourrez vous y opposer. </p>
 			</div>	
 			<a href="#p2" class="fermer" id="peut-être"> Je choisis car je suis relou</a>
-			<!--"#fermeture" sert à pointer le lien sur la balise avec l'id fermeture de la même page et "&times"affiche un symbole de multiplication (ici utilisé pour représenter le bouton de fermeture)-->
 			<a href="#fermeture" class="fermer" id="croix">&times;</a>
 			<a href="#fermeture" class="fermer" id="oui"> Tout accepter même si je n'ai rien lu</a>
 			<!--ne pas chercher ce bouton ne doit mener nulle-part-->
@@ -75,8 +69,8 @@
 			  <h1>Partenaires pouvant éventuellement consulter vos données</h1>
 			
 			<table><thead><tr><th>partenaire</th><th>données stockées</th><th>procédure pour s'y opposer</th></tr></thead>
-			<tbody><tr><td>lucifer</td><td>se réserve le droit de prendre l'âme des visiteurs</td><td>faire un cercle de sel<br>(fin de préférence) autour du clavier</td></tr>
-			<td rowspan="4" colspan="2">Ces cases sont actuellement vides, nous sommes activement à la recherche d'éventuels collaborateurs</td></tr>
+			<tbody><tr><td>Lucifer</td><td>se réserve le droit de prendre l'âme des visiteurs</td><td>faire un cercle de sel<br>(fin de préférence) autour du clavier</td></tr>
+			<td rowspan="4" colspan="2">Ces cases sont actuellement vides, nous sommes à la recherche d'éventuels collaborateurs</td></tr>
 			<tr><td><a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target= "_blank" rel="noopener noreferrer">⎋règlement européen sur la protection des données</a></td></tr></tbody></table>
 			<p>Cette politique de confidentialité a été mise à jour pour la dernière fois le 32 septembre 2024 et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen et du Listenbourg.</p>
 			  <a href="#fermeture" id="bouton1" class="fermer">valider mes choix de gros relou</a>
