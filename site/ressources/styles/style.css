@@ -1,6 +1,7 @@
 @import url("animations.css");
 
 body {
+/*	display: flex;  *//* à réinstaurer, peut etre uniquements dans header, main et footer*/
 	width: 100%;
 	height: 100vh;
 	font-family: Salsa;
