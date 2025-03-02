@@ -1,10 +1,43 @@
-body {
-    background-color: #b3a267
+@font-face {
+    font-family: 'Segoe-Boot-Semilight';
+    src:url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.woff') format('woff'),
+        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.svg#Segoe-Boot-Semilight') format('svg'),
+        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.eot'),
+        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: 350;
+    font-style: normal;
 }
 
-h1 {
-	color:rgb(68, 0, 255);
+
+
+body {
+    background-color: #b3a267;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+header {
+	display: inherit;
+	justify-content: center;
+	align-items: flex-start;
+}
+header h1 {
+	color:rgb(22, 155, 216);
 	text-align: center;
-	font-family: 'Sevillana';
+	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 80px;
+}
+main{
+	display: inherit;
+	align-items: center;
+	
+}
+
+footer{
+	display: inherit;
+	justify-content: center;
+	align-items: flex-end;
+	align-self: center;
+	flex-direction: row;
+	position: relative;
 }
