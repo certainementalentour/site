@@ -208,6 +208,9 @@ td a{color: inherit; size: .9em;}
 #fermeture {
 	size: 100%;
 }
+#fermeture:target {
+	size: 0%;
+}
 
 .contenu.defilement {
 	height: 20%;
