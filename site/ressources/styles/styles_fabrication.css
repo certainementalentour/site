@@ -21,6 +21,22 @@ h3 {
     gap: 15px;
 }
 
+.DivSechage {
+    width: 50%;
+    background: #eeeeff;
+    border: none;
+    border-radius: 20px;
+
+    position: relative;
+    left: 20%; /* |--30%--|---40%---|--30%--| = 100% */
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
 .FlexLigne {
     display: flex;
     flex-direction: row;
@@ -47,6 +63,18 @@ h3 {
     height: 100%;
     object-fit: cover; /* Coupe l’image pour l’adapter sans déformation */
     border-radius: 20px; /* Coins arrondis pour un meilleur rendu */
+}
+
+.DivSechageTexte {
+    text-align: justify;
+    background: transparent;
+    border: none;
+    width: 30%;
+}
+
+.DivFleche {
+    width: 100%;
+    object-fit: cover;
 }
 
 .TexteInfo {
