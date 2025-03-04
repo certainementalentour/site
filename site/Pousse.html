@@ -4,8 +4,11 @@
 	<meta name="author" content="moi">
 	<meta name="keywords" content="NSI, Café, J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ">
 	<link rel="license" href="../LICENSE">
+
 	<script src="ressources/scripts/favicon.js" type="text/javascript"></script>
+    <script type="text/javascript" src="ressources/scripts/navigation.js"></script>
 	<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La pousse du café</title>
@@ -54,16 +57,14 @@
 </table>
 
 <footer>
-    <table class="TableauBoutons">
-        <tr>
-            <td><a href="index.html" class="BoutonPageInterne">
-                <img src="ressources/Images/BoutonPrecedent.png" width="367" height="117"></a>
-            </td>
-            <td><a href="Recolte.html" class="BoutonPageInterne">
-                <img src="ressources/Images/BoutonSuivant.png" width="367" height="117"></a>
-            </td>
-        </tr>
-    </table>
+    <nav class="footer-nav">
+        <button type="button" onclick="previousPage()">
+            <img src="ressources/Images/BoutonPrecedent.png" alt="Suivant" width="367" height="117"> <!-- Ce n'est pas une inversion, ça apprendra aux visiteur à charger le css-->
+        </button>
+        <button type="button" onclick="nextPage()">
+            <img src="ressources/Images/BoutonSuivant.png" alt="Précédent" width="367" height="117">
+        </button>
+    </nav>
 </footer>
 
 </body>

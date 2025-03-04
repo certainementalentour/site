@@ -8,7 +8,7 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
     home_page = "index.html"  
 
     def do_GET(self):
-        # Si la requête concerne la racine, redirige vers la page d'accueil
+        # Si la requête concerne la racine, redirige vers la page d'accueil (normalement on n'accède plus à ../../key.pem)
         if self.path == "/":
             self.path = "/" + self.home_page
         return super().do_GET()
@@ -22,13 +22,12 @@ def run(server_class=HTTPServer, handler_class=CustomHTTPRequestHandler):
     server_address = ('', 8000)  # Le serveur écoute sur toutes les interfaces, port 8000
     httpd = server_class(server_address, handler_class)
     
-    # Vérifier si les fichiers existent pour activer HTTPS
     if os.path.exists(cert_file) and os.path.exists(key_file):
         try:
             # Créer un contexte SSL et charger le certificat et la clé
             context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
             context.load_cert_chain(certfile=cert_file, keyfile=key_file)
-            # Envelopper le socket du serveur avec le contexte SSL
+
             httpd.socket = context.wrap_socket(httpd.socket, server_side=True)
             protocol = "https"
         except Exception as e:
