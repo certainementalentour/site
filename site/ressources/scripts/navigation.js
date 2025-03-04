@@ -1,10 +1,10 @@
-var pages = [ // chemins relatifs au scripts svp
-	"../../Fabrication.html",
-	"../../FunFact.html",
-	"../../index.html",
-	"../../machine.html",
-	"../../Pousse.html",
-	"../../Recolte.html",
+var pages = [ // chemins absolus depuis Github/site/site
+	"Fabrication.html",
+	"FunFact.html",
+//	"index.html",
+	"machine.html",
+	"Pousse.html",
+	"Recolte.html",
 ];
 
 function getCurrentIndex() {
@@ -18,8 +18,7 @@ function previousPage() {
 	if (index === -1) {
 		console.error("Page introuvable.");
 		return;
-	}
-	if (index > 0) {
+	} if (index > 0) {
 		window.location.href = pages[index - 1];
 	} else {
 		window.location.href = pages[pages.length - 1];
@@ -28,9 +27,5 @@ function previousPage() {
 
 function nextPage() {
 	var index = getCurrentIndex();
-	if (index < pages.length - 1) {
-		window.location.href = pages[index + 1];
-	} else {
-		window.location.href = pages[0];
-	}
+	window.location.href = pages[index + 1] || pages[0];
 }

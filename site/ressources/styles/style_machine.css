@@ -40,4 +40,19 @@ footer{
 	align-self: center;
 	flex-direction: row;
 	position: relative;
+	align-items: center;
+	flex-shrink: 0;
+	gap: 20px; /* espacement des boutons */
+}
+
+footer nav button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+footer nav button img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
