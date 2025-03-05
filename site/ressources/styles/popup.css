@@ -1,22 +1,37 @@
 @import url("animations.css");
 
 
-a {
+.popup a {
 	text-decoration: none;
 	font-family: 'Segoe-Boot-Semilight';
-}
-
-#bodyBizarre {
-	background: conic-gradient(red, yellow, green, blue, rgba(255, 120, 255, .7),red);
-	background-size: 100% 120%;
-	/*	animation: translationHorizontale 200ms ease-in-out infinite;	*/
-	height: 100vh;
-	width: 100vw;
 }
 
 .popup h1 {
 	color: white;
 	font-size: 25px;
+}
+
+.contenu {
+	border-radius: 7px;
+	position: sticky;
+	top: 10px;
+	height: 650px;
+	width: 600px;
+	background: #131416;
+	padding: 24px 32px;
+	color: white;
+}
+
+.contenu.defilement {
+	height: 20%;
+	overflow: hidden;
+}
+
+#fermeture {
+	size: 100%;
+}
+#fermeture:target {
+	size: 0%;
 }
 
 h3 {
@@ -27,38 +42,20 @@ h3 {
 		text-decoration: underline; /* vérifier si c'est pas mieux sans */
 }
 
-.ParagraphesInfo {
-	color: #333333;
-	text-align: justify;
-	font-family: 'Sevillana';
-	font-size: 30px;
-	margin-bottom: 5px;
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
-.ParagraphesInfo2 { /* car le premier n'est pas compatible avec la page Récolte */
-	color: #333333;
-	text-align: justify;
-	font-family: 'Sevillana';
-	font-size: 28px;
-	margin-bottom: 5px;
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
 h4 {
 	font-family: Salsa;
 	text-align: center;
 	color: floralwhite;
 }
 
-table {
-	background: radial-gradient(circle, rgba(1, 43, 136, 0.1) 0%, rgba(63, 56, 56, 0.4) 35%, rgb(49, 49, 48) 100%);	text-align: center;
+/* table {
+	background: radial-gradient(circle, rgba(1, 43, 136, 0.1) 0%, rgba(63, 56, 56, 0.4) 35%, rgb(49, 49, 48) 100%);
+	text-align: center;
 	border-radius: 7px;
 	border: thick simple green;
 	border-collapse: collapse;
-}
+} */
+
 th{color: antiquewhite;}
 td{border: none;}
 td a{color: inherit; size: .9em;}
@@ -143,16 +140,6 @@ td a{color: inherit; size: .9em;}
 	visibility: visible;
 	opacity: 1;
 }
-.contenu {
-	border-radius: 7px;
-	position: sticky;
-	top: 10px;
-	height: 650px;
-	width: 600px;
-	background: #131416;
-	padding: 24px 32px;
-	color: white;
-}
 
 #non {
 	position: absolute;
@@ -205,14 +192,7 @@ td a{color: inherit; size: .9em;}
 	transform: translateY(3px);/*effet d'appui*/
 	}
 
-#fermeture {
-	size: 100%;
-}
-#fermeture:target {
-	size: 0%;
-}
 
-.contenu.defilement {
-	height: 20%;
-	overflow: hidden;
+#parking {
+	line-height: .2em;
 }

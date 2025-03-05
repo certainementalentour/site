@@ -40,7 +40,6 @@ footer{
 	align-self: center;
 	flex-direction: row;
 	position: relative;
-	align-items: center;
 	flex-shrink: 0;
 	gap: 20px; /* espacement des boutons */
 }
