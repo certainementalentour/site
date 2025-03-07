@@ -2,19 +2,19 @@ h3 {
 	color: #bfff50;
     text-align: center;
     font-family: 'Sevillana';
-    font-size: 30px;
+    font-size: 2vw;
     text-decoration: underline;
     margin-bottom: 8px;
 }
 
 .DivLavage {
-    width: 40%; /* |--30%--|---40%---|--30%--| = 100% */
+    width: 60%; /* |--20%--|---60%---|--20%--| = 100% */
     background: #eeeeff;
     border: none;
     border-radius: 20px;
 
     position: relative;
-    left: 30%; /* |--30%--|---40%---|--30%--| = 100% */
+    left: 20%; /* |--20%--|---60%---|--20%--| = 100% */
 
     display: flex;
     flex-direction: column;
@@ -34,12 +34,12 @@ h3 {
     gap: 15px;
 }
 
-    .FlexLigne {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        gap: 15px;
-    }
+.FlexLigne {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 15px;
+}
 
 .DivLavageTexte {
     text-align: justify;
@@ -78,8 +78,8 @@ h3 {
 }
 
 .DivSechageImage img {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     object-fit: scale-down;
     margin-top: 10px;
     margin-left: 10px;
@@ -131,7 +131,7 @@ h3 {
     color: #333333;
     text-align: justify;
     font-family: 'Sevillana';
-    font-size: 20px;
+    font-size: 1.3vw;
     margin-top: 3px;
     margin-bottom: 15px;
     margin-left: 15px;
@@ -142,7 +142,7 @@ h3 {
     color: #b3a267; /* Couleur du fond */
     text-align: center;
     font-family: 'Sevillana';
-    font-size: 30px;
+    font-size: 2vw;
     text-decoration: underline;
     margin-top: 0px;
     margin-bottom: 2px;
@@ -152,7 +152,7 @@ h3 {
     color: #169bd8;
     text-align: center;
     font-family: 'Sevillana';
-    font-size: 30px;
+    font-size: 2vw;
     text-decoration: underline;
     margin-top: 0px;
     margin-bottom: 2px;
@@ -160,6 +160,11 @@ h3 {
 
 .ImageTraitement {
     align-self: center;
+}
+
+.DivEspace {
+    height: 20px;
+    background-color: #b3a267;
 }
 
 .Terminal {
