@@ -49,6 +49,7 @@ footer nav button {
 	border: none;
 	padding: 0;
 	cursor: pointer;
+	padding: 40px;
 }
 footer nav button img {
 	display: block;
