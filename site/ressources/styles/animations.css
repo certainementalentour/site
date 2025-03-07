@@ -1,3 +1,4 @@
+@import url('polices.css');
 @keyframes translationHorizontale {
 	0% {
 	  background-position: 0% 100%;
@@ -24,15 +25,7 @@
 	75%{background-position: 0% 75%;}
 	100%{background-position: 100% 0%;}
 }
-@font-face {
-    font-family: 'Segoe-Boot-Semilight';
-    src:url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.woff') format('woff'),
-        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.svg#Segoe-Boot-Semilight') format('svg'),
-        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.eot'),
-        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: 350;
-    font-style: normal;
-}
+
 
   /*
   

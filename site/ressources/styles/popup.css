@@ -1,5 +1,5 @@
 @import url("animations.css");
-
+@import url('polices.css');
 
 .popup a {
 	text-decoration: none;
@@ -194,5 +194,11 @@ td a{color: inherit; size: .9em;}
 
 
 #parking {
+	display: block;
 	line-height: .2em;
+}
+
+#mesloLGS {
+	font-family: 'mesloLGS';
+	font-size: 15px;
 }

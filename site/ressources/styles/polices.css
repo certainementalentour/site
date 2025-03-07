@@ -1,0 +1,144 @@
+@import url("../polices/FiraCode/fira_code.css");
+@font-face {
+    font-family: 'Segoe-Boot-Semilight';
+    src:url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.woff') format('woff'),
+        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.svg#Segoe-Boot-Semilight') format('svg'),
+        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.eot'),
+        url('../polices/SegoeBoot/Semilight/Segoe-Boot-Semilight.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: 350;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Consolas';
+	src:url('../polices/Consolas/Ligaturized/Consolasligaturizedv3.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+} @font-face {
+	font-family: 'Consolas';
+	src:url('../polices/Consolas/Ligaturized/Consolasligaturizedv3-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: bold;
+} @font-face {
+	font-family: 'Consolas';
+	src:url('../polices/Consolas/Ligaturized/Consolasligaturizedv3-BoldItalic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: bold italic;
+} @font-face {
+	font-family: 'Consolas';
+	src:url('../polices/Consolas/Ligaturized/Consolasligaturizedv3-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: bold;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-BoldItalic.woff2') format('woff2');
+	font-weight: 700;
+	font-style: italic;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-ExtraBold.woff2') format('woff2');
+	font-weight: 800;
+	font-style: bold;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+	font-weight: 800;
+	font-style: italic;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-ExtraLight.woff2') format('woff2');
+	font-weight: 200;
+	font-style: light;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-ExtraLightItalic.woff2') format('woff2');
+	font-weight: 200;
+	font-style: italic;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-Italic.woff2') format('woff2');
+	font-style: italic;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-LightItalic.woff2') format('woff2');
+	font-weight: 300;
+	font-style: italic;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-MediumItalic.woff2') format('woff2');
+	font-weight: 500;
+	font-style: italic;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+	font-weight: 600;
+	font-style: italic;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-Thin.woff2') format('woff2');
+	font-weight: 100;
+	font-style: normal;
+} @font-face {
+	font-family: 'JetBrainsMono';
+	src:url('../polices/JetBrainsMono/JetBrainsMono-ThinItalic.woff2') format('woff2');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'MesloLGS';
+	src:url('../polices/MesloLGS/MesloLGS\ NF\ Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+} @font-face {
+	font-family: 'MesloLGS';
+	src:url('../polices/MesloLGS/MesloLGS\ NF\ Bold\ Italic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: italic;
+} @font-face {
+	font-family: 'MesloLGS';
+	src:url('../polices/MesloLGS/MesloLGS\ NF\ Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+} @font-face {
+	font-family: 'MesloLGS';
+	src:url('../polices/MesloLGS/MesloLGS\ NF\ Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*
+'Segoe-Boot-Semilight'
+'Fira Code' 300; 400; 500; 600; 700
+'Fira Code VF' 300; 700
+'Consolas'
+'JetBrainsMono' 
+'MesloLGS'
+*/
