@@ -29,3 +29,5 @@ function nextPage() {
 	var index = getCurrentIndex();
 	window.location.href = pages[index + 1] || pages[0];
 }
+
+// veuillez ne pas inclure ce script si la page n'est pas renseignée dans pages[]
