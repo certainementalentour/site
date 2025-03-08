@@ -113,13 +113,6 @@ h4 {
 	margin-right: 5%;
 }
 
-#elementCasse {
-	display: none; /* Sinon on a un énorme blanc en plein milieu */
-	visibility: hidden;
-	height: 100vh;
-	width: 100vw;
-}
-
 .contours{
 	background: linear-gradient(to right,orange,yellow,blue, red,indigo,violet, green);
 	padding: 11px;

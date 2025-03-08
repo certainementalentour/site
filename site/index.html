@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+	<title>[insérer un titre]</title>
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="moi">
@@ -28,26 +29,29 @@
 	<link rel="stylesheet" type="text/css" href="ressources/styles/style.css">
 	<link rel="stylesheet" type="text/css" href="ressources/styles/popup.css">
 	<link rel="license" href="../LICENSE"><!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
-	<script src="ressources/scripts/cookies.js" type="text/javascript"></script><!--il est recommandé pour certains navigateurs de lier les 
+	<script src="ressources/scripts/cookies.js" type="text/javascript" defer></script><!--il est recommandé pour certains navigateurs de lier les 
 	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page-->
 	<script type="text/javascript" src="ressources/scripts/navigation.js"></script>
+	<script type="text/javascript" src="ressources/scripts/pasdexplications.js" defer></script>
 	<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
-	<title>[insérer un titre]</title>
 </head>
 <body>
 	<header>
 		<h1><strong>TITRE DE LA PAGE</strong></h1>
+		<audio id="son" src="ressources/sons/tkt.mp3" preload="auto"></audio>
+		<audio id="son2" src="ressources/sons/son2.mp3" preload="auto"></audio>
 	</header>
 
 	<div id="elementCasse">
-		<p>Réparer le site en appuyant sur <kbd>Alt + F4</kbd></p>
+		<button popover id="boutonMAJ"><span>Réparer le site en appuyant sur <kbd>Alt + F4</kbd></span></button>
 	</div>
 
 	<main>
-		<table>
+		<table class="mesloLGS">
 			<tr>
 				<td>
 					<ul>
+						<li><button popovertarget='boutonMAJ'>Ne pas cliquer</button></li>
 						<li><a href="./Fabrication.html">Fabrication</a></li>
 						<li><a href="./FunFact.html">FunFact</a></li>
 						<li><a href="./machine.html">machine</a></li>
@@ -68,9 +72,11 @@
 			<span>║&nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;  ║</span><div class="br"></div>
 			<span>╚═════════════════╝</span><div class="br"></div>
 			<!-- ═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬ -->
-			<p id="mesloLGS">ﴣ     ﴖ ﴝ ﲵ ﳢ ﴑ ﲹ ﳶ ﱮ ﲏ ﱄ ﯙ ﯣ ﯤ ﮭ ﮰ ﭱ ﭰ ﭠ ﭡ ﭢ ﭣ ﭮ ﮟ ﯎ ﯏ ﯐ 者 荒 視 謹 磌 﫸 漢 梅 既 﨓 﨑 塚 晴 廬 <div class="br"></div></p>
-			<p id="mesloLGS">溜 樂 縷                               </p>
+			<p class="mesloLGS">ﴣ     ﴖ ﴝ ﲵ ﳢ ﴑ ﲹ ﳶ ﱮ ﲏ ﱄ ﯙ ﯣ ﯤ ﮭ ﮰ ﭱ ﭰ ﭠ ﭡ ﭢ ﭣ ﭮ ﮟ ﯎ ﯏ ﯐ 者 荒 視 謹 磌 﫸 漢 梅 既 﨓 﨑 塚 晴 廬 <div class="br"></div></p>
+			<p class="mesloLGS">溜 樂 縷                               </p>
 		</div>
+
+		<button id="lebouton"><span class="mesloLGS"></span></button>
 
 		<img class="contours" src="ressources/Images/ERR_CERT_AUTHORITY_INVALID.png" alt="image bidon pour tester les styles" width="380" height="230">
 	</main>

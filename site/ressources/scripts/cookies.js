@@ -9,9 +9,7 @@ function obtenirValeurcookie(cookieName) {
 	  }
 	}
 	return null; // Si le cookie n'existe pas
-}
-
-function depotCookie(cookieName, value, daysToLive, options) {
+} function depotCookie(cookieName, value, daysToLive, options) {
 	//depotCookie('cle', 'valeur', int, { path: '/', domain: 'example.tld', secure: true });
 	let expires = ""
 	if (daysToLive) {
@@ -42,3 +40,14 @@ function verificationConfientialite() {
 
 //let valide = false;
 //depotCookie('validationConfidentialite', valide, 5);
+
+document.addEventListener("DOMContentLoaded", () => {
+	const button = document.getElementById("boutonMAJ");
+	if (button) {
+		button.addEventListener("click", () => {
+			// marquer l'utilisateur
+			sessionStorage.setItem("fromMAJButton", "true");
+			window.location.href = "redemarrage.html";
+	});
+  }
+});

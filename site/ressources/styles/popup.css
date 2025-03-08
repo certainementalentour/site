@@ -1,38 +1,6 @@
 @import url("animations.css");
 @import url('polices.css');
 
-.popup a {
-	text-decoration: none;
-	font-family: 'Segoe-Boot-Semilight';
-}
-
-.popup h1 {
-	color: white;
-	font-size: 25px;
-}
-
-.contenu {
-	border-radius: 7px;
-	position: sticky;
-	top: 10px;
-	height: 650px;
-	width: 600px;
-	background: #131416;
-	padding: 24px 32px;
-	color: white;
-}
-
-.contenu.defilement {
-	height: 20%;
-	overflow: hidden;
-}
-
-#fermeture {
-	size: 100%;
-}
-#fermeture:target {
-	size: 0%;
-}
 
 h3 {
 	color: #bfff50;
@@ -61,23 +29,28 @@ td{border: none;}
 td a{color: inherit; size: .9em;}
 
 
-.popup {
-	visibility: visible;
-	opacity: 1;
-	position: sticky;
-	top: 10; right: 0;
-	bottom: 0; left: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(77, 77, 77, 1); 
+#elementCasse button {
+	border-radius: 5px;
+}
+#elementCasse kbd {
+	font-style: oblique;
 }
 
-.popup:target {/*sert à détecter le clic*/
-	visibility: hidden;
-	opacity: 0;
+#lebouton {
+	position: absolute; /* Pour le bouger */
+	left: 5%;
+	top: 5%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+	transition: left 0.1s, top 0.1s;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
-.fermer {text-decoration: none;}
 #croix {
 	position: absolute;
 	top: 2em;
@@ -125,7 +98,7 @@ td a{color: inherit; size: .9em;}
 }
 
 #p2 {
-	visibility: hidden;
+	display: none;
 	opacity: 0;
 	position: absolute;
 	top: 0; right: 0;
@@ -184,21 +157,72 @@ td a{color: inherit; size: .9em;}
 	margin-bottom: 2%;
 	margin-right: 4%;
 	transition-duration: .3s;
-	}
+}
 
-	#oui:active {
+#oui:active {
 	background:darkred;
 	box-shadow: 0px 5px #313132;
 	transform: translateY(3px);/*effet d'appui*/
-	}
-
+}
 
 #parking {
 	display: block;
 	line-height: .2em;
 }
 
-#mesloLGS {
+#fermeture {
+	size: 100%;
+}
+#fermeture:target {
+	size: 0%;
+}
+
+.popup a {
+	text-decoration: none;
+	font-family: 'Segoe-Boot-Semilight';
+}
+
+.popup h1 {
+	color: white;
+	font-size: 25px;
+}
+
+.contenu {
+	border-radius: 7px;
+	position: sticky;
+	top: 10px;
+	height: 650px;
+	width: 600px;
+	background: #131416;
+	padding: 24px 32px;
+	color: white;
+}
+
+.contenu.defilement {
+	height: 20%;
+	overflow: hidden;
+}
+
+
+.popup {
+	visibility: visible;
+	opacity: 1;
+	position: sticky;
+	top: 10; right: 0;
+	bottom: 0; left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(77, 77, 77, 1); 
+}
+
+.popup:target {/*sert à détecter le clic*/
+	display: none;
+	opacity: 0;
+}
+.fermer {text-decoration: none;}
+
+.mesloLGS {
 	font-family: 'mesloLGS';
 	font-size: 15px;
 }

@@ -11,14 +11,40 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=google content="notranslate">
    
     <link rel="stylesheet" type="text/css" href="ressources/styles/redemarrage.css">
     <link rel="icon" href="ressources/favicon/" type="image/png">
+    <script type="text/javascript" src="ressources/scripts/redemarrage.js"></script>
+    <script type="text/javascript" src="ressources/scripts/desactivation.js"></script>
 </head>
 <body>
-<main>
-	<span id="progress">Erreur</span>
 </main>
-<script type="text/javascript" src="ressources/scripts/redemarrage.js"></script> <!-- J'ai dû mettre l'import après le <title> pour que le changement de titre s'effectue -->
-</body>
+    <div id="background"></div>
+
+
+
+        <div class=mainholder>
+            <div class=main>
+                <div class=content>
+                    <div class=update>
+                        <div class=spinnerloading>
+                            <div class=dots></div>
+                            <div class=dots></div>
+                            <div class=dots></div>
+                            <div class=dots></div>
+                            <div class=dots></div>
+                        </div>
+                        <br>
+                        <br>
+                        <a>Installation des mises à jour : </a>
+                        <span id="progress">Erreur</span>
+                        <span>effectués.</span>
+                        <br>
+                        <span>N'éteignez pas votre ordinateur.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
