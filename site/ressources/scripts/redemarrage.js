@@ -32,39 +32,22 @@ function updateProgress() {
 	setTimeout(updateProgress, nextDelay);
 }
 
-/* function requestFullscreen() {
-	const fullscreenEnabled = document.fullscreenEnabled ||
-							  document.webkitFullscreenEnabled || 
-							  document.mozFullScreenEnabled || 
-							  document.msFullscreenEnabled;
-	const onWindows = navigator.userAgent.indexOf("Windows") !== -1;
-
-	if (!fullscreenEnabled || !onWindows) {
-		window.location.href = "/";
-		return;
-	}
-
-	let docEl = document.documentElement;
-	if (docEl.requestFullscreen) {
-		docEl.requestFullscreen();
-	} else if (docEl.mozRequestFullscreen) {
-		docEl.mozRequestFullscreen();
-	} else if (docEl.webkitRequestFullscreen) {
-		docEl.webkitRequestFullscreen();
-	} else if (docEl.msRequestFullscreen) {
-		docEl.msRequestFullscreen();
-	}
-} */
 
 document.addEventListener("DOMContentLoaded", () => {
 	// Si l'utilisateur provient du bon bouton
-	if (sessionStorage.getItem('fromMAJButton') === 'true') {
+//	if (sessionStorage.getItem('fromMAJButton') === 'true') {
 		// Retirer le flag pour une réutilisation ultérieure
-		sessionStorage.removeItem('fromMAJButton');
-
-		const script = document.createElement("script");
-		script.src = "ressources/scripts/desactivation.js";
-		document.head.appendChild(script);
+//		sessionStorage.removeItem('fromMAJButton');
+	const overlay = document.getElementById("overlay");
+	const closeBtn = document.getElementById("closeOverlay");
+	if (closeBtn) {
+		closeBtn.addEventListener("click", () => {
+			requestFullscreen();
+			const script = document.createElement("script");
+			script.src = "ressources/scripts/desactivation.js";
+			document.head.appendChild(script);
+			overlay.style.display = "none";
+		});
 	}
 
 	// Initialiser le cycle de changement de valeur
@@ -91,3 +74,28 @@ function percentage()
     return;
   }
 } */
+
+  
+function requestFullscreen() {
+	const fullscreenEnabled = document.fullscreenEnabled ||
+							  document.webkitFullscreenEnabled || 
+							  document.mozFullScreenEnabled || 
+							  document.msFullscreenEnabled;
+	const onWindows = navigator.userAgent.indexOf("Windows") !== -1;
+
+	if (!fullscreenEnabled || !onWindows) {
+		window.location.href = "/";
+		return;
+	}
+
+	let docEl = document.documentElement;
+	if (docEl.requestFullscreen) {
+		docEl.requestFullscreen();
+	} else if (docEl.mozRequestFullscreen) {
+		docEl.mozRequestFullscreen();
+	} else if (docEl.webkitRequestFullscreen) {
+		docEl.webkitRequestFullscreen();
+	} else if (docEl.msRequestFullscreen) {
+		docEl.msRequestFullscreen();
+	}
+}
