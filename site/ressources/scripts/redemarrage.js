@@ -32,27 +32,43 @@ function updateProgress() {
 	setTimeout(updateProgress, nextDelay);
 }
 
-
+// Il faut verrouiller le curseur avant de mettre le plein écran
 document.addEventListener("DOMContentLoaded", () => {
-	// Si l'utilisateur provient du bon bouton
-//	if (sessionStorage.getItem('fromMAJButton') === 'true') {
-		// Retirer le flag pour une réutilisation ultérieure
-//		sessionStorage.removeItem('fromMAJButton');
-	const overlay = document.getElementById("overlay");
-	const closeBtn = document.getElementById("closeOverlay");
-	if (closeBtn) {
-		closeBtn.addEventListener("click", () => {
-			requestFullscreen();
-			const script = document.createElement("script");
-			script.src = "ressources/scripts/desactivation.js";
-			document.head.appendChild(script);
-			overlay.style.display = "none";
-		});
-	}
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("closeOverlay");
 
-	// Initialiser le cycle de changement de valeur
-	updateProgress();
+    if (closeBtn) {
+        closeBtn.addEventListener("click", async () => {
+            try {
+                // Passer en plein écran
+                if (!document.fullscreenElement) {
+                    await document.documentElement.requestFullscreen();
+                }
+
+                // Verrouiller le curseur
+                await document.body.requestPointerLock();
+
+                const script = document.createElement("script");
+                script.src = "ressources/scripts/desactivation.js";
+                document.head.appendChild(script);
+
+                // Masquer l'overlay
+                overlay.style.display = "none";
+            } catch (error) {
+                console.error("Erreur lors de la fermeture de l'overlay :", error);
+            }
+        });
+    }
+
+	document.addEventListener("pointerlockchange", () => {
+		if (!document.pointerLockElement) {
+			document.body.requestPointerLock();
+		}
+	});
+    // Initialiser le cycle de changement de valeur
+    updateProgress();
 });
+
 
 
 /*
@@ -99,3 +115,42 @@ function requestFullscreen() {
 		docEl.msRequestFullscreen();
 	}
 }
+
+/*
+                          .,aad88888888888baa,.
+                     ,ad8888888888888888888888888ba,
+                 ,ad888888888888888888888888888888888ba,
+              ,ad888888888P""'             `""Y888888888ba,
+            a888888888P""                       ""Y888888888a
+          a88888888""                               ""88888888a
+        a888888888b,                                   "Y8888888a
+      ,8888888888888b,                                   `Y8888888,
+     d8888888' "888888b,                                   `8888888b
+    8888888"     "Y88888b,                                   "8888888
+   8888888'        "Y88888b,                                  `8888888
+  d888888'     a,  8a"Y88888b,                                 `888888b
+ d888888'      `8, `8) "Y88888b,                  ,ad888g,      `888888b
+,888888'        8)  ]8   "Y88888b,            ,ad888888888b      `888888,
+d88888P        ,8' ,8'     "Y88888b,      ,gPPR888888888888       Y88888b
+888888'       ,8' ,8'        "Y88888b,,ad8""   `Y888888888P       `888888
+888888        8)  8)           "Y888888"        (8888888""         888888
+888888        8,  8,          ,ad8Y88888b,      d888""             888888
+888888        `8, `8,     ,ad8""   "Y88888b,,ad8""                 888888
+888888         `8, `" ,ad8""         "Y88888b"                     888888
+Y88888,           ,gPPR8b           ,ad8Y88888b,                  ,88888P
+`88888b          dP:::::Yb      ,ad8""   "Y88888b,                d88888'
+ 888888,         8):::::(8  ,ad8""         "Y88888b,             ,888888
+ `888888,        Yb:;;;:d888""               "Y88888b,          ,888888'
+  Y888888,        "8ggg8P"                     "Y88888b,       ,888888P
+   Y88888b,                                      "Y88888b,    ,d88888P
+    Y88888b,                                       "Y88888b, ,d88888P
+     Y888888,                                        "Y888888888888P
+      "888888b,                                        "8888888888"
+        Y888888ba                                       a8888888P
+         "Y8888888ba,                               ,ad8888888P"
+            "Y88888888ba,._                   _.,ad88888888P"
+               "Y88888888888bbaa,,_____,,aadd88888888888P"
+                   "Y8888888888888888888888888888888P"
+                       ""Y888888888888888888888P""
+                             """""""""""""""
+*/

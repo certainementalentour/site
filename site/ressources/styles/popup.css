@@ -239,7 +239,7 @@ td a{color: inherit; size: .9em;}
 	display: flex;
 	align-items: center;
 	background: rgba(77, 77, 77, 1);
-	height: 100vh;
+	height: 100dvh;
 }
 
 #p2:target {
