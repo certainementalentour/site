@@ -32,7 +32,6 @@ body {
 	padding: 0;
 	justify-content: center;
 	flex-direction: column;
-	cursor: crosshair; /* Debug, voir le body */
 }
 
 header {
@@ -69,7 +68,6 @@ footer nav button {
 	background: none;
 	border: none;
 	padding: 0;
-	cursor: pointer;
 	padding: 40px;
 }
 footer nav button img {
@@ -104,7 +102,6 @@ h3 {
 		text-align: center;
 		font-family: 'Sevillana';
 		font-size: 40px;
-		text-decoration: underline; /* vérifier si c'est pas mieux sans */
 }
 
 h4 {

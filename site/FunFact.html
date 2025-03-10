@@ -53,25 +53,17 @@ Le café lyophilisé a été inventé par accident : Un chimiste a oublié son c
 body{
    cursor: url('ressources/Images/trans.png'),none;
 }
+footer {border: 12px solid blue;}
 #fake-cursor {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background: url('ressources/Images/cursor.png') no-repeat center;
-    background-size: contain;
-    pointer-events: none;
-    transition: transform 0.02s linear;
-    z-index: 9999;
-} #fake-cursor::before {
-    content: "";
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
+        position: fixed;
+        width: 32px;
+        height: 32px;
         pointer-events: none;
-} #fake-cursor.inverted{
-    filter: invert(100%) contrast(100%) brightness(100%);
+        z-index: 9999;
+        background: url('ressources/Images/cursor.png') no-repeat center;
+        background-size: contain;
+        transition: transform 0.02s linear;
+        will-change: transform;
 }
     </style>
 <script>
@@ -79,14 +71,18 @@ body{
     const fakeCursor = document.getElementById("fake-cursor");
     fakeCursor.style.display = "block";
     document.addEventListener("mousemove", (event) => {
-        fakeCursor.style.transform = `translate(${event.clientX - 16}px, ${event.clientY - 16}px)`;
-        const elementUnderCursor = document.elementFromPoint(event.clientX, event.clientY);
+        const fakeCursorX = event.clientX - 16;
+        const fakeCursorY = event.clientY - 700;
+        fakeCursor.style.transform = `translate(${fakeCursorX}px, ${fakeCursorY}px)`;
+        const elementUnderCursor = document.elementFromPoint(fakeCursorX, fakeCursorY);
         if (elementUnderCursor) {
             const computedStyle = window.getComputedStyle(elementUnderCursor);
             const backgroundColor = computedStyle.backgroundColor;
             if (backgroundColor !== 'rgba(0, 0, 0, 0)') {
                 const inverseColor = getInverseColor(backgroundColor);
                 fakeCursor.style.backgroundColor = inverseColor;
+            } else {
+                fakeCursor.style.backgroundColor = '';
             }}});});
     function getInverseColor(rgb) {
         const rgbArray = rgb.match(/\d+/g);
