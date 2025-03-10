@@ -22,16 +22,12 @@
 */
 
 body {
-	display: flex;
-	width: 100%;
-	height: 100dvh;
 	font-family: Salsa;
 	font-display: block; /*bloque le chargement de la page tant que la police n'est pas téléchargée*/
 	overflow-x: hidden; /*empêche le défilement horizontal*/
 	margin: 0;
 	padding: 0;
 	justify-content: center;
-	flex-direction: column;
 }
 
 header {
