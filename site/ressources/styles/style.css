@@ -23,15 +23,23 @@
 
 body {
 	display: flex;
-	width: 100%;
+	width: 100dvw;
 	height: 100dvh;
 	font-family: Salsa;
 	font-display: block; /*bloque le chargement de la page tant que la police n'est pas téléchargée*/
 	overflow-x: hidden; /*empêche le défilement horizontal*/
+	overflow-y: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 	margin: 0;
 	padding: 0;
 	justify-content: center;
 	flex-direction: column;
+	cursor: url('../Images/arrow_i.cur') 5 5, auto;
+}
+body::-webkit-scrollbar {
+	width: 0;
+	display: none;
 }
 
 header {

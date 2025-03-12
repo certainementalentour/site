@@ -182,7 +182,6 @@ td a{color: inherit; size: .9em;}
 	color: white;
 	border: none;
 	border-radius: 5px;
-	cursor: pointer;
 }
 #croix {
 	position: absolute;
@@ -251,7 +250,6 @@ td a{color: inherit; size: .9em;}
 	position: absolute;
 	bottom: 10px;
 	left: 7px;
-	cursor: pointer;
 	text-decoration: none;
 	color: whitesmoke;
 	background: darkred;
@@ -276,7 +274,6 @@ td a{color: inherit; size: .9em;}
 	position: absolute;
 	bottom: 10px;
 	right: 7px;
-	cursor: pointer;/*modifie le modèle du pointeur de la souris (en main qui clique par défaut)*/
 	text-align: center;
 	text-decoration: none;
 	color: whitesmoke;
