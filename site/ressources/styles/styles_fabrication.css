@@ -22,7 +22,7 @@ h3 {
 }
 
 .DivSechage {
-    width: 100%;
+    width: 90%;
     background: #eeeeff;
     border: none;
     border-radius: 20px;
@@ -64,9 +64,8 @@ h3 {
 
 .DivSechageDroite {
     text-align: justify;
-    background: transparent;
-    border: none;
     width: 80%;
+    margin-right: 20px;
 }
 
 .DivSechageTexte {
@@ -78,8 +77,8 @@ h3 {
 }
 
 .DivSechageImage img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: scale-down;
     margin-top: 10px;
     margin-left: 10px;
@@ -130,10 +129,14 @@ h3 {
   //                               \\
  //                                 \\
 */
-.DivTorrefaction {
+.DivTorrefactionD {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.DivTorrefactionG {
     width: 100%;
     margin-left: 20px;
-    margin-right: 20px;
 }
 
 .FlecheVersBroyage1 {
@@ -164,7 +167,7 @@ h3 {
     color: #333333;
     text-align: justify;
     font-family: 'Sevillana';
-    font-size: 1.3vw;
+    font-size: 20px;
     margin-top: 3px;
     margin-bottom: 15px;
     margin-left: 15px;
@@ -175,7 +178,7 @@ h3 {
     color: #b3a267; /* Couleur du fond */
     text-align: center;
     font-family: 'Sevillana';
-    font-size: 2vw;
+    font-size: 30px;
     text-decoration: underline;
     margin-top: 0px;
     margin-bottom: 2px;
@@ -185,7 +188,7 @@ h3 {
     color: #169bd8;
     text-align: center;
     font-family: 'Sevillana';
-    font-size: 2vw;
+    font-size: 30px;
     text-decoration: underline;
     margin-top: 0px;
     margin-bottom: 2px;

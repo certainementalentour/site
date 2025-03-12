@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		setTimeout(() => {
 			bouton.style.backgroundColor = "red";
-			bouton.innerHTML = '<img src="ressources/images/j.png">';
+			bouton.innerHTML = '<img src="ressources/Images/j.png">';
 			son.play();
 
 			son.onended = () => {

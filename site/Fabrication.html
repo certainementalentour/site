@@ -15,10 +15,10 @@
     <link rel="stylesheet" type="text/css" href="ressources/styles/style.css">
     <link rel="stylesheet" type="text/css" href="ressources/styles/styles_fabrication.css">
 </head>
-<body class="FondClassique" style="border: 10px solid blue">
+<body class="FondClassique">
     <header><h1>La fabrication du café</h1></header>
 
-    <div class="DivLavage">
+    <div class="DivLavage" style="margin-bottom: 50px; margin-top: 40px;">
         <div class="FlexLigne">
             <div class="DivLavageImage">
                 <img src="ressources/Images/ImagesFabrication/LavageSec.jpeg" alt="Image lavage sec">
@@ -47,9 +47,7 @@
         </div>
     </div>
 
-    <div class="DivEspace">=== espace ===</div> <!-- Faire une espace -->
-
-    <div class="FlexLigne">
+    <div class="FlexLigne" style="margin-bottom: 50px;">
         <div class="DivDecorticage">
             <h3 class="TitreInfo2">Le décorticage</h3>
             <p class="TexteInfo">Après séchage, les grains de café sont encore recouverts d'une fine couche.<br/>
@@ -58,21 +56,21 @@
         </div>
         
         <div class="DivSechage">
-            <div class="FlexLigne">
-                <div class="DivSechageImage">
+            <div class="FlexLigne" style="height: 100%;">
+                <div class="DivSechageImage" style="align-content: center">
                     <img src="ressources/Images/ImagesFabrication/Soleil.png">
                 </div>
                 <div class="DivSechageTexte">
-                    <p class="TexteInfo">Ce séchage peut se faire de manière naturelle,</p>
+                    <p class="TexteInfo" style="font-size: 20px;">Ce séchage peut se faire de manière naturelle,</p>
                 </div>
             </div>
 
-            <div class="FlexLigne">
-                <div class="DivSechageImage">
+            <div class="FlexLigne" style="height: 100%;">
+                <div class="DivSechageImage" style="align-content: center">
                     <img src="ressources/Images/ImagesFabrication/Four.png">
                 </div>
                 <div class="DivSechageTexte">
-                    <p class="TexteInfo">Ou à l’aide de machines.</p>
+                    <p class="TexteInfo" style="font-size: 20px;">Ou à l’aide de machines.</p>
                 </div>
             </div>
         </div>
@@ -84,32 +82,51 @@
         </div>
     </div>
 
-    <div class="DivEspace">=== espace ===</div>
+    <svg width="100%" height="100px" viewBox="0 0 100% 100">
+        <!-- Courbe -->
+        <path d="M 150,0 C 150,50 150,80 150,80" stroke="#FFE693" fill="transparent" stroke-width="50" />
+        
+        <!-- Pointe de flèche -->
+        <polygon points="100,80 200,80 150,100" fill="#FFE693" />
+    </svg>
 
-    <div class="FlexLigne">
-        <div class="DivTorrefaction">
+    <div class="FlexLigne" style="margin-bottom: 50px;">
+        <div class="DivTorrefactionG">
             <h3 class="TitreInfo2">La torréfaction</h3>
             <p class="TexteInfo">Une fois triés et nettoyés, les grains de café verts sont prêts à être torréfiés. La torréfaction est l’étape qui transforme les grains de café verts en grains brun foncé prêts à être moulus. Elle est cruciale pour le goût final du café.</p>
         </div>
-        <div class="DivTorrefaction">
+        <svg width="400" height="150" viewBox="0 0 100 100">
+            <!-- Courbe -->
+            <path d="M 0,60 C 50,60 50,60 80,60" stroke="#FFE693" fill="transparent" stroke-width="20" />
+            
+            <!-- Pointe de flèche -->
+            <polygon points="80,90 80,30 100,60" fill="#FFE693" />
+        </svg>
+        <div class="DivTorrefactionD">
             <h3 class="TitreInfo2">Le processus de torréfaction</h3>
             <p class="TexteInfo">Les grains sont chauffés dans des machines appelées torréfacteurs à des températures entre 180°C et 250°C. Le temps et la température de torréfaction influencent directement le profil de saveur du café.</p>
         </div>
     </div>
 
-    <div class="DivEspace">=== espace ===</div>
-
-    <div class="FlexLigne">
-        <div class="FlecheVersBroyage1"> <!-- Espacer des bords -->
-            <img src="ressources/Images/ImagesFabrication/FlecheVersBroyage1.png">
-        </div>
+    <div class="FlexLigne" style="margin-bottom: 50px;">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <!-- Courbe -->
+            <path d="M 50,0 C 50,50 50,100 150,100" stroke="#FFE693" fill="transparent" stroke-width="30" />
+            
+            <!-- Pointe de flèche -->
+            <polygon points="140,70 180,100 140,130" fill="#FFE693" />
+        </svg>
         <div class="DivBroyage">
             <h3 class="TitreInfo2">Le broyage et la préparation</h3>
             <p class="TexteInfo">Une fois torréfiés, les grains sont généralement moulus avant d’être préparés en infusion, que ce soit par des méthodes comme l’espresso, la méthode filtre, la cafetière à piston ou d’autres techniques. Le type de broyage (fin, moyen ou grossier) dépend de la méthode d'infusion choisie :
         </div>
-        <div class="FlecheVersBroyage2"> <!-- Espacer des bords -->
-            <img src="ressources/Images/ImagesFabrication/FlecheVersBroyage2.png">
-        </div>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <!-- Courbe -->
+            <path d="M 50,0 C 100,0 150,50 150,100" stroke="#FFE693" fill="transparent" stroke-width="30" />
+            
+            <!-- Pointe de flèche -->
+            <polygon points="120,90 180,90 150,130" fill="#FFE693" />
+        </svg>
     </div>
 
     <div class="FlechesVersMouture">
@@ -192,12 +209,12 @@ Mouture fine : espresso
         </div>
         -->
         <nav class="footer-nav">
-            <button type="button" onclick="previousPage()">
+            <center><button type="button" onclick="previousPage()">
                 <img src="ressources/Images/BoutonPrecedent.png" alt="Suivant" width="367" height="117"> <!-- Ce n'est pas une inversion, ça apprendra aux visiteur à charger le css-->
             </button>
             <button type="button" onclick="nextPage()">
                 <img src="ressources/Images/BoutonSuivant.png" alt="Précédent" width="367" height="117">
-            </button>
+            </button></center>
         </nav>
     </footer>
 </body>
