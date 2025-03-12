@@ -18,7 +18,7 @@
 <body class="FondClassique">
     <header><h1>La fabrication du café</h1></header>
 
-    <div class="DivLavage" style="margin-bottom: 50px; margin-top: 40px;">
+    <div class="DivLavage">
         <div class="FlexLigne">
             <div class="DivLavageImage">
                 <img src="ressources/Images/ImagesFabrication/LavageSec.jpeg" alt="Image lavage sec">
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="FlexLigne" style="margin-bottom: 50px;">
+    <div class="FlexLigne">
         <div class="DivDecorticage">
             <h3 class="TitreInfo2">Le décorticage</h3>
             <p class="TexteInfo">Après séchage, les grains de café sont encore recouverts d'une fine couche.<br/>
@@ -56,21 +56,21 @@
         </div>
         
         <div class="DivSechage">
-            <div class="FlexLigne" style="height: 100%;">
-                <div class="DivSechageImage" style="align-content: center">
+            <div class="FlexLigne">
+                <div class="DivSechageImage">
                     <img src="ressources/Images/ImagesFabrication/Soleil.png">
                 </div>
                 <div class="DivSechageTexte">
-                    <p class="TexteInfo" style="font-size: 20px;">Ce séchage peut se faire de manière naturelle,</p>
+                    <p class="TexteInfo">Ce séchage peut se faire de manière naturelle,</p>
                 </div>
             </div>
 
-            <div class="FlexLigne" style="height: 100%;">
-                <div class="DivSechageImage" style="align-content: center">
+            <div class="FlexLigne">
+                <div class="DivSechageImage">
                     <img src="ressources/Images/ImagesFabrication/Four.png">
                 </div>
                 <div class="DivSechageTexte">
-                    <p class="TexteInfo" style="font-size: 20px;">Ou à l’aide de machines.</p>
+                    <p class="TexteInfo">Ou à l’aide de machines.</p>
                 </div>
             </div>
         </div>
@@ -132,6 +132,25 @@
     <div class="FlechesVersMouture">
         <img src="ressources/Images/ImagesFabrication/FlecheVersMouture.png">
     </div>
+    <footer>
+        <!--
+        <div class="Terminal">
+            Toujours en projet ?
+        </div>
+        -->
+        <nav class="footer-nav">
+            <center><button type="button" onclick="previousPage()">
+                <img src="ressources/Images/BoutonPrecedent.png" alt="Suivant" width="367" height="117"> <!-- Ce n'est pas une inversion, ça apprendra aux visiteur à charger le css-->
+            </button>
+            <button type="button" onclick="nextPage()">
+                <img src="ressources/Images/BoutonSuivant.png" alt="Précédent" width="367" height="117">
+            </button></center>
+        </nav>
+    </footer>
+</body>
+</html>
+
+
 
     <!-- Si on n'arrive pas à gérer les tailles des écrans, on insère des images
     <center> --><!-- La balise <center> est obsolète en HTML5 et ne fonctionne plus forcément dans les navigateurs modernes. --><!--
@@ -201,25 +220,6 @@ Mouture grossière : cafetière à piston
 Mouture moyenne : cafetières filtre
 Mouture fine : espresso
 -->
-
-    <footer>
-        <!--
-        <div class="Terminal">
-            
-        </div>
-        -->
-        <nav class="footer-nav">
-            <center><button type="button" onclick="previousPage()">
-                <img src="ressources/Images/BoutonPrecedent.png" alt="Suivant" width="367" height="117"> <!-- Ce n'est pas une inversion, ça apprendra aux visiteur à charger le css-->
-            </button>
-            <button type="button" onclick="nextPage()">
-                <img src="ressources/Images/BoutonSuivant.png" alt="Précédent" width="367" height="117">
-            </button></center>
-        </nav>
-    </footer>
-</body>
-</html>
-
 
 <!--
                     .+~                :xx++::

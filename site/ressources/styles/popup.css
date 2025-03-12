@@ -134,7 +134,12 @@ $F        `'      <!               !!!               !!>    !!
                   `-                ;!                                `"$$
                                                                         `?
 */
-
+header {
+	display: flex;
+}
+main {
+	display: flex;
+}
 h3 {
 	color: #bfff50;
 		text-align: center;

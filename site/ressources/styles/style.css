@@ -22,7 +22,6 @@
 */
 
 body {
-	display: flex;
 	width: 100dvw;
 	height: 100dvh;
 	font-family: Salsa;
@@ -31,11 +30,7 @@ body {
 	overflow-y: scroll;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
-	margin: 0;
-	padding: 0;
-	justify-content: center;
-	flex-direction: column;
-	cursor: url('../Images/arrow_i.cur') 5 5, auto;
+/*	cursor: url('../Images/arrow_i.cur') 5 5, auto; */
 }
 body::-webkit-scrollbar {
 	width: 0;
@@ -43,7 +38,7 @@ body::-webkit-scrollbar {
 }
 
 header {
-	display: inherit;
+	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 }
@@ -53,11 +48,6 @@ header h1 {
 	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 80px;
 	margin: 0;
-}
-
-main{
-	display: inherit;
-	align-items: center;
 }
 
 footer {
