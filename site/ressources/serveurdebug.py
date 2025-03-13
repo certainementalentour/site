@@ -3,6 +3,9 @@ import os
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import ssl
 
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Gestionnaire personnalisé pour définir la page d'accueil
 class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
     home_page = "index.html"  
@@ -12,9 +15,22 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
         if self.path == "/":
             self.path = "/" + self.home_page
         return super().do_GET()
+    
+    def send_error(self, code, message=None, explain=None):
+        error_pages: dict = {
+            404: os.path.join(script_dir, "404.html"),
+            500: os.path.join(script_dir, "500.html")
+        }
+        if code in error_pages and os.path.exists(error_pages[code]):
+            self.send_response(200)  # http 200 = OK, pour afficher la page plutôt que l'erreur
+            self.send_header("Content-Type", "text/html")
+            self.end_headers()
+            with open(error_pages[code], "rb") as f:
+                self.wfile.write(f.read())
+        else:  # sinon gestion par défaut des erreurs de SimpleHTTPRequestHandler
+            super().send_error(code, message, explain)
 
 def run(server_class=HTTPServer, handler_class=CustomHTTPRequestHandler):
-    script_dir = os.path.dirname(os.path.abspath(__file__))
     # fichiers de certificat et de clé
     cert_file = os.path.join(script_dir, './cert.pem')
     key_file = os.path.abspath(os.path.join(script_dir, '../../../key.pem'))

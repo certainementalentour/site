@@ -27,9 +27,7 @@ body {
 	font-family: Salsa;
 	font-display: block; /*bloque le chargement de la page tant que la police n'est pas téléchargée*/
 	overflow-x: hidden; /*empêche le défilement horizontal*/
-	overflow-y: scroll;
 	scrollbar-width: none;
-	-ms-overflow-style: none;
 /*	cursor: url('../Images/arrow_i.cur') 5 5, auto; */
 }
 body::-webkit-scrollbar {
@@ -51,7 +49,7 @@ header h1 {
 }
 
 footer {
-	display: inherit;
+	display: flex;
 	justify-content: center;
 /*	align-items: flex-end; */
 	align-items: center;
@@ -66,7 +64,7 @@ footer nav button {
 	background: none;
 	border: none;
 	padding: 0;
-	padding: 40px;
+	margin: 40px;
 }
 footer nav button img {
 	display: block;
