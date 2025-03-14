@@ -45,8 +45,8 @@ function updateProgress() {
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("overlay");
     const closeBtn = document.getElementById("closeOverlay");
-    const shutdownSound = document.getElementById("shutdownSound")
-    const shutdownLoudSound = document.getElementById("shutdownLoudSound")
+    const shutdownSound = document.getElementById("shutdownSound");
+    const shutdownLoudSound = document.getElementById("shutdownLoudSound");
     const bassBoosted = getBassBoostedState();
     if (closeBtn) {
         closeBtn.addEventListener("click", async () => {
@@ -64,10 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.head.appendChild(script);
 
                 // Masquer l'overlay
-                overlay.style.display = "none";
-                if (bassBoosted) {
-                  shutdownLoudSound.play();
+                if (overlay){
+                  overlay.style.display = "none";
                 } else {
+                  window.location.href = "/";
+                }
+
+                if (bassBoosted && shutdownLoudSound instanceof HTMLAudioElement) {
+                  shutdownLoudSound.play();
+                } else if (shutdownSound instanceof HTMLAudioElement){
                   shutdownSound.play(); 
                 }
             } catch (error) {
@@ -109,10 +114,7 @@ function percentage()
 
   
 function requestFullscreen() {
-	const fullscreenEnabled = document.fullscreenEnabled ||
-							  document.webkitFullscreenEnabled || 
-							  document.mozFullScreenEnabled || 
-							  document.msFullscreenEnabled;
+	const fullscreenEnabled = document.fullscreenEnabled;
 	const onWindows = navigator.userAgent.indexOf("Windows") !== -1;
 
 	if (!fullscreenEnabled || !onWindows) {
@@ -120,16 +122,7 @@ function requestFullscreen() {
 		return;
 	}
 
-	let docEl = document.documentElement;
-	if (docEl.requestFullscreen) {
-		docEl.requestFullscreen();
-	} else if (docEl.mozRequestFullscreen) {
-		docEl.mozRequestFullscreen();
-	} else if (docEl.webkitRequestFullscreen) {
-		docEl.webkitRequestFullscreen();
-	} else if (docEl.msRequestFullscreen) {
-		docEl.msRequestFullscreen();
-	}
+	document.documentElement.requestFullscreen();
 }
 
 /*

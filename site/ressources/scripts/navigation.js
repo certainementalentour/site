@@ -1,3 +1,4 @@
+// @ts-check
 var pages = [ // chemins absolus depuis Github/site/site
 	"Fabrication.html",
 	"FunFact.html",

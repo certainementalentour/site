@@ -1,3 +1,4 @@
+// @ts-check
 // Désactiver le clic droit
 document.addEventListener('contextmenu', (event) => {
 	event.preventDefault();

@@ -1,5 +1,5 @@
 //Le pépin est que chaque frame est téléchargée à chaque affichage, même lorsque la boucle redémarre
-
+// @ts-check
 const frames2 = [
 	'ressources/favicon/animation/cafe2/frame_00.png',
 	'ressources/favicon/animation/cafe2/frame_01.png',
@@ -62,7 +62,7 @@ const frames2 = [
 	'ressources/favicon/animation/cafe2/frame_58.png',
 	'ressources/favicon/animation/cafe2/frame_59.png',
 ];
-const frames = [
+const frames1 = [
 	'ressources/favicon/animation/cafe1/frame_00.png',
 	'ressources/favicon/animation/cafe1/frame_01.png',
 	'ressources/favicon/animation/cafe1/frame_02.png',
@@ -85,12 +85,13 @@ const interval = 100; // Intervalle entre chaque image en ms
 
 function changeFavicon() {
   const img = new Image();
-  img.src = frames[index];
+  img.src = frames1[index];
   img.crossOrigin = "anonymous"; // Évite les problèmes si les images viennent d'un autre domaine
 
   img.onload = () => {
     const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");  // contexte
+	if (!ctx) return;
 
     const size = 64; // Taille du favicon
     canvas.width = size;
@@ -106,8 +107,9 @@ function changeFavicon() {
     ctx.drawImage(img, 0, 0, size, size);
 
     // Supprimer l'ancien favicon
+	/** @type {HTMLLinkElement|null} */ // correction jsdoc afin de préciser que htmllinkelement ne sera pas nul
     let link = document.querySelector("link[rel='icon']");
-    if (!link) {
+    if (!(link instanceof HTMLLinkElement)) {
       link = document.createElement("link");
       link.rel = "icon";
       document.head.appendChild(link);
