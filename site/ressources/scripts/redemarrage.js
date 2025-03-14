@@ -1,3 +1,4 @@
+// @ts-check
 // initialisation
 let originalTitle = document.title;
 
@@ -7,6 +8,14 @@ function getRandomPercentage() {
 
 function getRandomDuration() {
 	return Math.random() * (10000 - 3000) + 3000;  // nb entre 0 et 1 exclus, multiplié par la différence du délai max et min (donne une valeur pseudo-aléatoire entre 0 et intervalleMax), + 500 pour tjrs avoir une demi-seconde de délai
+}
+
+function getBassBoostedState() {
+  var isBassBoosted = false;
+  if (Math.random() >= .8) {
+    isBassBoosted = true;
+  }
+  return isBassBoosted;
 }
 
 function updateProgress() {
@@ -36,7 +45,9 @@ function updateProgress() {
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("overlay");
     const closeBtn = document.getElementById("closeOverlay");
-
+    const shutdownSound = document.getElementById("shutdownSound")
+    const shutdownLoudSound = document.getElementById("shutdownLoudSound")
+    const bassBoosted = getBassBoostedState();
     if (closeBtn) {
         closeBtn.addEventListener("click", async () => {
             try {
@@ -54,6 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Masquer l'overlay
                 overlay.style.display = "none";
+                if (bassBoosted) {
+                  shutdownLoudSound.play();
+                } else {
+                  shutdownSound.play(); 
+                }
             } catch (error) {
                 console.error("Erreur lors de la fermeture de l'overlay :", error);
             }

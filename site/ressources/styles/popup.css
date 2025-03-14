@@ -375,3 +375,16 @@ footer button:hover {
 	font-family: 'mesloLGS';
 	font-size: 15px;
 }
+
+.btn {
+	
+	background-color: azure;
+	border: none;
+	color: none;
+	font-size: 25px;
+	height: 50px;
+}
+.btn:hover {
+	background-color: grey;
+	color: white;
+}

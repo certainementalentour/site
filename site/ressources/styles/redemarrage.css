@@ -3,7 +3,7 @@
 
 body {
     background: #000000;
-    cursor: url(ressources/images/trans.png),none;
+    cursor: url(../Images/trans.png),none;
     margin: 0;
     padding: 0;
     text-align: center;

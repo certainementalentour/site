@@ -1,3 +1,4 @@
+// @ts-check
 document.addEventListener("DOMContentLoaded", () => {
 	const bouton = document.getElementById("lebouton");
 	const son = document.getElementById("son");
