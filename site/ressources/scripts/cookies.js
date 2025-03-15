@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (button) {
 		button.addEventListener("click", () => {
 			// marquer l'utilisateur
-			sessionStorage.setItem("fromMAJButton", "true");
+			//sessionStorage.setItem("fromMAJButton", "true");
 			window.location.href = "redemarrage.html";
 	});
   }

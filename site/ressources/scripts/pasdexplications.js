@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				};
 			}
 		}, 2000);
-		});
+		});};})
 /*
 iIYVVVVXVVVVVVVVVYVYVYYVYYYYIIIIYYYIYVVVYYYYYYYYYVVYVVVVXVVVVVYI+.
 tYVXXXXXXVXXXXVVVYVVVVVVVVVVVVYVVVVVVVVVVVVVVVVVXXXXXVXXXXXXXVVYi.
@@ -113,4 +113,4 @@ iVRMMMMMMMMMMMMMMMMMMMY;IBWWWWMMXYi=;:::::;RBBBMMMMMMMMMMMMMMBBXi,
 ,,,,,,,,,,,,,,,,,,,.....................................,.......,,
 ,,,,,,,,,.,,,,,,,...............................................,,
 itittiiiii+=++=;;=iiiiiiittiiiiii+iii===;++iiitiiiiiii+=====+ii=+i
-*/};})
+*/

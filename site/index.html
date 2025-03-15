@@ -4,6 +4,7 @@
 	<title>[insérer un titre]</title>
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="author" content="moi">
 	<meta name="keywords" content="NSI, Café, J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ">
 	<meta name="description" content="à vérifier">
@@ -31,9 +32,9 @@
 	<link rel="stylesheet" type="text/css" href="ressources/styles/popup.css">
 	<link rel="license" href="../LICENSE"><!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
 	<script src="ressources/scripts/cookies.js" type="text/javascript" defer></script><!--il est recommandé pour certains navigateurs de lier les 
-	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page-->
-	<script type="text/javascript" src="ressources/scripts/navigation.js"></script>
-	<script type="text/javascript" src="ressources/scripts/pasdexplications.js" defer></script>
+	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page, sinon utiliser defer-->
+	<script type="text/javascript" src="ressources/scripts/textbox.js" defer></script>
+	<script type="text/javascript" src="ressources/scripts/pasdexplications.js"></script>
 	<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
 </head>
 <body>
@@ -62,6 +63,7 @@
 				</td>
 			</tr>
 		</table>
+
 		<div id="parking">
 			<label for="parking">Parking de curseurs</label>
 			<input type="text" id="parking" name="parking" placeholder="╔═════════════════╗&NewLine;╚═════════════════╝">
@@ -82,44 +84,62 @@
 		<img class="contours" src="ressources/Images/ERR_CERT_AUTHORITY_INVALID.png" alt="image bidon pour tester les styles" width="380" height="230">
 	</main>
 
-
-	<div id="fermeture" class="popup">	<!--arrière-plan pop-up grisé-->
-		<!--corps de la pop-up-->
-	  <div class="contenu">
-		<h1>Nous respectons votre vie privée</h1>
-		<div class="defilement">	
-			<h4>Introduction</h4>
-			<p>Notre site web, &lt;!-- insérer un nom --&gt; (ci-après : « notre site web ») peut utiliser des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.</p><h4>Que sont les cookies ?</h4>
-			<p>Un cookie est un petit fichier simple envoyé avec les pages de ce site web et stocké par votre navigateur sur le disque dur de votre ordinateur ou d’un autre appareil. Les informations qui y sont stockées peuvent être renvoyées à nos serveurs ou aux serveurs des tierces parties concernées lors d’une visite ultérieure.</p><p>Votre activité sur ce service peut être utilisée pour créer ou améliorer un profil vous concernant à des fins de publicité ou de contenu personnalisé. Les performances de la publicité et du contenu peuvent être mesurées. Des rapports peuvent être générés en fonction de votre activité et de celle des autres. Certains partenaires ne demandent pas votre consentement pour le traitement de vos données, et s'appuient plutôt sur leur intérêt légitime. Consultez notre liste de partenaires pour voir les finalités pour lesquelles ils pensent avoir un intérêt légitime et comment vous pourrez vous y opposer. </p>
-			</div>	
-			<a href="#p2" class="fermer" id="peut-être"> Je choisis car je suis relou</a>
-			<a href="#fermeture" class="fermer" id="croix">&times;</a>
-			<a href="#fermeture" class="fermer" id="oui"> Tout accepter même si je n'ai rien lu</a>
-			<!--ne pas chercher ce bouton ne doit mener nulle-part-->
-			<a href="#" id="non">Tout refuser</a>
-	  </div>
-		  <div id="p2" class="popup">	
-	  <div class="contenu">
-			  <h1>Partenaires pouvant éventuellement consulter vos données</h1>
-			
-			<table><thead><tr><th>partenaire</th><th>données stockées</th><th>procédure pour s'y opposer</th></tr></thead>
-			<tbody><tr><td>Lucifer</td><td>se réserve le droit de prendre l'âme des visiteurs</td><td>faire un cercle de sel<div class="br"></div>(fin de préférence) autour du clavier</td></tr>
-			<td rowspan="4" colspan="2">Ces cases sont actuellement vides, nous sommes à la recherche d'éventuels collaborateurs</td></tr>
-			<tr><td><a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target= "_blank" rel="noopener noreferrer">⎋règlement européen sur la protection des données</a></td></tr></tbody></table>
-			<p>Cette politique de confidentialité a été mise à jour pour la dernière fois le 32 septembre 2024 et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen et du Listenbourg.</p>
-			  <a href="#fermeture" id="bouton1" class="fermer">valider mes choix de gros relou</a>
-	  </div>
-		  </div>
+	<div class="textboxmainholder">
+		<div class="tbcontent">
+			<div class="tbtitle"><h3>Un moment</h3></div>
+			<div class="tbtxt"><span>Assurez vous de bien avoir lu notre politique de confidentialité</span></div>
+	
+			<div class="tbinput">
+				<div class="referenceText" id="referenceText"></div>
+				<textarea name="copy" id="userInput" spellcheck="false" autocapitalize="none" autocomplete="off"></textarea>
+				<button id="validate" class="hidden"><span>Continuer</span></button>
+			</div>
+			<div class="button"><button popovertarget="avertissement">valider</button></div>
+			<div id="avertissement" popover><span>bah non, tu vois bien qu'il faut la recopier, et ne triche pas<a href="redemarrage.html">🫃🏿</a></span></div>
+		</div>
 	</div>
 
+	<div class="pmainholder" id="masquer">
+
+		<div id="fermeture" class="popup">	<!--arrière-plan pop-up grisé-->
+			<!--corps de la pop-up-->
+		<div class="contenu">
+			<h1>Nous respectons votre vie privée</h1>
+			<div class="defilement">	
+				<h4>Introduction</h4>
+				<p>Notre site web, &lt;!-- insérer un nom --&gt; (ci-après : « notre site web ») peut utiliser des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.</p><h4>Que sont les cookies ?</h4>
+				<p>Un cookie est un petit fichier simple envoyé avec les pages de ce site web et stocké par votre navigateur sur le disque dur de votre ordinateur ou d’un autre appareil. Les informations qui y sont stockées peuvent être renvoyées à nos serveurs ou aux serveurs des tierces parties concernées lors d’une visite ultérieure.</p><p>Votre activité sur ce service peut être utilisée pour créer ou améliorer un profil vous concernant à des fins de publicité ou de contenu personnalisé. Les performances de la publicité et du contenu peuvent être mesurées. Des rapports peuvent être générés en fonction de votre activité et de celle des autres. Certains partenaires ne demandent pas votre consentement pour le traitement de vos données, et s'appuient plutôt sur leur intérêt légitime. Consultez notre liste de partenaires pour voir les finalités pour lesquelles ils pensent avoir un intérêt légitime et comment vous pourrez vous y opposer. </p>
+				</div>	
+				<a href="#p2" class="fermer" id="peut-être"> Je choisis car je suis relou</a>
+				<a href="#fermeture" class="fermer" id="croix">&times;</a>
+				<a href="#fermeture" class="fermer" id="oui"> Tout accepter même si je n'ai rien lu</a>
+				<!--ne pas chercher ce bouton ne doit mener nulle-part-->
+				<a href="#" id="non">Tout refuser</a>
+		</div>
+			<div id="p2" class="popup">	
+		<div class="contenu">
+				<h1>Partenaires pouvant éventuellement consulter vos données</h1>
+				
+				<table><thead><tr><th>partenaire</th><th>données stockées</th><th>procédure pour s'y opposer</th></tr></thead>
+				<tbody><tr><td>Lucifer</td><td>se réserve le droit de prendre l'âme des visiteurs</td><td>faire un cercle de sel<div class="br"></div>(fin de préférence) autour du clavier</td></tr>
+				<td rowspan="4" colspan="2">Ces cases sont actuellement vides, nous sommes à la recherche d'éventuels collaborateurs</td></tr>
+				<tr><td><a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target= "_blank" rel="noopener noreferrer">⎋règlement européen sur la protection des données</a></td></tr></tbody></table>
+				<p>Cette politique de confidentialité a été mise à jour pour la dernière fois le 32 septembre 2024 et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen et du Listenbourg.</p>
+				<a href="#fermeture" id="bouton1" class="fermer">valider mes choix de gros relou</a>
+		</div>
+			</div>
+		</div>
+
+	</div>
 	<footer>
-		<a href="index.html"><img src="ressources/favicon/favicon-16x16.png" width="16" height="16" alt="logo du site"></a>
-		<a href="http://certainementalentour.github.io/site" target="_blank" rel="noopener noreferrer">© 2025</a>
-		<a href="/site/index.html">Privacy</a>
-		<a href="http://genesis.market" target="_blank" rel="noopener noreferrer">Contact</a>
-		<button><span>Manage cookies</span></button>
-		<button onclick="document.getElementById('popupDoNotShare').style.display"><span>Do not share my personal information</span></button>
-	</footer>
+		<footer>
+			<a href="index.html#masquer"><img src="ressources/favicon/favicon-16x16.png" width="16" height="16" alt="logo du site"></a>
+			<a href="http://certainementalentour.github.io/site" target="_blank" rel="noopener noreferrer">© 2025</a>
+			<a href="/site/index.html">Privacy</a>
+			<a href="http://genesis.market" target="_blank" rel="noopener noreferrer">Contact</a>
+			<button><a href="index.html"><span>Manage cookies</span></a></button>
+			<button onclick="document.getElementsByClassName('textboxmainholder')[0].style.display='flex'"><span>Do not share my personal information</span></button>
+		</footer>
 </body>
 </html>
 

@@ -24,7 +24,8 @@
 body {
 	width: 100dvw;
 	height: 100dvh;
-	font-family: Salsa;
+	min-height: 100dvh;
+	font-family: Salsa; /* à changer, j'en ai mis plein si besoin */
 	font-display: block; /*bloque le chargement de la page tant que la police n'est pas téléchargée*/
 	overflow-x: hidden; /*empêche le défilement horizontal*/
 	scrollbar-width: none;
@@ -93,11 +94,11 @@ a:visited {
 	background-color: #b3a267;
 }
 
-h3 {
+.FondClassique h3 {
 	color: #bfff50;
-		text-align: center;
-		font-family: 'Sevillana';
-		font-size: 40px;
+	text-align: center;
+	font-family: 'Sevillana';
+	font-size: 40px;
 }
 
 h4 {

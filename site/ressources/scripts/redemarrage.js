@@ -90,8 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateProgress();
 });
 
-
-
 /*
 var count=0;
 var p=setInterval(p, 10000);

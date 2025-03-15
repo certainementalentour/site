@@ -6,7 +6,7 @@ document.addEventListener('contextmenu', (event) => {
   
 // Et les touches
 document.addEventListener('keydown', (event) => {
-	const allowedKeys = ["none"];
+	const allowedKeys = ["Tab"];
 
 	if (!allowedKeys.includes(event.key)) {
 		event.preventDefault();
