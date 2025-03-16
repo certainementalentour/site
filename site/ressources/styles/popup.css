@@ -135,6 +135,11 @@ $F		`'	  <!			   !!!			   !!>	!!
 																		`?
 */
 
+::-webkit-scrollbar {
+	width: 0;
+	display: none;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
