@@ -12,6 +12,7 @@
     <script type="text/javascript" src="ressources/scripts/navigation.js"></script>
 	<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="ressources/styles/style.css">
     <link rel="stylesheet" type="text/css" href="ressources/styles/styles_fabrication.css">
 </head>
@@ -88,13 +89,13 @@
                 Quel que soit le traitement choisi, une fois la pulpe enlevée, les grains doivent être séchés pour réduire leur teneur en eau à environ 10-12%. Un séchage correct est essentiel pour éviter les moisissures et assurer la conservation des grains.
         </div>
     </div>
-
+<!-- fleche entre décorticage et torréfaction -->
     <svg width="100%" height="100px" viewBox="0 0 100% 100">
         <!-- Courbe -->
-        <path d="M 150,0 C 150,50 150,80 150,80" stroke="#FFE693" fill="transparent" stroke-width="50" />
+        <path d="M 150,0 C 150,50 150,80 150,80" stroke="#FFE693" fill="transparent" stroke-width="30" />
         
         <!-- Pointe de flèche -->
-        <polygon points="100,80 200,80 150,100" fill="#FFE693" />
+        <polygon points="110,80 190,80 150,100" fill="#FFE693" />
     </svg>
 
     <div class="FlexLigne">
@@ -102,6 +103,7 @@
             <h3 class="TitreInfo2">La torréfaction</h3>
             <p class="TexteInfo">Une fois triés et nettoyés, les grains de café verts sont prêts à être torréfiés. La torréfaction est l’étape qui transforme les grains de café verts en grains brun foncé prêts à être moulus. Elle est cruciale pour le goût final du café.</p>
         </div>
+<!-- flèche entre la torréfaction et le processus de torréfaction -->
         <svg width="400" height="150" viewBox="0 0 100 100">
             <!-- Courbe -->
             <path d="M 0,60 C 50,60 50,60 80,60" stroke="#FFE693" fill="transparent" stroke-width="20" />
@@ -162,24 +164,20 @@
             </div>
         </div>
     </div>
-
-    <footer style="margin-bottom:150px;"> <!-- La marge est un bidouillage pour voir les bouton avec le terminal -->
-        <nav class="footer-nav">
-            <button type="button" onclick="previousPage()">
-                <img src="ressources/Images/BoutonPrecedent.png" alt="Suivant" width="367" height="117"> <!-- Ce n'est pas une inversion, ça apprendra aux visiteur à charger le css-->
-            </button>
-            <button type="button" onclick="nextPage()">
-                <img src="ressources/Images/BoutonSuivant.png" alt="Précédent" width="367" height="117">
-            </button>
-        </nav>
-    </footer>
+<footer>
     <div class="Terminal">
             Toujours en projet ? oui il fallait juste que je finisse la page
             En gros il faut faire des commandes pour faire bouger l'image d'une étape à l'autre. Il faut changer l'image en fonction des étapes. (évidement ne met pas l'image sur le texte pour pouvoir lire et fais les passer sur les flèches)
+    
+
+        <nav>
+            <div id="BoutonPrecedent"><button type="button" onclick="previousPage()"><i class="fa-solid fa-circle-left"></i></button></div>
+            <div id="BoutonSuivant"><button type="button" onclick="nextPage()"><i class="fa-solid fa-circle-right"></i></button></div>
+        </nav>
     </div>
+</footer>
 </body>
 </html>
-
 
 
     <!-- Si on n'arrive pas à gérer les tailles des écrans, on insère des images

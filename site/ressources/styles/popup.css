@@ -205,6 +205,10 @@ td a {
 	size: .9em;
 }
 
+a:visited {
+	color: coral;
+}
+
 .pmainholder, .textboxmainholder {
 	position: fixed;
 	display: flex;
@@ -214,11 +218,6 @@ td a {
 	height: 100%;
 	justify-content: center;
 	align-items: center;
-}
-
-.pmainholder {
-	background: white;
-	z-index: 100000;
 }
 
 .textboxmainholder {
@@ -245,7 +244,7 @@ td a {
 }
 
 .tbtitle {
-	font-family: 'Fira Code', verdana;
+	font-family: verdana;
 	font-size: 40px;
 	color: orangered;
 	text-align: center;
@@ -256,10 +255,12 @@ td a {
 	text-align: center;
 	max-height: 120px;
 	flex-shrink: 4;
+	margin-bottom: none;
 }
 .tbtxt span {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: #313132;
+	font-size: 20px;
 }
 
 .tbinput {
@@ -319,7 +320,6 @@ td a {
 }
 
 .button {
-
 	align-self: flex-end;
 	flex-basis: 0%;
 	margin-left: auto; /* Aligne à droite dans un monde parfait */
@@ -342,51 +342,6 @@ td a {
 
 .hidden {
 	display: none;
-}
-
-.popup {
-	visibility: visible;
-	opacity: 1;
-	position: sticky;
-	top: 10;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(77, 77, 77, 1);
-}
-
-.popup:target {
-	display: none;
-	opacity: 0;
-}
-
-.popup a {
-	text-decoration: none;
-	font-family: 'Segoe-Boot-Semilight';
-}
-
-.popup h1 {
-	color: white;
-	font-size: 25px;
-}
-
-.contenu {
-	border-radius: 7px;
-	position: sticky;
-	top: 10px;
-	height: 650px;
-	width: 600px;
-	background: #131416;
-	padding: 24px 32px;
-	color: white;
-}
-
-.contenu.defilement {
-	height: 20%;
-	overflow: hidden;
 }
 
 .mesloLGS {
@@ -423,114 +378,9 @@ td a {
 	border-radius: 5px;
 }
 
-#masquer:target {
-	display: none;
-}
-
-#croix {
-	position: absolute;
-	top: 2em;
-	right: 2em;
-	color: green;
-	background-color: #131416;
-	transition-duration: 0.8s;
-	border-radius: 20px;
-	text-decoration: none;
-	padding: 20px 22px;
-	font-size: xx-small;
-}
-
-#croix:hover {
-	background-color: #04AA6D;
-	color: #131416;
-}
-
-#peut-être {
-	color: black;
-}
-
-#bouton1 {
-	text-align: center;
-	text-decoration: none;
-	color: ghostwhite;
-	border-radius: 18px;
-	padding: 10px;
-	background: green;
-	box-shadow: 2px 4px #59595F;
-	display: block;
-}
-
-#bouton1:hover {
-	background: darkgreen;
-	box-shadow: 2px 4px #313132;
-	transition-duration: .4s;
-}
-
-#bouton1:active {
-	box-shadow: 1px 2px #313132;
-	translate: 1px 2px;
-}
-
-#page2 {
-	display: none;
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	align-items: center;
-	background: rgba(77, 77, 77, 1);
-	height: 100dvh;
-}
-
-#page2:target {
-	visibility: visible;
-	opacity: 1;
-}
-
-#oui, #non {
-	position: absolute;
-	bottom: 10px;
-	text-decoration: none;
-	color: whitesmoke;
-	background: darkred;
-	border-radius: 7px;
-	box-shadow: 0px 8px #59595F;
-	padding: 3px 1em;
-	margin-bottom: 2%;
-	transition-duration: .3s;
-	z-index: 11001;
-}
-
-#non {
-	left: 7px;
-	margin-left: 4%;
-}
-
-#oui {
-	right: 7px;
-	margin-right: 4%;
-}
-
-#oui:active, #non:active {
-	background: darkred;
-	box-shadow: 0px 5px #313132;
-	transform: translateY(3px);
-}
-
 #parking {
 	display: block;
 	line-height: .2em;
-}
-
-#fermeture {
-	size: 100%;
-}
-
-#fermeture:target {
-	size: 0%;
 }
 
 #elementCasse button {
@@ -539,10 +389,6 @@ td a {
 
 #elementCasse kbd {
 	font-style: oblique;
-}
-
-#masquer:target {
-	display: none;
 }
 
 #avertissement {
@@ -560,3 +406,173 @@ td a {
 	font-size: 15px;
 	box-shadow: 0px 8px #59595F;
 }
+
+
+
+
+.pmainholder {
+	background: white;
+	z-index: 1;
+}
+
+	#masquer:target {
+		display: none;
+		opacity: 0;
+	}
+
+	#page1, #page2 {
+		display: flex;
+		font-family: 'Segoe-Boot-Semilight', auto;
+		align-items: center;
+		background: grey;
+		border-radius: 7px;
+		color: white;
+		height: 75%;
+		width: 80%;
+		position: absolute;
+		top: 12.5%;
+		left: 10%;
+	}
+
+	#page1 {
+		display: block;
+	}
+
+	#page2 {
+		display: none;
+		opacity: 0;
+		z-index: 222;
+	}
+	#page2:target {
+		display: block;
+		opacity: 1;
+		z-index: 2;
+	}
+
+	#page1 .content, #page2 .content {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.boutons {
+		display: flex;
+		align-self: flex-end;
+		flex-direction: row;
+		margin-bottom: 8px;
+		width: 100%;
+		flex-grow: 0;
+		flex-basis: default;
+	}
+		#ok, #non, #valider {
+			font-size: 18px;
+			border: 1px solid white;
+			background: black;
+			color: white;
+			cursor: grab;
+			border-radius: 5px;
+			user-select: none;
+			box-shadow: 0px 8px #59595F;
+		}
+
+		#ok:active, #non:active, #valider:active{
+			box-shadow: 0px 5px #313132;
+			transform: translateY(3px);
+		}
+
+		#non {
+			margin-left: 25px;
+			margin-right: auto;
+		}
+		
+		#ok {
+			margin-left: auto;
+			margin-right: 25px;
+		}
+
+		#valider {
+			margin-left: auto;
+			margin-right: 25px;
+			position: relative;
+			bottom: 0;
+			right: 0;
+		}
+		
+		.boutons div {
+			padding: 10px 20px;
+		}
+
+		.pmainholder .content button a {
+			color: inherit;
+			cursor: inherit;
+			font-family: 'Fira Code';
+		}
+	#croix {
+		font-size: xx-small;
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		color: green;
+		border: none;
+		background: none;
+		border-radius: 50%;
+		padding: 17px 20px;
+		font-family: monospace;
+	}
+	#croix:hover {
+		background-color: green;
+		color: white;
+	}
+	#plus {
+		background: none;
+		border: none;
+		color: rgb(97, 97, 97);
+		cursor: default;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-top: auto;
+		align-self: flex-end;
+		font-size: 12px;
+		display: inline;
+	}
+
+	.messagepage2, .messagepage1 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 4;
+	}
+	.messagepage2 table {
+		width: 70%;
+		border-radius: 5px;
+		text-align: center;
+		border: 1px double black;
+		border-collapse: collapse;
+		background: radial-gradient(circle, rgba(0,80,255,.1) 0%, rgba(20,9,110,.4) 35%, rgba(30,25,36,1) 100%);
+	}
+	.messagepage2 table thead {
+		font-size: 25px;
+	}
+	.messagepage2 table tbody {
+		font-size: 20px;
+	}
+	.messagepage2 table th, .messagepage2 table td {
+		padding: 20px;
+		border: 1px solid #313132;
+	}
+	.messagepage2 p {
+		font-size: 20px;
+		width: 60%;
+		text-align: center;
+		color: beige;
+	}
+	.messagepage2 h1 {
+		color: #313132;
+	}
+
+	.messagepage1 .defilement {
+		width: 80%;
+	}
