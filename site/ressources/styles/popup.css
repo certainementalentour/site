@@ -241,6 +241,10 @@ a:visited {
 	overflow: hidden;
 	padding: 20px;
 	flex-direction: column;
+	max-width: 1200px;
+	max-height: 800px;
+	min-width: calc(725px + 20em);
+	min-height: calc(350px + 15em);
 }
 
 .tbtitle {
@@ -413,6 +417,7 @@ a:visited {
 .pmainholder {
 	background: white;
 	z-index: 1;
+	user-select: none;
 }
 
 	#masquer:target {
@@ -432,6 +437,9 @@ a:visited {
 		position: absolute;
 		top: 12.5%;
 		left: 10%;
+		min-height: 625px;
+		min-width: 1100px;
+
 	}
 
 	#page1 {
