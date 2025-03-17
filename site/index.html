@@ -27,12 +27,14 @@
 	<meta name="msapplication-TileImage" content="ressources/favicon/ms-icon-144x144.png" />
 	<meta name="theme-color" content="#ffffff" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="ressources/styles/fakerecaptcha.css">
 	<link rel="stylesheet" type="text/css" href="ressources/styles/style.css" />
 	<link rel="stylesheet" type="text/css" href="ressources/styles/popup.css" />
 	<link rel="license" href="../LICENSE"><!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
 	<script src="ressources/scripts/cookies.js" type="text/javascript" defer></script><!--il est recommandé pour certains navigateurs de lier les 
 	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page, sinon utiliser defer-->
 	<script type="text/javascript" src="ressources/scripts/textbox.js" defer></script>
+	<script type="text/javascript" src="ressources/scripts/fakerecaptcha.js" defer></script>
 	<script type="text/javascript" src="ressources/scripts/pasdexplications.js"></script>
 	<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
 </head>
@@ -61,6 +63,43 @@
 			</tr>
 		</table>
 
+
+		 <div id="reCAPTCHA" class="fkrc-container fkrc-m-p">
+			<!-- checkbox -->
+			<div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block">
+				<div class="fkrc-checkbox-container fkrc-m-p">
+					<button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
+				</div>
+				<p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">I'm not a robot</p>
+				<img src="ressources/Images/captcha_logo.svg" class="fkrc-captcha-logo fkrc-line-normal">
+				<p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">reCAPTCHA</p>
+				<p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
+				<img src="ressources/Images/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" id="fkrc-spinner">
+			</div>
+			<!-- checkbox verification -->
+			<div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
+				<div class="fkrc-verifywin-container">
+					<div class="fkrc-verifywin-header">
+						<span class="fkrc-verifywin-header-text-medium fkrc-m-p fkrc-block">petit titre</span>
+						<span class="fkrc-verifywin-header-text-big fkrc-m-p fkrc-block">plus grand</span>
+						<span class="fkrc-verifywin-header-text-medium fkrc-m-p fkrc-block">de nouveau petit</span>
+					</div>
+					<div class="fkrc-verifywin-main">
+						Placer des trucs
+					</div>
+				</div>
+				<div class="fkrc-verifywin-container fkrc-verifywin-footer">
+					<div class="fkrc-verifywin-footer-left">
+						Press the verify button to proceed.
+					</div>
+					<button type="button" class="fkrc-verifywin-verify-button fkrc-block" id="fkrc-verifywin-verify-button">Verify</button>
+				</div>
+			</div>
+			<img src="ressources/Images/captcha_arrow.svg" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
+		</div>
+	
+
+
 		<div id="parking">
 			<label for="parking">Parking de curseurs</label>
 			<input type="text" id="parking" name="parking" placeholder="╔═════════════════╗&NewLine;╚═════════════════╝">
@@ -76,8 +115,15 @@
 			<p class="mesloLGS">溜 樂 縷                               </p>
 		</div>
 
-		<button id="lebouton"><span class="mesloLGS"></span></button>
-		<button class="btn"><i class="fa fa-download"></i><a href="ressources/MiniPrince-Windows.zip" download="J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ"> truc secret</a></button>
+		<button id="lebouton">
+			<span class="mesloLGS"></span>
+		</button>
+
+		<button class="btn">
+			<i class="fa fa-download"></i>
+			<a href="ressources/MiniPrince-Windows.zip" download="J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ"> truc secret</a>
+		</button>
+
 		<img class="contours" src="ressources/Images/ERR_CERT_AUTHORITY_INVALID.png" alt="image bidon pour tester les styles" width="380" height="230">
 	</main>
 	<div class="textboxmainholder">
@@ -122,7 +168,7 @@
 				<div class="messagepage2">
 					<h1>Partenaires pouvant éventuellement consulter vos données</h1>
 					
-					<table>
+					<table class="nav">
 						<thead>
 							<tr>
 								<th>partenaire</th>
