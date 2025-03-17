@@ -20,9 +20,40 @@
 <body class="FondClassique">
     <header><h1>La fabrication du café</h1></header>
     <div class="FlexLigne">
-        <svg width="20%" height="100%" viewBox="0 0 100 200">
-            <polygon points="40,100 100,50 100,70 40,100 100,130 100,150" fill="#FFE693" />
-        </svg>
+        <div style="width: 20%;" id="conteuneurSVG">
+            <svg width="100" height="100" viewBox="0 0 100 200" id="SVG">
+                <polygon points="40,100 100,50 100,70 40,100 100,130 100,150" fill="#FFE693"/>
+            </svg>
+        </div><!-- jsp insérer un script. En plus il marche pas -->
+        <script>
+            function updatePolygon() {
+                const conteuneurSVG = document.getElementById('conteuneurSVG');
+                const svg = document.getElementById('SVG');
+                const width = conteuneurSVG.clientWidth;
+                const height = conteuneurSVG.clientHeight;
+
+                const points = [
+                    { x: Maths.round(width * 0.4), y: Maths.round(height * 0.5) },
+                    { x: Maths.round(width * 1), y: Maths.round(height * 0.25) },
+                    { x: Maths.round(width * 1), y: Maths.round(height * 0.7) },
+                    { x: Maths.round(width * 0.4), y: Maths.round(height * 0.5) },
+                    { x: Maths.round(width * 1), y: Maths.round(height * 0.65) },
+                    { x: Maths.round(width * 1), y: Maths.round(height * 0.75) }
+                ];
+        
+                const Coordonnees = points.map(point => `${point.x},${point.y}`).join(' '); //faire des arrondis à l'unité
+        
+                // Mettre à jour les coordonnées du polygone
+                svg.innerHTML = `<polygon points="${Coordonnees}" fill="#FFE693"/>`;
+            }
+        
+            // Mettre à jour le polygone lors du chargement de la page
+            window.onload = updatePolygon;
+        
+            // Recalculer le polygone lors du redimensionnement de la fenêtre
+            window.onresize = updatePolygon;
+        </script>
+
         <div class="DivLavage">
             <div class="FlexLigne">
                 <div class="DivLavageImage">
