@@ -74,7 +74,7 @@ footer {
 	flex-direction: row;
 	position: relative;
 	flex-shrink: 0;
-	gap: 20px; /* espacement des boutons */
+	gap: 20px; 
 }
 
 footer nav button {

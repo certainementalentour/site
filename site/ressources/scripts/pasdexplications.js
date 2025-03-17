@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						son2.play();
 					}
 
-					bouton.innerHTML = '<img src="ressources/images/png.png" width="132" height="150">';
+					bouton.innerHTML = '<img src="ressources/Images/png.png" width="132" height="150">';
 				};
 			}
 		}, 2000);
