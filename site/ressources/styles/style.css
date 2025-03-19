@@ -106,6 +106,8 @@ a:visited {
 	color: gray;
 }
 
+em { font-style: normal;}
+
 .FondClassique {
 	background-color: #b3a267;
 }

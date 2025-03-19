@@ -184,7 +184,7 @@ footer button:hover {
 	transform: scale(1.1, 1.3);
 }
 table.nav {
-	max-height: 2px;
+	border-spacing: 5px 0;
 }
 strong {
 	margin-top: auto;
@@ -284,7 +284,6 @@ a:visited {
 	z-index: 1;
 }
 .referenceText, .tbinput textarea {
-	white-space: pre-wrap;
 	text-align: left;
 	font-size: 18px;
 	line-height: 1.5;
@@ -307,9 +306,6 @@ a:visited {
 .referenceText {
 	color: rgba(0, 0, 0, 0.3);
 	pointer-events: none;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
 }
 
 .tbinput textarea {
@@ -318,9 +314,6 @@ a:visited {
 	color: black;
 	caret-color: violet;
 	z-index: 1;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
 }
 
 .incorrect {
@@ -360,7 +353,6 @@ a:visited {
 
 .btn {
 	flex-grow: 0;
-	order: 5;
 	background-color: azure;
 	border: none;
 	color: none;

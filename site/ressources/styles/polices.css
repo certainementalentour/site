@@ -181,6 +181,13 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Roboto';
+	src:url('../polices/Roboto/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
 /*
 'Segoe-Boot-Semilight'
 'Fira Code' 300; 400; 500; 600; 700

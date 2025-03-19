@@ -1,5 +1,7 @@
+@import url('polices.css');
+
 .fkrc-container {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto';
 }
 
 .fkrc-m-p {
@@ -163,4 +165,10 @@
     border: none;
     outline: none;
     cursor:pointer;
+}
+
+.fkrc-verifywin-main button#close2025 {
+    border: none;
+    background: none;
+    color: #737373;
 }

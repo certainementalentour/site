@@ -19,6 +19,8 @@ const checkboxBtnSpinner = document.getElementById("fkrc-spinner");
 const verifyWindow = document.getElementById("fkrc-verifywin-window");
 /** @type {HTMLElement | null} */
 const verifyWindowArrow = document.getElementById("fkrc-verifywin-window-arrow");
+/** @type {HTMLElement | null} */
+const close2025Btn = document.getElementById("close2025");
 
 // Le paragraphe qui suit contient des horreurs incompréhensibles, mais tant que ca marche...
 const rawVerifyBtn = document.getElementById("fkrc-verifywin-verify-button");
@@ -35,7 +37,7 @@ const checkboxBtn = rawCheckboxBtn;
 
 /** @returns {void} */
 function addCaptchaListeners() {
-	if (checkboxBtn && verifyBtn) {
+	if (checkboxBtn && verifyBtn && close2025Btn) {
 		document.addEventListener("click", function (event) {
 			if (event.composedPath && verifyWindow && !event.composedPath().includes(verifyWindow) && isVerifyWindowVisible()){
 				closeVerifyWindow();
@@ -51,6 +53,10 @@ function addCaptchaListeners() {
 			checkboxBtn.disabled = true;
 			runClickedCheckboxEffects();
 		});
+		close2025Btn.addEventListener("click", function (event) {
+			event.preventDefault();
+			closeCaptcha();
+		})
 	}
 }
 addCaptchaListeners();
@@ -150,4 +156,9 @@ function closeVerifyWindow() {
 /** @returns {boolean} */
 function isVerifyWindowVisible() {
 	return verifyWindow ? verifyWindow.style.display !== "none" && verifyWindow.style.display !== "" : false;
+}
+
+/** @returns {void} */
+function closeCaptcha() {
+	closeVerifyWindow();
 }
