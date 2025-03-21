@@ -2,7 +2,7 @@
 
 
 /** @type {HTMLDivElement | null} */
-const terminal = document.querySelector(".TerminalContent");
+const terminal = document.querySelector(".console");
 const rawinputField = document.getElementById("userInput");
 if (!(rawinputField instanceof HTMLTextAreaElement)) {throw new Error("problème");}
 const inputField = rawinputField;
