@@ -84,74 +84,80 @@ const animation = frames1;
 let index = 0;
 const interval = 100; // Intervalle entre chaque image en ms
 
+console.log("Animation:", animation);
 function changeFavicon() {
 
 	console.log("Index : " + index);
 
-  const img = new Image();
-  img.src = animation[index];
-  img.crossOrigin = "anonymous"; // Évite les problèmes si les images viennent d'un autre domaine
+	if (index < 0 || index >= animation.length) {
+		console.error("Index invalide:", index);
+		return;
+	}
 
-  img.onload = () => {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");  // contexte
+	const img = new Image();
+	img.src = animation[index];
+	img.crossOrigin = "anonymous"; // Évite les problèmes si les images viennent d'un autre domaine
+
+	img.onload = () => {
+	const canvas = document.createElement("canvas");
+	const ctx = canvas.getContext("2d");  // contexte
 	if (!ctx) return;
 
-    const size = 64; // Taille du favicon
-    canvas.width = size;
-    canvas.height = size;
+	const size = 64; // Taille du favicon
+	canvas.width = size;
+	canvas.height = size;
 
-    // Dessiner l'arrondi
-    ctx.beginPath();
-    ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-    ctx.closePath();
-    ctx.clip();
+	// Dessiner l'arrondi
+	ctx.beginPath();
+	ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+	ctx.closePath();
+	ctx.clip();
 
-    // Dessiner l'image
-    ctx.drawImage(img, 0, 0, size, size);
+	// Dessiner l'image
+	ctx.drawImage(img, 0, 0, size, size);
 
-    // Supprimer l'ancien favicon
+	// Supprimer l'ancien favicon
 	/** @type {HTMLLinkElement|null} */
-    let link = document.querySelector("link[rel='icon']");
-    if (!(link instanceof HTMLLinkElement)) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.head.appendChild(link);
-    }
-    link.href = canvas.toDataURL("image/png");
-  };
+	let link = document.querySelector("link[rel='icon']");
+	if (!(link instanceof HTMLLinkElement)) {
+		link = document.createElement("link");
+		link.rel = "icon";
+		document.head.appendChild(link);
+	}
+	link.href = canvas.toDataURL("image/png");
+};
 
-  index = (index + 1) % animation.length;
+	index = (index + 1) % animation.length;
 }
 
 setInterval(changeFavicon, interval);
 
 /*
-                      _____
-                   ,-'     `._
-                 ,'           `.        ,-.
-               ,'               \       ),.\
-     ,.       /                  \     /(  \;
-    /'\\     ,o.        ,ooooo.   \  ,'  `-')
-    )) )`. d8P"Y8.    ,8P"""""Y8.  `'  .--"'
-   (`-'   `Y'  `Y8    dP       `'     /
-    `----.(   __ `    ,' ,---.       (
-           ),--.`.   (  ;,---.        )
-          / \O_,' )   \  \O_,'        |
-         ;  `-- ,'       `---'        |
-         |    -'         `.           |
-        _;    ,            )          :
-     _.'|     `.:._   ,.::" `..       |
-  --'   |   .'     """         `      |`.
-        |  :;      :   :     _.       |`.`.-'--.
-        |  ' .     :   :__.,'|/       |  \
-        `     \--.__.-'|_|_|-/        /   )
-         \     \_   `--^"__,'        ,    |
-   -hrr- ;  `    `--^---'          ,'     |
-          \  `                    /      /
-           \   `    _ _          /
-            \           `       /
-             \           '    ,'
-              `.       ,   _,'
-                `-.___.---'
+					  _____
+				   ,-'	 `._
+				 ,'		   `.		,-.
+			   ,'			   \	   ),.\
+	 ,.	   /				  \	 /(  \;
+	/'\\	 ,o.		,ooooo.   \  ,'  `-')
+	)) )`. d8P"Y8.	,8P"""""Y8.  `'  .--"'
+   (`-'   `Y'  `Y8	dP	   `'	 /
+	`----.(   __ `	,' ,---.	   (
+		   ),--.`.   (  ;,---.		)
+		  / \O_,' )   \  \O_,'		|
+		 ;  `-- ,'	   `---'		|
+		 |	-'		 `.		   |
+		_;	,			)		  :
+	 _.'|	 `.:._   ,.::" `..	   |
+  --'   |   .'	 """		 `	  |`.
+		|  :;	  :   :	 _.	   |`.`.-'--.
+		|  ' .	 :   :__.,'|/	   |  \
+		`	 \--.__.-'|_|_|-/		/   )
+		 \	 \_   `--^"__,'		,	|
+   -hrr- ;  `	`--^---'		  ,'	 |
+		  \  `					/	  /
+		   \   `	_ _		  /
+			\		   `	   /
+			 \		   '	,'
+			  `.	   ,   _,'
+				`-.___.---'
 */
