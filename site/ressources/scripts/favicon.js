@@ -121,7 +121,7 @@ function changeFavicon() {
     link.href = canvas.toDataURL("image/png");
   };
 
-  index = (index + 1) % frames.length;
+  index = (index + 1) % animation.length;
 }
 
 setInterval(changeFavicon, interval);
