@@ -84,15 +84,10 @@ const animation = frames1;
 let index = 0;
 const interval = 100; // Intervalle entre chaque image en ms
 
-console.log("Animation:", animation);
+
 function changeFavicon() {
 
-	console.log("Index : " + index);
 
-	if (index < 0 || index >= animation.length) {
-		console.error("Index invalide:", index);
-		return;
-	}
 
 	const img = new Image();
 	img.src = animation[index];
@@ -133,31 +128,31 @@ function changeFavicon() {
 setInterval(changeFavicon, interval);
 
 /*
-					  _____
-				   ,-'	 `._
-				 ,'		   `.		,-.
-			   ,'			   \	   ),.\
-	 ,.	   /				  \	 /(  \;
-	/'\\	 ,o.		,ooooo.   \  ,'  `-')
-	)) )`. d8P"Y8.	,8P"""""Y8.  `'  .--"'
-   (`-'   `Y'  `Y8	dP	   `'	 /
-	`----.(   __ `	,' ,---.	   (
-		   ),--.`.   (  ;,---.		)
-		  / \O_,' )   \  \O_,'		|
-		 ;  `-- ,'	   `---'		|
-		 |	-'		 `.		   |
-		_;	,			)		  :
-	 _.'|	 `.:._   ,.::" `..	   |
-  --'   |   .'	 """		 `	  |`.
-		|  :;	  :   :	 _.	   |`.`.-'--.
-		|  ' .	 :   :__.,'|/	   |  \
-		`	 \--.__.-'|_|_|-/		/   )
-		 \	 \_   `--^"__,'		,	|
-   -hrr- ;  `	`--^---'		  ,'	 |
-		  \  `					/	  /
-		   \   `	_ _		  /
-			\		   `	   /
-			 \		   '	,'
-			  `.	   ,   _,'
-				`-.___.---'
+                      _____
+                   ,-'     `._
+                 ,'           `.        ,-.
+               ,'               \       ),.\
+     ,.       /                  \     /(  \;
+    /'\\     ,o.        ,ooooo.   \  ,'  `-')
+    )) )`. d8P"Y8.    ,8P"""""Y8.  `'  .--"'
+   (`-'   `Y'  `Y8    dP       `'     /
+    `----.(   __ `    ,' ,---.       (
+           ),--.`.   (  ;,---.        )
+          / \O_,' )   \  \O_,'        |
+         ;  `-- ,'       `---'        |
+         |    -'         `.           |
+        _;    ,            )          :
+     _.'|     `.:._   ,.::" `..       |
+  --'   |   .'     """         `      |`.
+        |  :;      :   :     _.       |`.`.-'--.
+        |  ' .     :   :__.,'|/       |  \
+        `     \--.__.-'|_|_|-/        /   )
+         \     \_   `--^"__,'        ,    |
+   -hrr- ;  `    `--^---'          ,'     |
+          \  `                    /      /
+           \   `    _ _          /
+            \           `       /
+             \           '    ,'
+              `.       ,   _,'
+                `-.___.---'
 */
