@@ -47,6 +47,10 @@ h3 {
     height: 100%;
 }
 
+.Decalage {
+    width: 20%;
+}
+
 .DivLavageTexte {
     text-align: justify;
     background: #ffffff;
