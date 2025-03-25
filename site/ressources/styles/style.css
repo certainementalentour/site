@@ -208,3 +208,7 @@ li {
 	animation: animationFondImages 120s ease infinite;
 	user-select: none;
 }
+
+.mesloLGS {
+	font-family: 'mesloLGS';
+}

@@ -2,15 +2,14 @@
 
 /** @returns {void} */
 function verifyCaptcha() {
-
-	alert("Verified!");
 	closeVerifyWindow();
-
+	hideReCaptcha();
+/*	alert("Verified!"); */
 }
 
 
-
-
+/** @type {HTMLElement | null} */
+const reCAPTCHA = document.getElementById("reCAPTCHA");
 /** @type {HTMLElement | null} */
 const checkboxWindow = document.getElementById("fkrc-checkbox-window");
 /** @type {HTMLElement | null} */
@@ -110,25 +109,31 @@ function hideCaptchaLoading() {
 
 /** @returns {void} */
 function showVerifyWindow() {
-	if (!verifyWindow || !checkboxWindow || !verifyWindowArrow) return;
+	if (!verifyWindow || !checkboxWindow || !verifyWindowArrow) return; //vérifications ts, s'assurer que tous les éléments soient présents
+
+	const verifyWindowHeight = verifyWindow.offsetHeight;
+	const arrowVerticalCenter = checkboxWindow.offsetTop + 30;  //+30 car on a déjà bougé le curseur
+
 	Object.assign(verifyWindow.style, {
 		display: "block",
 		visibility: "visible",
 		opacity: "1",
-		top: `${checkboxWindow.offsetTop - 80}px`,
-		left: `${checkboxWindow.offsetLeft +50}px`,
+		top: `${arrowVerticalCenter - verifyWindowHeight / 2}px`,    // ça représente le positionnement de la pop-up par rapport à la case à cocher
+		left: `${checkboxWindow.offsetLeft +55}px`,   				//  Position non mise à jour après un déplacement (visuel) de la case (zoom) 
 	});
 
    if (verifyWindow.offsetTop < 5) {
+	// s'assurer que la fenêtre ne soit pas trop haute
 	   verifyWindow.style.top = "5px";
    }
 
    if (verifyWindow.offsetLeft + verifyWindow.offsetWidth > window.innerWidth - 10) {
+	// ou trop à droite
 	   verifyWindow.style.left =  `${checkboxWindow.offsetLeft - 8}px`;
    } else {
 		Object.assign(verifyWindowArrow.style, {
-			top: `${checkboxWindow.offsetTop + 24}px`,
-			left: `${checkboxWindow.offsetLeft + 45}px`,
+			top: `${checkboxWindow.offsetTop + 30}px`,
+			left: `${checkboxWindow.offsetLeft + 45}px`,  // Et on place le triangle 45 px à droite de la case à cocher, afin de ne pas se superposer
 			visibility: "visible",
 			opacity: "1",
 		});
@@ -161,4 +166,14 @@ function isVerifyWindowVisible() {
 /** @returns {void} */
 function closeCaptcha() {
 	closeVerifyWindow();
+}
+
+/** @returns {void} */
+function hideReCaptcha() {
+	if (!reCAPTCHA) return;
+	Object.assign(reCAPTCHA.style, {
+		display: "none",
+		visibility: "hidden",
+		opacity: "0",
+	});
 }

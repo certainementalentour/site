@@ -37,15 +37,19 @@
 	<script type="text/javascript" src="ressources/scripts/fakerecaptcha.js" defer></script>
 	<script type="text/javascript" src="ressources/scripts/pasdexplications.js"></script>
 	<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
-		<h1><em>INDEX</em></h1>
+		<h1><em>INDEX</em><i class="fa-solid fa-cat fa-spin-pulse"></i></h1>
 		<audio id="son" src="ressources/sons/tkt.mp3" preload="auto"></audio>
 		<audio id="son2" src="ressources/sons/son2.mp3" preload="auto"></audio>
 	</header>
 	<div id="elementCasse">
-		<button popover id="boutonMAJ"><span>Réparer le site en appuyant sur <kbd>Alt + F4</kbd></span></button>
+		<button popover id="boutonMAJ">
+			<span>Réparer le site en appuyant sur <kbd>Alt + F4</kbd>
+			</span>
+		</button>
 	</div>
 	<main>
 		<table class="mesloLGS">
@@ -76,7 +80,7 @@
 				<p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
 				<img src="ressources/Images/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" id="fkrc-spinner">
 			</div>
-			<!-- checkbox verification -->
+			<!-- checkbox pop-up -->
 			<div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
 				<div class="fkrc-verifywin-container">
 					<div class="fkrc-verifywin-header">
@@ -88,9 +92,9 @@
 						<button id="close2025" class="fl-end"><span>©</span class="fkrc-verifywin-header-text-big">lose 2025</button>
 					</div>
 					<div class="fkrc-verifywin-main">
-						<div>
-							
-						</div>
+						<span class="animerAuPlusVite">
+							<img src="ressources/Images/captcha/contentFrame.svg" width="386" height="386" alt="recharge">
+						</span>
 					</div>
 				</div>
 				<div class="fkrc-verifywin-container fkrc-verifywin-footer">
@@ -121,7 +125,7 @@
 		</div>
 
 		<button id="lebouton">
-			<span class="mesloLGS"></span>
+			<span class="mesloLGS"></span> <!-- Ok on dirait pas mais c'est un chat -->
 		</button>
 
 		<button class="btn">
@@ -202,7 +206,11 @@
 						et du Listenbourg.</p>
 
 					<span class="boutons">
-						<button id="valider"><a href="#masquer"><div>Valider mes choix de gros relou</div></a></button>
+						<button id="valider">
+							<a href="#masquer">
+								<div>Valider mes choix de gros relou</div>
+							</a>
+						</button>
 					</span>
 				</div>
 			</div>
@@ -214,12 +222,20 @@
 	</div>
 	
 	<footer>
-		<a href="index.html#masquer"><img src="ressources/favicon/favicon-16x16.png" width="16" height="16" alt="logo du site"></a>
+		<a href="index.html#masquer">
+			<img src="ressources/favicon/favicon-16x16.png" width="16" height="16" alt="logo du site">
+		</a>
 		<a href="http://certainementalentour.github.io/site" target="_blank" rel="noopener noreferrer">© 2025</a>
 		<a href="index.html">Privacy</a>
 		<a href="http://genesis.market" target="_blank" rel="noopener noreferrer">Contact</a>
-		<button><a href="index.html"><span>Manage cookies</span></a></button>
-		<button onclick="document.getElementsByClassName('textboxmainholder')[0].style.display='flex'"><span>Do not share my personal information</span></button>
+		<button>
+			<a href="index.html">
+				<span>Manage cookies</span>
+			</a>
+		</button>
+		<button onclick="document.getElementsByClassName('textboxmainholder')[0].style.display='flex'">
+			<span>Do not share my personal information</span>
+		</button>
 	</footer>
 </body>
 </html>

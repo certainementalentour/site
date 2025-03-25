@@ -148,6 +148,7 @@ body {
 
 header {
 	flex-grow: 1;
+	background: transparent;
 }
 
 main {
@@ -161,7 +162,7 @@ main {
 footer {
 	flex-shrink: 0;
 	flex-grow: 1;
-	margin-top: 50px;
+	margin-top: 20px;
 	padding-bottom: 35px;
 }
 
@@ -177,18 +178,31 @@ footer button span {
 	padding: 5px;
 	color: coral;
 	font-family: Arial, Helvetica, sans-serif;
+	user-select: none;
 }
 
 footer button:hover {
 	color: rgb(211, 72, 22);
 	transform: scale(1.1, 1.3);
 }
+
+img {user-select: none;}
+
 table.nav {
 	border-spacing: 5px 0;
 }
+
 strong {
 	margin-top: auto;
 	font-weight: normal;
+}
+
+main table.mesloLGS {
+	max-height: 300px;
+}
+
+main table.mesloLGS tr td ul li {
+	margin-bottom: 5px;
 }
 
 h4 {
@@ -197,22 +211,15 @@ h4 {
 	color: floralwhite;
 }
 
-th {
-	color: antiquewhite;
-}
-
-td {
-	border: none;
-}
+th {color: antiquewhite;}
+td {border: none;}
 
 td a {
 	color: inherit;
 	size: .9em;
 }
 
-a:visited {
-	color: coral;
-}
+a:visited {color: coral;}
 
 .pmainholder, .textboxmainholder {
 	position: fixed;
@@ -346,11 +353,6 @@ a:visited {
 	display: none;
 }
 
-.mesloLGS {
-	font-family: 'mesloLGS';
-	font-size: 15px;
-}
-
 .btn {
 	flex-grow: 0;
 	background-color: azure;
@@ -368,16 +370,16 @@ a:visited {
 #lebouton {
 	position: absolute;
 	left: 5%;
-	top: 5%;
+	top: 9%;
 	z-index: 1;
 	transform: translate(-50%, -50%);
 	transition: left 0.1s, top 0.1s;
-	padding: 10px 20px;
-	font-size: 16px;
+	padding: 0px 20px;
 	background-color: #3498db;
-	color: white;
+	color: #fff;
 	border: none;
 	border-radius: 5px;
+	font-size: 75px;
 }
 
 #parking {

@@ -3,6 +3,17 @@
 .fkrc-container {
     font-family: 'Roboto';
     user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: default;
 }
 
 .fkrc-m-p {
@@ -158,12 +169,13 @@ LLG88888888888@@@@@@@@@@@@@@@@@@88@@888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     position: absolute;
     visibility: hidden;
     margin: auto;
-    width: 310px;
+    width: 400px;
     background-color: #fff;
     border: 1px solid #cecece;
     -webkit-box-shadow: 5px 6px 7px -3px rgba(0,0,0,0.12);
     box-shadow: 5px 6px 7px -3px rgba(0,0,0,0.12);
     transition: opacity 400ms;
+    z-index: 88;
 }
 
 .fkrc-verifywin-window-arrow {
@@ -176,16 +188,24 @@ LLG88888888888@@@@@@@@@@@@@@@@@@88@@888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 }
 
 .fkrc-verifywin-container {
-    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    z-index: 19;
 }
 
 .fkrc-verifywin-header {
     display: flex;
     flex-direction: column;
-    background-color: #4285f4;
-    padding: 16px 16px 24px 16px;
-    color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 386px;
     height: 114px;
+    background-color: #4285f4;
+    color: #fff;
+    margin: 10px 8px 0;
 }
 
 .fkrc-verifywin-header-text-small {
@@ -194,7 +214,8 @@ LLG88888888888@@@@@@@@@@@@@@@@@@88@@888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 }
 
 .fkrc-verifywin-header-text-medium {
-    font-size: 16px;
+    font-size: 18px;
+    margin: none;
 }
 
 .fkrc-verifywin-header-text-big {
@@ -208,17 +229,18 @@ LLG88888888888@@@@@@@@@@@@@@@@@@88@@888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .fkrc-verifywin-footer {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: last baseline;
     border-top: 1px solid #cecece;
     padding: 10px 7px 10px 7px;
     color: #737373;
-    display: grid;
-    grid-template-columns: auto 102px;
     font-size: 13px;
+    width: 386px;
+    gap: 180px;
 }
 
 .fkrc-verifywin-footer-left {
-    margin-left: 5px;
+    align-self: center;
 }
 
 .fkrc-verifywin-verify-button, .fkrc-verifywin-verify-button:hover {
@@ -236,12 +258,18 @@ LLG88888888888@@@@@@@@@@@@@@@@@@88@@888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     border: none;
     outline: none;
     cursor:pointer;
+    margin-left: auto;
 }
 
 .fkrc-verifywin-header button#close2025 {
     border: none;
     background: none;
-    color: #fff;
+    color: #cecece;
+    margin: none;
+    position: absolute;
+    bottom: 3px;
+    left: 5px;
+
 }
 
 .fkrc-verifywin-footer button {
@@ -255,4 +283,8 @@ LLG88888888888@@@@@@@@@@@@@@@@@@88@@888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     margin-top: auto;
     z-index: 5;
     padding: none;
+}
+
+.animerAuPlusVite {
+    /* Prière d'animer ce truc à l'avenir */
 }
