@@ -467,6 +467,7 @@ a:visited {color: coral;}
 	.boutons {
 		display: flex;
 		align-self: flex-end;
+		justify-content: space-evenly;
 		flex-direction: row;
 		margin-bottom: 8px;
 		width: 100%;

@@ -38,29 +38,37 @@ const checkboxBtn = rawCheckboxBtn;
 function addCaptchaListeners() {
 	if (checkboxBtn && verifyBtn && close2025Btn) {
 		document.addEventListener("click", function (event) {
+			// Fermer la fenêtre si on clique dehors
 			if (event.composedPath && verifyWindow && !event.composedPath().includes(verifyWindow) && isVerifyWindowVisible()){
 				closeVerifyWindow();
 			}
 		});
 		verifyBtn.addEventListener("click", function (event) {
+			// Validation après le clic sur le bouton de validation
 			event.preventDefault();
 			verifyBtn.disabled = true;
 			verifyCaptcha();
 		});
 		checkboxBtn.addEventListener("click", function (event) {
+			// Animations de la case à cocher
 			event.preventDefault();
 			checkboxBtn.disabled = true;
 			runClickedCheckboxEffects();
 		});
 		close2025Btn.addEventListener("click", function (event) {
+			// Fermeture simple sans exécuter les autres fonctions
 			event.preventDefault();
-			closeCaptcha();
+			checkboxBtn.disabled = true;
+			hideReCaptcha();
 		})
 	}
 }
 addCaptchaListeners();
 
-/** @returns {void} */
+/** 
+ * animations de la case à cocher
+ * @returns {void}
+ */
 function runClickedCheckboxEffects() {
 	hideCaptchaCheckbox();
 	setTimeout(showCaptchaLoading, 500);
@@ -111,8 +119,19 @@ function hideCaptchaLoading() {
 function showVerifyWindow() {
 	if (!verifyWindow || !checkboxWindow || !verifyWindowArrow) return; //vérifications ts, s'assurer que tous les éléments soient présents
 
-	const verifyWindowHeight = verifyWindow.offsetHeight;
-	const arrowVerticalCenter = checkboxWindow.offsetTop + 30;  //+30 car on a déjà bougé le curseur
+	let verifyWindowHeight = verifyWindow.offsetHeight;  //obtenir la hauteur de la fenêtre
+	if (verifyWindowHeight === 0) {
+		// si elle est nulle (visibility: hidden), on calcule la hauteur
+		verifyWindowHeight = parseInt(getComputedStyle(verifyWindow).height, 10);
+
+		// Get computed style fait référence à tous les styles (une fois calculés) de l'élément en question (style par défaut, hérité, ajusté dynamiquement...)
+		// GetComputedStyle(obj).height donne la hauteur finale de l'objet
+		// En gros, c'est très pratique mais plus consommateur en ressources que de directement définir à hauteur voulue, utiliser avec modération
+		//
+		//parseInt(arg, 10) convertit en entier l'argument en base décimale, ignorant les caractères non numériques ("200px" -> 200)
+
+	}
+	const arrowVerticalCenter = checkboxWindow.offsetTop + 30; // Centrer sur la case à cocher
 
 	Object.assign(verifyWindow.style, {
 		display: "block",
@@ -161,11 +180,6 @@ function closeVerifyWindow() {
 /** @returns {boolean} */
 function isVerifyWindowVisible() {
 	return verifyWindow ? verifyWindow.style.display !== "none" && verifyWindow.style.display !== "" : false;
-}
-
-/** @returns {void} */
-function closeCaptcha() {
-	closeVerifyWindow();
 }
 
 /** @returns {void} */

@@ -82,7 +82,7 @@ body {
     animation-delay: 960ms;
 }
 
-#overlay {
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -90,13 +90,13 @@ body {
     height: 100%;
     background: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 1000;
     cursor: default;
 }
 
-#closeOverlay {
+.OverlayButton {
     padding: 10px 20px;
     font-size: 18px;
     border: none;
@@ -108,11 +108,17 @@ body {
     box-shadow: 0px 8px #59595F;
 }
 
-#closeOverlay:active{
+.OverlayButton:active{
     box-shadow: 0px 5px #313132;
 	transform: translateY(3px);
 }
 
+.a-none {
+    color: white;
+    font-size: 18px;
+    border: none;
+    text-decoration: black;
+}
 /*
                          ''~``
                         ( o o )

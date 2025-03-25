@@ -19,3 +19,4 @@ Gemfile.lock
 princeOfPersia/build
 .~lock.SchemaPageFabricationV2.odp#
 InfoTerminal/~$Chemin.odp
+.env
