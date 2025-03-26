@@ -30,6 +30,7 @@
 	<link rel="stylesheet" type="text/css" href="ressources/styles/fakerecaptcha.css">
 	<link rel="stylesheet" type="text/css" href="ressources/styles/style.css" />
 	<link rel="stylesheet" type="text/css" href="ressources/styles/popup.css" />
+	<link rel="stylesheet" type="text/css" href="ressources/styles/animations.css">
 	<link rel="license" href="../LICENSE"><!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
 	<script src="ressources/scripts/navigation.js" type="text/javascript" defer></script><!--il est recommandé pour certains navigateurs de lier les 
 	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page, sinon utiliser defer-->
@@ -75,10 +76,10 @@
 					<button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
 				</div>
 				<p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">I'm not a robot</p>
-				<img src="ressources/Images/captcha_logo.svg" class="fkrc-captcha-logo fkrc-line-normal">
+				<img src="ressources/Images/captcha/reCaptchaLogo.svg" class="fkrc-captcha-logo fkrc-line-normal">
 				<p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">reCAPTCHA</p>
 				<p onclick="hideReCaptcha()" class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
-				<img src="ressources/Images/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" id="fkrc-spinner">
+				<img src="ressources/Images/captcha/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" id="fkrc-spinner">
 			</div>
 			<!-- checkbox pop-up -->
 			<div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
@@ -104,7 +105,7 @@
 					<button type="button" class="fkrc-block" id="fkrc-verifywin-verify-button"><img src="ressources/Images/captcha/verifyButton.svg" alt="VERIFY"></button>
 				</div>
 			</div>
-			<img src="ressources/Images/captcha_arrow.svg" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
+			<img src="ressources/Images/captcha/captcha_arrow.svg" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
 		</div>
 	
 
@@ -151,7 +152,7 @@
 	
 	
 		<div id="page1">
-			<div class="content">
+			<div class="content" id="content">
 				<button id="croix"><div><a href="#masquer">&times;</a></div></button>
 
 				<div class="messagepage1">
@@ -163,7 +164,7 @@
 					</div>	
 				</div>
 				<span class="boutons">
-					<button id="non" onclick="removeCookie('rcVerified');"><a><div>Refuser</div></a></button>
+					<button class="non" id="non" onclick="removeCookie('rcVerified');"><a href="#content"><div>Refuser</div></a></button>
 					<button id="ok"><a href="#masquer"><div>Accepter (j'ai rien lu)</div></a></button>
 				</span>
 				<button id="plus"><a href="#page2"><span>choisir</span></a></button>
@@ -203,7 +204,7 @@
 						et du Listenbourg.</p>
 
 					<span class="boutons">
-						<button id="valider">
+						<button id="valider" onclick="document.getElementById('parking-container').style.display = 'none'">
 							<a href="#masquer">
 								<div>Valider mes choix de gros relou</div>
 							</a>

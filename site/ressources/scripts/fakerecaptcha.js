@@ -5,7 +5,7 @@ function verifyCaptcha() {
 	closeVerifyWindow();
 	hideReCaptcha();
 /*	alert("Verified!"); */
-	setCookie("rcVerified", "true", 5 / 1440, { path: "/" }); // normalement il y a 1440 min par jour, le cookie dure donc 5 min
+	setCookie("rcVerified", "true", 3 / 1440, { path: "/" }); // normalement il y a 1440 min par jour, le cookie dure donc 3 min
 }
 
 

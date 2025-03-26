@@ -55,7 +55,61 @@
         opacity: 0;
     }
 }
-
+@keyframes mask-animation {
+	0% {
+	  transform: rotate(45deg); }
+	100% {
+	  transform: rotate(-675deg); } }
+  
+  @keyframes mask-animation-sub-left {
+	0% {
+	  transform: rotate(0deg); }
+	50% {
+	  transform: rotate(90deg); }
+	100% {
+	  transform: rotate(0deg); } }
+  
+  @keyframes mask-animation-sub-right {
+	0% {
+	  transform: rotate(0deg); }
+	50% {
+	  transform: rotate(-90deg); }
+	100% {
+	  transform: rotate(0deg); } }
+  
+  @keyframes head-animation {
+	0% {
+	  transform: rotate(70deg); }
+	100% {
+	  transform: rotate(-650deg); } }
+  
+  @keyframes foot-animation {
+	0% {
+	  transform: rotate(25deg); }
+	100% {
+	  transform: rotate(-695deg); } }
+  
+  @keyframes eye-light-animation {
+	0% {
+	  opacity: 0;
+	  height: 6px; }
+	50% {
+	  opacity: .75;
+	  height: 50px; }
+	80% {
+	  opacity: 1;
+	  height: 6px; }
+	100% {
+	  opacity: 0; } }
+  
+  @keyframes mouth-animation {
+	0% {
+	  height: 0px; }
+	50% {
+	  height: 10px; }
+	100% {
+	  height: 0px; } }
+  
 
 
   /*
