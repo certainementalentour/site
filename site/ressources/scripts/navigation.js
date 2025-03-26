@@ -31,6 +31,18 @@ function nextPage() {
 	window.location.href = pages[index + 1] || pages[0];
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+	const button = document.getElementById("boutonMAJ");
+  // rediriger vers la page de redémarrage tout utilisateur cliquant sur un élément "boutonMAJ"
+	if (button) {
+		button.addEventListener("click", () => {
+			// marquer l'utilisateur
+			//sessionStorage.setItem("fromMAJButton", "true");
+			window.location.href = "redemarrage.html";
+	});
+  }
+});
+
 // veuillez ne pas inclure ce script si la page n'est pas renseignée dans pages[]
 
 /*

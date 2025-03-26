@@ -31,13 +31,13 @@
 	<link rel="stylesheet" type="text/css" href="ressources/styles/style.css" />
 	<link rel="stylesheet" type="text/css" href="ressources/styles/popup.css" />
 	<link rel="license" href="../LICENSE"><!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
-	<script src="ressources/scripts/cookies.js" type="text/javascript" defer></script><!--il est recommandé pour certains navigateurs de lier les 
+	<script src="ressources/scripts/navigation.js" type="text/javascript" defer></script><!--il est recommandé pour certains navigateurs de lier les 
 	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page, sinon utiliser defer-->
 	<script type="text/javascript" src="ressources/scripts/textbox.js" defer></script>
 	<script type="text/javascript" src="ressources/scripts/fakerecaptcha.js" defer></script>
 	<script type="text/javascript" src="ressources/scripts/pasdexplications.js"></script>
 	<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>-->
 </head>
 <body>
 	<header>
@@ -109,16 +109,13 @@
 	
 
 
-		<div id="parking">
-			<label for="parking">Parking de curseurs</label>
-			<input type="text" id="parking" name="parking" placeholder="╔═════════════════╗&NewLine;╚═════════════════╝">
-			<p>Parking de curseurs</p>
-			<!-- Pk ça casse tjrs ??? L'interligne à haute résolution, sinon la largeur du caractère 😭--> <!--faut essayer avec une zone de texte-->
-			<span>╔═════════════════╗</span><div class="br"></div>
-			<span>║&nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;  ║</span><div class="br"></div>
-			<span>║&nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;  ║</span><div class="br"></div>
-			<span>║&nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;  ║</span><div class="br"></div>
-			<span>╚═════════════════╝</span><div class="br"></div>
+		<div id="parking-container">
+			<h1>Parking de curseurs</h1>
+			<p>Posez votre curseur ici et détendez-vous.</p>
+			<div></div>
+
+
+
 			<!-- ═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬ -->
 			<p class="mesloLGS">ﴣ     ﴖ ﴝ ﲵ ﳢ ﴑ ﲹ ﳶ ﱮ ﲏ ﱄ ﯙ ﯣ ﯤ ﮭ ﮰ ﭱ ﭰ ﭠ ﭡ ﭢ ﭣ ﭮ ﮟ ﯎ ﯏ ﯐ 者 荒 視 謹 磌 﫸 漢 梅 既 﨓 﨑 塚 晴 廬 <div class="br"></div></p>
 			<p class="mesloLGS">溜 樂 縷                               </p>
@@ -166,7 +163,7 @@
 					</div>	
 				</div>
 				<span class="boutons">
-					<button id="non"><a><div>Refuser</div></a></button>
+					<button id="non" onclick="removeCookie('rcVerified');"><a><div>Refuser</div></a></button>
 					<button id="ok"><a href="#masquer"><div>Accepter (j'ai rien lu)</div></a></button>
 				</span>
 				<button id="plus"><a href="#page2"><span>choisir</span></a></button>

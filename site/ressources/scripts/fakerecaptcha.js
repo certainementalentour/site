@@ -5,6 +5,7 @@ function verifyCaptcha() {
 	closeVerifyWindow();
 	hideReCaptcha();
 /*	alert("Verified!"); */
+	setCookie("rcVerified", "true", 5 / 1440, { path: "/" }); // normalement il y a 1440 min par jour, le cookie dure donc 5 min
 }
 
 
@@ -25,7 +26,7 @@ const close2025Btn = document.getElementById("close2025");
 const rawVerifyBtn = document.getElementById("fkrc-verifywin-verify-button");
 if (!(rawVerifyBtn instanceof HTMLButtonElement)) {
 	throw new Error("cette fois c'est verifyBtn");
-}
+} console.clear() // tkt, erreurs réglées
 const verifyBtn = rawVerifyBtn;
 const rawCheckboxBtn = document.getElementById("fkrc-checkbox");
 if (!(rawCheckboxBtn instanceof HTMLButtonElement)) {
@@ -40,6 +41,7 @@ function addCaptchaListeners() {
 		document.addEventListener("click", function (event) {
 			// Fermer la fenêtre si on clique dehors
 			if (event.composedPath && verifyWindow && !event.composedPath().includes(verifyWindow) && isVerifyWindowVisible()){
+				// !event.composedPath().includes(verifyWindow) -> si l'élément ayant activé l'évènement ne contient pas verifyWindow
 				closeVerifyWindow();
 			}
 		});
@@ -64,6 +66,17 @@ function addCaptchaListeners() {
 	}
 }
 addCaptchaListeners();
+
+/** @returns {void} */
+function addDOMListeners() {
+	document.addEventListener("DOMContentLoaded", () => {
+		if (getCookieValue("rcVerified")?.toLowerCase() === "true") {
+			// masquer le captcha tant que le cookie de vérification est présent
+			hideReCaptcha();
+		}
+	});
+}
+addDOMListeners();
 
 /** 
  * animations de la case à cocher
@@ -190,4 +203,65 @@ function hideReCaptcha() {
 		visibility: "hidden",
 		opacity: "0",
 	});
+}
+
+
+
+/**
+ * Récupère le contenu d'un cookie
+ * @param {string} cookieName - le nom du cookie
+ * @returns {string | null} - La valeur du cookie
+ */
+function getCookieValue(cookieName) {
+	const name = cookieName + "=";
+	const decodedCookie = decodeURIComponent(document.cookie);
+	const cookieArray = decodedCookie.split('; ');
+
+	for (let i = 0; i < cookieArray.length; i++) {
+		if (cookieArray[i].indexOf(name) === 0) {
+			return cookieArray[i].substring(name.length);
+		}
+	}
+	return null; // Si le cookie n'existe pas
+}
+
+/**
+ * Dépose un cookie avec les options données
+ * @param {string} cookieName - le nom du cookie
+ * @param {string} value - la valeur du cookie
+ * @param {number} [daysToLive] - le nombre de jours avant expiration
+ * @param {{ path?: string, domain?: string, secure?: boolean, sameSite?: 'Strict' | 'Lax' | 'None' }} [options] - Options supplémentaires du cookie.
+ */
+function setCookie(cookieName, value, daysToLive, options = {}) {
+	let expires = "";
+	if (daysToLive) {
+		let date = new Date();
+		date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+
+	let cookie = `${cookieName}=${encodeURIComponent(value)}${expires}`;
+
+
+	for (let key in options) {
+		if (options[key] === true) {
+			// pour les options comme secure, qui s'écrivent directement ;secure et non ;secure=true
+			cookie += `; ${key}`;
+		} else if (options[key]) {
+			// les autres options avec une valeur spécifique
+			cookie += `; ${key}=${options[key]}`;
+		}
+	}
+	document.cookie = cookie;
+}
+
+/**
+ * supprime un cookie
+ * @param {string} cookieName - le nom du cookie à supprimer
+ * @returns {void}
+ */
+function removeCookie(cookieName) {
+	setCookie(cookieName, "", -1, { path: "/"});
+	// on définit une date d'expiration passée pour que le cookie se fasse supprimer
+	// { path: "/"} -> assure la suppression si le cookie a été déposé avec un path spécifique
 }

@@ -1,3 +1,6 @@
+// page d'exemples de fonctions de gestion de cookies
+
+
 function obtenirValeurcookie(cookieName) {
 	const name = cookieName + "=";
 	const decodedCookie = decodeURIComponent(document.cookie);
@@ -41,16 +44,6 @@ function verificationConfientialite() {
 //let valide = false;
 //depotCookie('validationConfidentialite', valide, 5);
 
-document.addEventListener("DOMContentLoaded", () => {
-	const button = document.getElementById("boutonMAJ");
-	if (button) {
-		button.addEventListener("click", () => {
-			// marquer l'utilisateur
-			//sessionStorage.setItem("fromMAJButton", "true");
-			window.location.href = "redemarrage.html";
-	});
-  }
-});
 
 /*
                                                      ___
