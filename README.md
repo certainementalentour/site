@@ -118,5 +118,5 @@ c'est fait
 | site/Machine.html | Page de la machine à café |
 | En vrai flemme | de continuer |
 
-
+>_n'oubliez pas rendre un code propre [js](https://10015.io/tools/javascript-formatter) [HTML](https://10015.io/tools/html-formatter) [css](https://10015.io/tools/css-formatter)_
 >_vous pouvez formater cette page en utilisant la [syntaxe markdown](https://markdownlivepreview.com/)_

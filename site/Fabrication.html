@@ -9,6 +9,7 @@
         <meta name="description" content="à vérifier">
         <link rel="license" href="../LICENSE">
         <script src="ressources/scripts/favicon.js" type="text/javascript"></script>
+		<script src="ressources/scripts/fabrication.js" type="text/javascript" defer></script>
         <script type="text/javascript" src="ressources/scripts/navigation.js"></script>
         <noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
         <link rel="icon" href="ressources/favicon/animation/image2.png" type="image/png">
@@ -68,6 +69,21 @@
                     Cette étape consiste à décortiquer les grains pour enlever cette enveloppe.<br />
                     Le décorticage est souvent effectué à l’aide de machines, mais dans certaines régions, cela peut se faire manuellement.</p>
             </div>
+
+<div class="terminal-holder" id="terh">
+			<div class="terminal-loader">
+				<div class="terminal-header">
+					<div class="terminal-title">Internal error</div>
+					<div class="terminal-controls">
+						<div class="control close"></div>
+						<div class="control minimize"></div>
+						<div class="control maximize"></div>
+				  </div>
+				</div>
+				<div class="text">Gathering informations...</div>
+			</div>
+</div>
+
             <div class="DivSechage">
                 <div class="FlexLigne">
                     <div class="DivSechageImage">
@@ -153,7 +169,7 @@
             <rect width="5vw" height="60" x="47.5vw" y="29" fill="#FFE693" />
             <rect width="5vw" height="60" x="85vw" y="29" fill="#FFE693" />
         </svg>
-        <div class="DivPreparation" onclick="document.getElementById('terminal').style.display = 'flex'">
+        <div class="DivPreparation" onclick="displayLoaders()">
             <div class="FlexLigne">
                 <div class="DivPreparationTexte">
                     <p class="TextePreparation2">Mouture grossière :</br>
@@ -170,6 +186,14 @@
             </div>
         </div>
         <footer>
+			<nav class="footer-nav" id="foon">
+				<button type="button" onclick="previousPage()">
+						<img src="ressources/Images/BoutonPrecedent.png" alt="Suivant" width="367" height="117"> <!-- Ce n'est pas une inversion, ça apprendra aux visiteur à charger le css-->
+				</button>
+				<button type="button" onclick="nextPage()">
+					<img src="ressources/Images/BoutonSuivant.png" alt="Précédent" width="367" height="117">
+				</button>
+			</nav>
             <div class="Terminal" id="terminal">
                 <div class="TerminalContent">
                     <span class="mesloLGS icon"></span>

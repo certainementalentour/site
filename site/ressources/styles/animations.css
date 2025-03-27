@@ -132,6 +132,27 @@
 	 stroke-dashoffset: -125px;
 	}
 }
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 28ch;
+  }
+  45%,
+  55% {
+    width: 2.2em; /* longueur de texte non effacé */
+  }
+  90%,
+  100% {
+    width: 28ch;
+  }
+}
   /*
   
 										   ___

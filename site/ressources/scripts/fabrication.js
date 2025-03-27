@@ -1,5 +1,11 @@
 // @ts-check
 
+/** @type {HTMLElement | null} */
+const foon = document.getElementById('foon');
+/** @type {HTMLElement | null} */
+const ter = document.getElementById('terminal');
+/** @type {HTMLElement | null} */
+const terh = document.getElementById('terh');
 
 /** @type {HTMLDivElement | null} */
 const terminal = document.querySelector(".console");
@@ -11,6 +17,13 @@ if (!terminal || !inputField) {
 	console.error('pas la bonne page ?')
 }
 
+
+function displayLoaders() {
+	if (!foon || !ter || !terh) return;
+	foon.style.display = 'none';
+	ter.style.display = 'flex';
+	terh.style.display = 'block';
+}
 
 /** @param {string} input - Commande tapée. */
 function executeCommand(input) {
