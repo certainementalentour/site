@@ -1,5 +1,5 @@
 @import url('./animations.css');
-
+@import url('./polices.css');
 
 body {
     background: #000000;
@@ -25,6 +25,11 @@ body {
 .main {
     width: 500px;
     margin: 0px auto;
+}
+
+.mesloLGS {
+	font-family: 'mesloLGS';
+    color: #000000;
 }
 
 .content {
@@ -90,6 +95,7 @@ body {
     height: 100%;
     background: white;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-evenly;
     align-items: center;
     z-index: 1000;

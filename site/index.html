@@ -1,237 +1,250 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>[insérer un titre]</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="moi">
-        <meta name="keywords" content="NSI, Café, J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ">
-        <meta name="description" content="à vérifier">
-        
+	<head>
+		<title>[insérer un titre]</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="moi">
+		<meta name="keywords" content="NSI, Café, J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ">
+		<meta name="description" content="à vérifier">
+		
 		<!--debug-->
 		<meta http-equiv="refresh" content="300">
 
-        <!--<link rel="icon" href="ressources/" type="image/svg+xml">-->
-        <link rel="apple-touch-icon" sizes="57x57" href="ressources/favicon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="ressources/favicon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="ressources/favicon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="ressources/favicon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="ressources/favicon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="ressources/favicon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="ressources/favicon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="ressources/favicon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="ressources/favicon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="ressources/favicon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="ressources/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="ressources/favicon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="ressources/favicon/favicon-16x16.png">
-        <link rel="manifest" href="ressources/favicon/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="ressources/favicon/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="ressources/styles/fakerecaptcha.css">
-        <link rel="stylesheet" type="text/css" href="ressources/styles/style.css" />
-        <link rel="stylesheet" type="text/css" href="ressources/styles/popup.css" />
-        <link rel="license" href="../LICENSE">
+		<!--<link rel="icon" href="ressources/" type="image/svg+xml">-->
+		<link rel="apple-touch-icon" sizes="57x57" href="ressources/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="ressources/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="ressources/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="ressources/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="ressources/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="ressources/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="ressources/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="ressources/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="ressources/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="ressources/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="ressources/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="ressources/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="ressources/favicon/favicon-16x16.png">
+		<link rel="manifest" href="ressources/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="ressources/favicon/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="ressources/styles/fakerecaptcha.css">
+		<link rel="stylesheet" type="text/css" href="ressources/styles/style.css" />
+		<link rel="stylesheet" type="text/css" href="ressources/styles/popup.css" />
+		<link rel="license" href="../LICENSE">
 
-        <!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
-        <script src="ressources/scripts/navigation.js" type="text/javascript" defer></script>
+		<!--Jamais une bonne idée de laisser accéder aux fichiers précédent le dossier du site-->
+		<script src="ressources/scripts/navigation.js" type="text/javascript" defer></script>
 
-        <!--il est recommandé pour certains navigateurs de lier les 
+		<!--il est recommandé pour certains navigateurs de lier les 
 	scripts juste avant la balise de fermeture de body, afin de ne pas bloquer le chargement de la page, sinon utiliser defer-->
-        <script type="text/javascript" src="ressources/scripts/textbox.js" defer></script>
-        <script type="text/javascript" src="ressources/scripts/fakerecaptcha.js" defer></script>
-        <script type="text/javascript" src="ressources/scripts/pasdexplications.js"></script>
-        <noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
+		<script type="text/javascript" src="ressources/scripts/textbox.js" defer></script>
+		<script type="text/javascript" src="ressources/scripts/fakerecaptcha.js" defer></script>
+		<script type="text/javascript" src="ressources/scripts/parking.js" defer></script>
+		<script type="text/javascript" src="ressources/scripts/pasdexplications.js"></script>
+		<noscript>Veuillez activer les scripts pour une meilleure expérience</noscript>
 
-        <!--<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>-->
-    </head>
-    <body>
-        <header>
-            <h1><em>INDEX</em><i class="fa-solid fa-cat fa-spin-pulse"></i></h1>
-            <audio id="son" src="ressources/sons/tkt.mp3" preload="auto"></audio>
-            <audio id="son2" src="ressources/sons/son2.mp3" preload="auto"></audio>
-        </header>
-        <div id="elementCasse">
-            <button popover id="boutonMAJ">
-                <span>Réparer le site en appuyant sur <kbd>Alt + F4</kbd>
+		<!--<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>-->
+	</head>
+	<body>
+		<header>
+			<h1><em>INDEX</em><i class="fa-solid fa-cat fa-spin-pulse"></i></h1>
+			<audio id="son" src="ressources/sons/tkt.mp3" preload="auto"></audio>
+			<audio id="son2" src="ressources/sons/son2.mp3" preload="auto"></audio>
+		</header>
+		<div id="elementCasse">
+			<button popover id="boutonMAJ">
+				<span>Réparer le site en appuyant sur <kbd>Alt + F4</kbd>
 			</span>
-            </button>
-        </div>
-        <main>
-            <table class="mesloLGS">
-                <tr>
-                    <td>
-                        <ul>
-                            <li><button popovertarget='boutonMAJ'>Ne pas cliquer</button></li>
-                            <li><a href="./Fabrication.html">Fabrication</a></li>
-                            <li><a href="./FunFact.html">FunFact</a></li>
-                            <li><a href="./machine.html">machine</a></li>
-                            <li><a href="./Pousse.html">Pousse</a></li>
-                            <li><a href="./Recolte.html">Recolte</a></li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-            <div id="reCAPTCHA" class="fkrc-container fkrc-m-p">
+			</button>
+		</div>
+		<main>
+			<nav class="nav-bar mesloLGS">
+				<ul class="menu">
+					<li class="menu-item">
+						<span class="menu-link" id="menu-link">Aller</span>
+						<ul class="submenu">
+							<li class="submenu-item"><a class="submenu-link" href="./Fabrication.html">Fabrication</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="./FunFact.html">FunFact</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="./machine.html">machine</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="./Pousse.html">Pousse</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="./Recolte.html">Recolte</a></li>
+							<li class="submenu-item"><button class="menu-button submenu-link" popovertarget='boutonMAJ'>Ne pas cliquer</button></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
 
-                <!-- checkbox -->
-                <div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block">
-                    <div class="fkrc-checkbox-container fkrc-m-p">
-                        <button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
-                    </div>
-                    <p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">I'm not a robot</p>
-                    <img src="ressources/Images/captcha/reCaptchaLogo.svg" class="fkrc-captcha-logo fkrc-line-normal">
-                    <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">reCAPTCHA</p>
-                    <p onclick="hideReCaptcha()" class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
-                    <img src="ressources/Images/captcha/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" id="fkrc-spinner">
-                </div>
+			<div id="reCAPTCHA" class="fkrc-container fkrc-m-p">
 
-                <!-- checkbox pop-up -->
-                <div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
-                    <div class="fkrc-verifywin-container">
-                        <div class="fkrc-verifywin-header">
+				<!-- checkbox -->
+				<div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block">
+					<div class="fkrc-checkbox-container fkrc-m-p">
+						<button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
+					</div>
+					<p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">  I'm not a robot</p>
+					<img src="ressources/Images/captcha/reCaptchaLogo.svg" class="fkrc-captcha-logo fkrc-line-normal">
+					<p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">reCAPTCHA</p>
+					<p onclick="hideReCaptcha()" class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
+					<div class="fkrc-spinner fkrc-m-p fkrc-line-normal" id="fkrc-spinner">
+						<svg viewBox="25 25 50 50" class="svg" preserveAspectRatio="xMidYMid meet">
+							<circle r="20" cy="50" cx="50" class="circle"></circle>
+						</svg>
+					</div>
+				</div>
 
-                            <!--
+				<!-- checkbox pop-up -->
+				<div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
+					<div class="fkrc-verifywin-container">
+						<div class="fkrc-verifywin-header">
+
+							<!--
 						<span class="fkrc-verifywin-header-text-medium fkrc-m-p fkrc-block">petit titre</span>
 						<span class="fkrc-verifywin-header-text-big fkrc-m-p fkrc-block">plus grand</span>
 						-->
-                            <span class="fkrc-verifywin-header-text-medium fkrc-m-p fkrc-block">Select the image without coffee.</span>
-                            <button id="close2025" class="fl-end"><span>©</span class="fkrc-verifywin-header-text-big">lose 2025</button>
+							<span class="fkrc-verifywin-header-text-medium fkrc-m-p fkrc-block">Select the holy coffee.</span>
+							<button id="close2025" class="fl-end"><span>©</span class="fkrc-verifywin-header-text-big">lose 2025</button>
 					</div>
 					<div class="fkrc-verifywin-main">
 						<span class="animerAuPlusVite">
 							<img src="ressources/Images/captcha/contentFrame.svg" width="386" height="386" alt="recharge">
 						</span>
-                        </div>
-                    </div>
-                    <div class="fkrc-verifywin-container fkrc-verifywin-footer">
-                        <div class="fkrc-verifywin-footer-left">
-                            <img src="ressources/Images/captcha/footerSymbols.svg" alt="Press the verify button to proceed.">
-                        </div>
-                        <button type="button" class="fkrc-block" id="fkrc-verifywin-verify-button"><img src="ressources/Images/captcha/verifyButton.svg" alt="VERIFY"></button>
-                    </div>
-                </div>
-                <img src="ressources/Images/captcha/captcha_arrow.svg" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow" />
-            </div>
-            <div id="parking-container">
-                <h1>Parking de curseurs</h1>
-                <p>Posez votre curseur ici et détendez-vous.</p>
-                <div></div>
+						</div>
+					</div>
+					<div class="fkrc-verifywin-container fkrc-verifywin-footer">
+						<div class="fkrc-verifywin-footer-left">
+							<img src="ressources/Images/captcha/footerSymbols.svg" alt="Press the verify button to proceed.">
+						</div>
+						<button type="button" class="fkrc-block" id="fkrc-verifywin-verify-button"><img src="ressources/Images/captcha/verifyButton.svg" alt="VERIFY"></button>
+					</div>
+				</div>
+				<img src="ressources/Images/captcha/captcha_arrow.svg" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow" />
+			</div>
+			<div id="parking-container">
+				<h1>Parking de curseurs</h1>
+				<p>Posez votre curseur ici et détendez-vous.</p>
+				<div class="parking" id="parkingZone">
+<pre id="parkingZone" contenteditable="true">╔═════════════════════════════════════════════╗
+║                                             ║
+║            Zone de stationnement            ║
+║                                             ║
+╚═════════════════════════════════════════════╝</pre>
+				</div>
+				<p id="message"></p>
 
-                <!-- ═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬ -->
-                <p class="mesloLGS">ﴣ     ﴖ ﴝ ﲵ ﳢ ﴑ ﲹ ﳶ ﱮ ﲏ ﱄ ﯙ ﯣ ﯤ ﮭ ﮰ ﭱ ﭰ ﭠ ﭡ ﭢ ﭣ ﭮ ﮟ ﯎ ﯏ ﯐ 者 荒 視 謹 磌 﫸 漢 梅 既 﨓 﨑 塚 晴 廬
-                <div class="br"></div>
-                </p>
-                <p class="mesloLGS">溜 樂 縷                               </p>
-            </div>
-            <button id="lebouton">
-                <span class="mesloLGS"></span>
+
+			</div>
+
+				<!-- ═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬ -->			
+
+			<button id="lebouton">
+				<span class="mesloLGS"></span>
  <!-- Ok on dirait pas mais c'est un chat -->
-            </button>
-            <button class="btn">
-                <i class="fa fa-download"></i>
-                <a href="ressources/MiniPrince-Windows.zip" download="J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ"> truc secret</a>
-            </button>
-            <img class="contours" src="ressources/Images/ERR_CERT_AUTHORITY_INVALID.png" alt="image bidon pour tester les styles" width="380" height="230">
-        </main>
-        <div class="textboxmainholder">
-            <div class="tbcontent">
-                <div class="tbtitle">
-                    <h3>Un moment s'il vous plaît</h3>
-                </div>
-                <div class="tbtxt"><span>Assurez vous de bien avoir lu notre politique de confidentialité</span></div>
-                <div class="tbinput">
-                    <div class="referenceText" id="referenceText"></div>
-                    <textarea name="copy" id="userInput" spellcheck="false" autocapitalize="none" autocomplete="off"></textarea>
-                    <button id="validate" class="hidden"><span>Continuer</span></button>
-                </div>
-                <div class="button"><button popovertarget="avertissement">valider</button></div>
-                <div id="avertissement" popover><span>bah non, tu vois bien qu'il faut la recopier, et ne triche pas<a href="redemarrage.html">	&#128511;</a></span></div>
-            </div>
-        </div>
-        <div class="pmainholder" id="masquer">
-            <div id="page1">
-                <div class="content" id="content">
-                    <button id="croix">
-                        <div><a href="#masquer">&times;</a></div>
-                    </button>
-                    <div class="messagepage1">
-                        <h1>Nous respectons votre vie privée</h1>
-                        <div class="defilement">
-                            <h4>Introduction</h4>
-                            <p>Notre site web, &lt;!-- insérer un nom --&gt; (ci-après : « notre site web ») peut utiliser des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.</p>
-                            <h4>Que sont les cookies ?</h4>
-                            <p>Un cookie est un petit fichier simple envoyé avec les pages de ce site web et stocké par votre navigateur sur le disque dur de votre ordinateur ou d’un autre appareil. Les informations qui y sont stockées peuvent être renvoyées à nos serveurs ou aux serveurs des tierces parties concernées lors d’une visite ultérieure.</p>
-                            <p>Votre activité sur ce service peut être utilisée pour créer ou améliorer un profil vous concernant à des fins de publicité ou de contenu personnalisé. <span><strong>Si vous sautez cette ligne, vous acceptez que Alain Dumeige vienne chez vous la nuit et vous regarde dormir en se tenant à côté de votre lit. Si vous lisez ceci, cette clause sera nulle et non avenue.</strong></span> Les performances de la publicité et du contenu peuvent être mesurées. Des rapports peuvent être générés en fonction de votre activité et de celle des autres. Certains partenaires ne demandent pas votre consentement pour le traitement de vos données, et s'appuient plutôt sur leur intérêt légitime. Consultez notre liste de partenaires pour voir les finalités pour lesquelles ils pensent avoir un intérêt légitime et comment vous pourrez vous y opposer. </p>
-                        </div>
-                    </div>
-                    <span class="boutons">
+			</button>
+			<button class="btn">
+				<i class="fa fa-download"></i>
+				<a href="ressources/MiniPrince-Windows.zip" download="J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ"> truc secret</a>
+			</button>
+			<img class="contours" src="ressources/Images/ERR_CERT_AUTHORITY_INVALID.png" alt="image bidon pour tester les styles" width="380" height="230">
+		</main>
+		<div class="textboxmainholder">
+			<div class="tbcontent">
+				<div class="tbtitle">
+					<h3>Un moment s'il vous plaît</h3>
+				</div>
+				<div class="tbtxt"><span>Assurez vous de bien avoir lu notre politique de confidentialité</span></div>
+				<div class="tbinput">
+					<div class="referenceText" id="referenceText"></div>
+					<textarea name="copy" id="userInput" spellcheck="false" autocapitalize="none" autocomplete="off"></textarea>
+					<button id="validate" class="hidden"><span>Continuer</span></button>
+				</div>
+				<div class="button"><button popovertarget="avertissement">valider</button></div>
+				<div id="avertissement" popover><span>bah non, tu vois bien qu'il faut la recopier, et ne triche pas<a href="redemarrage.html">	&#128511;</a></span></div>
+			</div>
+		</div>
+		<div class="pmainholder" id="masquer">
+			<div id="page1">
+				<div class="content" id="content">
+					<button id="croix">
+						<div><a href="#masquer">&times;</a></div>
+					</button>
+					<div class="messagepage1">
+						<h1>Nous respectons votre vie privée</h1>
+						<div class="defilement">
+							<h4>Introduction</h4>
+							<p>Notre site web, &lt;!-- insérer un nom --&gt; (ci-après : « notre site web ») peut utiliser des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.</p>
+							<h4>Que sont les cookies ?</h4>
+							<p>Un cookie est un petit fichier simple envoyé avec les pages de ce site web et stocké par votre navigateur sur le disque dur de votre ordinateur ou d’un autre appareil. Les informations qui y sont stockées peuvent être renvoyées à nos serveurs ou aux serveurs des tierces parties concernées lors d’une visite ultérieure.</p>
+							<p>Votre activité sur ce service peut être utilisée pour créer ou améliorer un profil vous concernant à des fins de publicité ou de contenu personnalisé. <span><strong>Si vous sautez cette ligne, vous acceptez que Alain Dumeige vienne chez vous la nuit et vous regarde dormir en se tenant à côté de votre lit. Si vous lisez ceci, cette clause sera nulle et non avenue.</strong></span> Les performances de la publicité et du contenu peuvent être mesurées. Des rapports peuvent être générés en fonction de votre activité et de celle des autres. Certains partenaires ne demandent pas votre consentement pour le traitement de vos données, et s'appuient plutôt sur leur intérêt légitime. Consultez notre liste de partenaires pour voir les finalités pour lesquelles ils pensent avoir un intérêt légitime et comment vous pourrez vous y opposer. </p>
+						</div>
+					</div>
+					<span class="boutons">
 					<button class="non" id="non" onclick="removeCookie('rcVerified');"><a href="#content"><div>Refuser</div></a></button>
 					<button id="ok"><a href="#masquer"><div>Accepter (j'ai rien lu)</div></a></button>
 				</span>
-                    <button id="plus"><a href="#page2"><span>choisir</span></a></button>
-                </div>
-            </div>
-            <div id="page2">
-                <div class="content">
-                    <div class="messagepage2">
-                        <h1>Partenaires pouvant éventuellement consulter vos données</h1>
-                        <table class="nav">
-                            <thead>
-                                <tr>
-                                    <th>partenaire</th>
-                                    <th>données stockées</th>
-                                    <th>procédure pour s'y opposer</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Lucifer</td>
-                                    <td>se réserve le droit de prendre l'âme des visiteurs</td>
-                                    <td>faire un cercle de sel<div class="br"></div>(fin de préférence) autour du clavier</td>
-                                </tr>
-                                <td rowspan="4" colspan="2">Ces cases sont actuellement vides, nous sommes à la recherche d'éventuels collaborateurs</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener noreferrer">⎋règlement européen sur la protection des données</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>Cette politique de confidentialité a été mise à jour pour la dernière fois le 32 septembre 2024
-                            et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen
-                            et du Listenbourg.</p>
-                        <span class="boutons">
+					<button id="plus"><a href="#page2"><span>choisir</span></a></button>
+				</div>
+			</div>
+			<div id="page2">
+				<div class="content">
+					<div class="messagepage2">
+						<h1>Partenaires pouvant éventuellement consulter vos données</h1>
+						<table class="nav">
+							<thead>
+								<tr>
+									<th>partenaire</th>
+									<th>données stockées</th>
+									<th>procédure pour s'y opposer</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Lucifer</td>
+									<td>se réserve le droit de prendre l'âme des visiteurs</td>
+									<td>faire un cercle de sel<div class="br"></div>(fin de préférence) autour du clavier</td>
+								</tr>
+								<td rowspan="4" colspan="2">Ces cases sont actuellement vides, nous sommes à la recherche d'éventuels collaborateurs</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener noreferrer">⎋règlement européen sur la protection des données</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Cette politique de confidentialité a été mise à jour pour la dernière fois le 32 septembre 2024
+							et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen
+							et du Listenbourg.</p>
+						<span class="boutons">
 						<button id="valider" onclick="document.getElementById('parking-container').style.display = 'none'">
 							<a href="#masquer">
 								<div>Valider mes choix de gros relou</div>
 							</a>
 						</button>
 					</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <a href="index.html#masquer">
-                <img src="ressources/favicon/favicon-16x16.png" width="16" height="16" alt="logo du site">
-            </a>
-            <a href="http://certainementalentour.github.io/site" target="_blank" rel="noopener noreferrer">© 2025</a>
-            <a href="index.html">Privacy</a>
-            <a href="http://genesis.market" target="_blank" rel="noopener noreferrer">Contact</a>
-            <button>
-                <a href="index.html">
-                    <span>Manage cookies</span>
-                </a>
-            </button>
-            <button onclick="document.getElementsByClassName('textboxmainholder')[0].style.display='flex'">
-                <span>Do not share my personal information</span>
-            </button>
-        </footer>
-    </body>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<a href="index.html#masquer">
+				<img src="ressources/favicon/favicon-16x16.png" width="16" height="16" alt="logo du site">
+			</a>
+			<a href="http://certainementalentour.github.io/site" target="_blank" rel="noopener noreferrer">© 2025</a>
+			<a href="http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/the-world-factbook/daily-facts-archive/">Privacy</a>
+			<a href="http://genesis.market" target="_blank" rel="noopener noreferrer">Contact</a>
+			<button>
+				<a href="index.html">
+					<span>Manage cookies</span>
+				</a>
+			</button>
+			<button onclick="document.getElementsByClassName('textboxmainholder')[0].style.display='flex'">
+				<span>Do not share my personal information</span>
+			</button>
+		</footer>
+	</body>
 </html>
 
 <!--

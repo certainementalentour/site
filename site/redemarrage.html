@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title> - Veillez à ne pas éteindre votre ordinateur</title>
+	<title> - Veillez à ne pas éteindre votre ordinateur</title>
 	<meta name="author" content="moi">
 	<meta name="keywords" content="NSI, Café, J69QN-8FHK3-P7GYJ-WFWMA-R3KTQ">
 	<link rel="license" href="../LICENSE">
 
-    
+	
 	<noscript><meta http-equiv="refresh" content="0;url=/"></noscript> <!-- on ne veut pas que l'utilisateur découvre cette page si il ne tombe pas dans le piège-->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=google content="notranslate">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name=google content="notranslate">
    
-    <link rel="icon" href="ressources/Images/IMG_2094.webp" type="image/png">
-    <link rel="stylesheet" type="text/css" href="ressources/styles/redemarrage.css">
-    <link rel="icon" href="ressources/favicon/" type="image/png">
-    <script type="text/javascript" src="ressources/scripts/redemarrage.js"></script>
+	<link rel="icon" href="ressources/Images/IMG_2094.webp" type="image/png">
+	<link rel="stylesheet" type="text/css" href="ressources/styles/redemarrage.css">
+	<link rel="icon" href="ressources/favicon/" type="image/png">
+	<script type="text/javascript" src="ressources/scripts/redemarrage.js"></script>
 </head>
 <body>
-    <audio id="shutdownSound" src="ressources/sons/windows-shutdown.mp3" preload="auto"></audio>
-    <audio id="shutdownLoudSound" src="ressources/sons/windows-shutdown-loud.mp3" preload="auto"></audio>
-        <div class=mainholder>
+	<audio id="shutdownSound" src="ressources/sons/windows-shutdown.mp3" preload="auto"></audio>
+	<audio id="shutdownLoudSound" src="ressources/sons/windows-shutdown-loud.mp3" preload="auto"></audio>
+		<div class=mainholder>
 
-        </main>
-        <div id="overlay" class="overlay">
-            <button id="closeOverlay" class="OverlayButton"><span>Appliquer</span></button>
-            <button class="OverlayButton"><a href="ms-settings:network-proxy" class="a-none"><span>Débloquer le proxy</span></a></button>
-        </div>
+		</main>
+		<div id="overlay" class="overlay">
+			<button id="closeOverlay" class="OverlayButton"><span>Appliquer</span></button>
+			<button class="OverlayButton"><a href="ms-settings:network-proxy" class="a-none"><span>Débloquer le proxy</span></a></button>
+			<button class="OverlayButton" popovertarget="icones"><span>besoin d'icônes ?</span></button>
+			<div id="icones" popover>
+				<p class="mesloLGS">溜 樂 縷                     ﴣ                ﴖ ﴝ ﲵ ﳢ ﴑ ﲹ ﳶ ﱮ ﲏ ﱄ ﯙ ﯣ ﯤ ﮭ ﮰ ﭱ ﭰ ﭠ ﭡ ﭢ ﭣ ﭮ ﮟ ﯎ ﯏ ﯐ 者 荒 視 謹 磌 﫸 漢 梅 既 﨓 﨑 塚 晴 廬</p>
+			</div>
+		</div>
 
-            <div class=main id="main">
-                <div class=content>
-                    <div class=update>
-                        <div class=spinnerloading>
-                            <div class=dots></div>
-                            <div class=dots></div>
-                            <div class=dots></div>
-                            <div class=dots></div>
-                            <div class=dots></div>
-                        </div>
-                        <br>
-                        <br>
-                        <a>Installation des mises à jour : </a>
-                        <span id="progress">Erreur</span>
-                        <span>effectués.</span>
-                        <br>
-                        <span>N'éteignez pas votre ordinateur.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+			<div class=main id="main">
+				<div class=content>
+					<div class=update>
+						<div class=spinnerloading>
+							<div class=dots></div>
+							<div class=dots></div>
+							<div class=dots></div>
+							<div class=dots></div>
+							<div class=dots></div>
+						</div>
+						<br>
+						<br>
+						<a>Installation des mises à jour : </a>
+						<span id="progress">Erreur</span>
+						<span>effectués.</span>
+						<br>
+						<span>N'éteignez pas votre ordinateur.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 
 
