@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		userInput.addEventListener("click", () => {
 		/** @type {HTMLElement | null} */
 		const textElement = document.querySelector(".tbtxt span");
+		const script = document.createElement("script");
+		script.src = "ressources/scripts/desactivation.js";
+		document.head.appendChild(script);
 	
 		if (textElement && textElement.textContent) {
 			textElement.textContent = textElement.textContent.replace(
