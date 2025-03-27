@@ -1,109 +1,113 @@
-body {display: inline;}
+body {
+	display: inline;
+	width: 100vw;
+	height: 100svh;
+}
 h3 {
 	color: #bfff50;
-    text-align: center;
-    font-family: 'Sevillana';
-    font-size: 2vw;
-    text-decoration: underline;
-    margin-bottom: 8px;
+	text-align: center;
+	font-family: 'Sevillana';
+	font-size: 18px;
+	text-decoration: underline;
+	margin-bottom: 8px;
 }
 
 .DivLavage {
-    width: 60%; /* |--20%--|---60%---|--20%--| = 100% */
-    background: #eeeeff;
-    border: none;
-    border-radius: 20px;
+	width: 60%; /* |--20%--|---60%---|--20%--| = 100% */
+	background: #eeeeff;
+	border: none;
+	border-radius: 20px;
 
-    position: relative;
+	position: relative;
 
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 
-    margin-bottom: 50px; margin-top: 40px;
-    padding: 15px;
+	margin-bottom: 50px; margin-top: 40px;
+	padding: 15px;
 }
 
 .DivSechage {
-    width: 90%;
-    background: #eeeeff;
-    border: none;
-    border-radius: 20px;
+	width: 90%;
+	background: #eeeeff;
+	border: none;
+	border-radius: 20px;
 
-    margin-left: 15px;
+	margin-left: 15px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 15px;
 }
 
 .FlexLigne {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 15px;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	gap: 15px;
 
-    height: 100%;
+	height: 100%;
 }
 
 .Decalage {
-    width: 20%;
+	width: 20%;
 }
 
 .DivLavageTexte {
-    text-align: justify;
-    background: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 70%;
+	text-align: justify;
+	background: #ffffff;
+	border: none;
+	border-radius: 20px;
+	width: 70%;
 }
 
 .DivLavageImage {
-    width: 30%;
-    text-align: center;
-    border: none;
+	width: 30%;
+	text-align: center;
+	border: none;
 }
 
 .DivLavageImage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Coupe l’image pour l’adapter sans déformation */
-    border-radius: 20px; /* Coins arrondis pour un meilleur rendu */
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Coupe l’image pour l’adapter sans déformation */
+	border-radius: 20px; /* Coins arrondis pour un meilleur rendu */ /* Toujours pas un commentaire chat gpt ? */
 }
 
 .DivSechageDroite {
-    text-align: justify;
-    width: 80%;
-    margin-right: 20px;
+	text-align: justify;
+	width: 80%;
+	margin-right: 20px;
 }
 
 .DivSechageTexte {
-    align-content: center;
-    background: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 100%;
+	align-content: center;
+	background: #ffffff;
+	border: none;
+	border-radius: 20px;
+	width: 100%;
 }
 .DivSechageImage {align-content: center;}
 .DivSechageImage img {
-    width: 70px;
-    height: 70px;
-    object-fit: scale-down;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+	width: 70px;
+	height: 70px;
+	object-fit: scale-down;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
 }
 
 .DivFleche {
-    width: 100%;
-    object-fit: cover;
+	width: 100%;
+	object-fit: cover;
 }
 
 .DivDecorticage {
-    width: 80%;
-    position: relative;
-    left: 20px;
+	width: 80%;
+	position: relative;
+	left: 20px;
 }
 /*
              ___
@@ -140,223 +144,612 @@ h3 {
  //                                 \\
 */
 .DivTorrefactionD {
-    width: 100%;
-    margin-right: 20px;
+	width: 100%;
+	margin-right: 20px;
 }
 
 .DivTorrefactionG {
-    width: 100%;
-    margin-left: 20px;
+	width: 100%;
+	margin-left: 20px;
 }
 
 .FlecheVersBroyage1 {
-    width: 30%;
-    object-fit: fill;
-    position: relative;
-    left: 10px;
+	width: 30%;
+	object-fit: fill;
+	position: relative;
+	left: 10px;
 }
 
 .FlecheVersBroyage2 {
-    width: 30%;
-    object-fit: fill;
+	width: 30%;
+	object-fit: fill;
 }
 
 .DivBroyage {
-    width: 80%;
-    position: relative;
-    height: auto;
+	width: 80%;
+	position: relative;
+	height: auto;
 }
 
 .FlechesVersMouture {
-    width: 100%;
-    object-fit: fill;
-    height: 100px;
+	width: 100%;
+	object-fit: fill;
+	height: 100px;
 }
 
 .DivPreparation {
-    width: 88%;
-    background: #eeeeff;
-    border: none;
-    border-radius: 20px;
+	width: 88%;
+	background: #eeeeff;
+	border: none;
+	border-radius: 20px;
 
-    position: relative;
-    left: 5%;
+	position: relative;
+	left: 5%;
 
-    padding: 15px;
-    margin-bottom: 270px;
+	padding: 15px;
 }
 
 .DivPreparationTexte {
-    text-align: center;
-    background: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 100%;
+	text-align: center;
+	background: #ffffff;
+	border: none;
+	border-radius: 20px;
+	width: 100%;
 }
 
 .TexteInfo {
-    color: #333333;
-    text-align: justify;
-    font-family: 'Sevillana';
-    font-size: 20px;
-    margin-top: 3px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+	color: #333333;
+	text-align: justify;
+	font-family: 'Sevillana';
+	font-size: 20px;
+	margin-top: 3px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .TexteInfoCentre {
-    color: #333333;
-    text-align: center;
-    font-family: 'Sevillana';
-    font-size: 20px;
+	color: #333333;
+	text-align: center;
+	font-family: 'Sevillana';
+	font-size: 20px;
 }
 
 .TextePreparation {
-    color: #333333;
-    text-align: justify;
-    font-family: 'Sevillana';
-    font-size: 20px;
-    margin-left: 10vw;
-    margin-right: 15px;
+	color: #333333;
+	text-align: justify;
+	font-family: 'Sevillana';
+	font-size: 20px;
+	margin-left: 10vw;
+	margin-right: 15px;
 }
 
 .TextePreparation2 {
-    color: #333333;
-    text-align: center;
-    font-family: 'Sevillana';
-    font-size: 25px;
+	color: #333333;
+	text-align: center;
+	font-family: 'Sevillana';
+	font-size: 25px;
 }
 
 .TitreInfo {
-    color: #b3a267;
-    text-align: center;
-    font-family: 'Sevillana';
-    font-size: 30px;
-    text-decoration: underline;
-    margin-top: 0px;
-    margin-bottom: 2px;
+	color: #0d0d0d;
+	text-align: center;
+	font-family: 'Sevillana';
+	font-size: 30px;
+	text-decoration: underline;
+	margin-top: 0px;
+	margin-bottom: 2px;
 }
 
 .TitreInfo2 {
-    color: #169bd8;
-    text-align: center;
-    font-family: 'Sevillana';
-    font-size: 30px;
-    text-decoration: underline;
-    margin-top: 0px;
-    margin-bottom: 2px;
+	color: #169bd8;
+	text-align: center;
+	font-family: 'Sevillana';
+	font-size: 30px;
+	text-decoration: underline;
+	margin-top: 0px;
+	margin-bottom: 2px;
 }
 
 .ImageTraitement {
-    align-self: center;
+	align-self: center;
 }
 
 .Terminal {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 220px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #0d0d0d;
-    color: #00ff00;
-    font-family: "Consolas", monospace;
-    padding: 10px;
-    overflow-y: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    border-top: 3px solid #00ff00;
-    box-shadow: 0px -2px 10px rgba(0, 255, 0, 0.5);
+    margin-top: 30px;
+	display: none;
+	flex-direction: column;
+	width: 100%;
+	height: 400px;
+	background-color: #0d0d0d;
+	color: #00ff00;
+	font-family: "Consolas", monospace;
+	padding: 10px;
+	overflow-y: auto;
+
+	border-top: 3px solid #00ff00;
+	box-shadow: 0px -2px 10px rgba(0, 255, 0, 0.5);
+	overflow-x: hidden;
 }
 
 nav {
-    align-self: flex-end;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
+	align-self: flex-end;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	margin: none;
 }
 
 nav i {
-    color: #00ff00;
-    font-size: 45px;
-    padding: none;
+	color: #00ff00;
+	font-size: 45px;
+	padding: none;
 }
 
 #BoutonPrecedent, #BoutonSuivant {
-    border: none;
-    margin-top: auto;
+	border: none;
+	margin-top: auto;
 
 }
 
 #BoutonPrecedent {
-    margin-right: auto;
+	margin-right: auto;
 }
 
 #BoutonSuivant {
-    margin-left: auto;
+	margin-left: auto;
 }
 
 .TerminalContent {
-    color: #00ff00;
-    font-family: 'Consolas', auto;
-    font-size: 15px;
+	color: #00ff00;
+	font-family: 'Consolas', auto;
+	font-size: 15px;
 }
 
 .console {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 100%;
-    resize: none;
-    color: #00ff00;
-    font-size: 15px;
-    font-family: 'Consolas', auto;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	width: 100%;
+	resize: none;
+	color: #00ff00;
+	font-size: 15px;
+	font-family: 'Consolas', auto;
 }
 
 #userInput {
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: none;
-    margin: none;
-    color: #00ff00;
-    font-size: 15px;
-    width: 100%;
-    font-family: 'Consolas', auto;
-    caret-color: #00ff00; /*c'est le curseur de saisie*/
-    caret-shape: underscore;
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: none;
+	margin: none;
+	color: #00ff00;
+	font-size: 15px;
+	width: 100%;
+	font-family: 'Consolas', auto;
+	caret-color: #00ff00; /*c'est le curseur de saisie*/
+	caret-shape: underscore;
 }
 
 /*
 .blinking {
-    animation: blink 1s infinite;
+	animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+	50% { opacity: 0; }
 }
 
 .Terminal::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><filter id="f"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23f)" opacity="0.1"/></svg>');
-    opacity: 0.1;
-    pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><filter id="f"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23f)" opacity="0.1"/></svg>');
+	opacity: 0.1;
+	pointer-events: none;
 }
 
 .TerminalContent::after {
-    content: "█";
-    display: inline-block;
-    margin-left: 5px;
-    color: #00ff00;
-    animation: blink 1s infinite;
+	content: "█";
+	display: inline-block;
+	margin-left: 5px;
+	color: #00ff00;
+	animation: blink 1s infinite;
 }
 */
+.icon {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+
+.cat-container {
+	background-color: transparent;
+	position: relative;
+	top: 0;
+	left: 3em;
+	/*	top: calc(20% - 300px/2);
+	left: calc(20% - 300px/2);*/
+}
+
+  .loading-cat {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 48px auto;
+  }
+  
+  .cat-body {
+	position: absolute;
+	width: 290px;
+	height: 290px;
+	background-color: #EBA764;
+	border-radius: 50%;
+	border: 5px solid #514E51;
+  }
+  
+  .cat-body:before {
+	content: '';
+	position: absolute;
+	top: calc(50% - 188px/2 - 5px);
+	left: calc(50% - 188px/2 - 5px);
+	width: 188px;
+	height: 188px;
+	border: 5px solid #514E51;
+	border-radius: 50%;
+	background-color: #0D0D0D;
+  }
+  
+  .cat-body:after {
+	content: '';
+	position: absolute;
+	top: calc(50% - 222px/2 - 22px);
+	left: calc(50% - 222px/2 - 22px);
+	width: 222px;
+	height: 222px;
+	border: 22px solid #F1C28F;
+	border-radius: 50%;
+  }
+  
+  .cat-animation-mask {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	background-color: #0D0D0D;
+	transform-origin: right bottom;
+  }
+  
+  .cat-animation-mask:before {
+	content: '';
+	position: absolute;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: #0D0D0D;
+	transform-origin: left bottom;
+  }
+  
+  .cat-animation-mask:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: #0D0D0D;
+	transform-origin: right top;
+  }
+  
+  .cat-head {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 50%;
+	background-color: #0D0D0D;
+	transform-origin: left bottom;
+  }
+  
+  .cat-head .cat-face {
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	width: 50px;
+	height: 40px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-bottom: 0;
+  }
+  
+  .cat-head .cat-face:before {
+	content: '';
+	position: absolute;
+	left: calc(50% - 10px);
+	bottom: -15px;
+	width: 22px;
+	height: 22px;
+	background-color: #F1C28F;
+	border-radius: 50%;
+  }
+  
+  .cat-head .cat-ear {
+	position: absolute;
+	bottom: 39px;
+	right: 0;
+	width: 10px;
+	height: 12px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-bottom: 0;
+	border-radius: 20px 0 0 0;
+  }
+  
+  .cat-head .cat-ear:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -45px;
+	width: 10px;
+	height: 12px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-bottom: 0;
+	border-radius: 0 20px 0 0;
+  }
+  
+  .cat-head .cat-hand {
+	position: absolute;
+	bottom: -32px;
+	right: 0;
+	width: 10px;
+	height: 30px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-top: 0;
+	border-radius: 0 0 10px 10px;
+  }
+  
+  .cat-head .cat-hand:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -45px;
+	width: 10px;
+	height: 30px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-top: 0;
+	border-radius: 0 0 10px 10px;
+  }
+  
+  .cat-head .cat-eye,
+  .cat-head .cat-eye-light {
+	position: absolute;
+	top: 116px;
+	right: 12px;
+	width: 6px;
+	height: 6px;
+	background-color: #514E51;
+	border-radius: 3px;
+  }
+  
+  .cat-head .cat-eye:before,
+  .cat-head .cat-eye-light:before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 30px;
+	width: 6px;
+	height: 6px;
+	background-color: #514E51;
+	border-radius: 3px;
+  }
+  
+  .cat-head .cat-eye-light {
+	background-color: white;
+	box-shadow: 0 0 10px white;
+	opacity: 0;
+	animation: eye-light-animation 2.5s 1s infinite;
+  }
+  
+  .cat-head .cat-eye-light:before {
+	background-color: white;
+	box-shadow: 0 0 10px white;
+	opacity: 0;
+	animation: eye-light-animation 2.5s 1s infinite;
+  }
+  
+  .cat-head .cat-mouth {
+	position: absolute;
+	bottom: 16px;
+	right: 27px;
+	width: 2px;
+	height: 0px;
+	background-color: #FD7667;
+	border: 2px solid #514E51;
+	border-top: 0;
+	border-radius: 0 0 10px 10px;
+	animation: mouth-animation 2.5s 1s infinite;
+  }
+  
+  .cat-head .cat-mouth:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -4px;
+	width: 2px;
+	height: 2px;
+	background-color: #EBA764;
+	border: 2px solid #514E51;
+	border-top: 0;
+	border-radius: 0 0 10px 10px;
+  }
+  
+  .cat-head .cat-mouth:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0px;
+	width: 2px;
+	height: 2px;
+	background-color: #EBA764;
+	border: 2px solid #514E51;
+	border-top: 0;
+	border-radius: 0 0 10px 10px;
+  }
+  
+  .cat-head .cat-beard {
+	position: absolute;
+	bottom: 18px;
+	right: -4px;
+	width: 12px;
+	height: 3px;
+	background-color: #514E51;
+  }
+  
+  .cat-head .cat-beard:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	right: 0;
+	width: 12px;
+	height: 3px;
+	background-color: #514E51;
+	transform: rotate(-10deg);
+  }
+  
+  .cat-head .cat-beard:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 12px;
+	height: 3px;
+	background-color: #514E51;
+	transform: rotate(10deg);
+  }
+  
+  .cat-head .cat-beard.right {
+	right: 52px;
+  }
+  
+  .cat-head .cat-beard.right:before {
+	transform: rotate(10deg);
+  }
+  
+  .cat-head .cat-beard.right:after {
+	transform: rotate(-10deg);
+  }
+  
+  .cat-foot {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 50%;
+	height: 50%;
+	background-color: #0D0D0D;
+	transform-origin: right top;
+  }
+  
+  .cat-foot .cat-belly {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 14px;
+	height: 46px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-left: 0;
+	border-right: 0;
+  }
+  
+  .cat-foot .cat-leg {
+	position: absolute;
+	bottom: 0px;
+	right: 14px;
+	width: 30px;
+	height: 10px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-right: 0;
+	border-radius: 10px 0 0 10px;
+  }
+  
+  .cat-foot .cat-leg:before {
+	content: '';
+	position: absolute;
+	top: -41px;
+	right: 0;
+	width: 30px;
+	height: 10px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-right: 0;
+	border-radius: 10px 0 0 10px;
+  }
+  
+  .cat-foot .cat-tail {
+	position: absolute;
+	bottom: 16px;
+	right: 14px;
+	width: 50px;
+	height: 14px;
+	background-color: #C48344;
+	border: 5px solid #514E51;
+	border-right: 0;
+	border-radius: 14px 0 0 14px;
+  }
+  
+  .cat-foot .cat-tail:after {
+	content: '';
+	position: absolute;
+	right: -28px;
+	bottom: -4px;
+	width: 22px;
+	height: 22px;
+	background-color: #F1C28F;
+	border-radius: 50%;
+  }
+  
+  .cat-foot .cat-tail:before {
+	content: '';
+	position: absolute;
+	bottom: -7px;
+	right: 0;
+	width: 10px;
+	height: 18px;
+	background-color: #EBA764;
+	border: 5px solid #514E51;
+	border-right: 0;
+	border-radius: 12px 0 0 12px;
+  }
+  
+  .cat-animation-mask {
+	transform: rotate(45deg);
+	animation: mask-animation 2.5s 1s infinite;
+  }
+  
+  .cat-animation-mask:before {
+	animation: mask-animation-sub-right 2.5s 1s infinite;
+  }
+  
+  .cat-animation-mask:after {
+	animation: mask-animation-sub-left 2.5s 1s infinite;
+  }
+  
+  .cat-head {
+	transform: rotate(70deg);
+	animation: head-animation 2.5s 1s infinite;
+	animation-timing-function: cubic-bezier(0.2, 0, 0.09, 1);
+  }
+  
+  .cat-foot {
+	transform: rotate(25deg);
+	animation: foot-animation 2.5s 1s infinite;
+	animation-timing-function: cubic-bezier(0.2, 0, 0.45, 1);
+  }
