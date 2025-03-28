@@ -18,8 +18,8 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
     
     def send_error(self, code, message=None, explain=None):
         error_pages: dict = {
-            404: os.path.join(script_dir, "404.html"),
-            500: os.path.join(script_dir, "500.html")
+            404: os.path.join(script_dir, "../errors/404.html"),
+            500: os.path.join(script_dir, "../errors/500.html")
         }
         if code in error_pages and os.path.exists(error_pages[code]):
             self.send_response(200)  # http 200 = OK, pour afficher la page plutôt que l'erreur

@@ -62,7 +62,7 @@ function addParkingListeners() {
 
 	parking.addEventListener("focus", () => {
 	parking.classList.add("active");
-	startTime = Date.now();
+	startTime = Date.now();  // Avec cette méthode, le compteur se réinitialise lors d'un changement d'onglet
 	startDotsAnimation();
 	});
 

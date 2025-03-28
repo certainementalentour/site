@@ -262,12 +262,14 @@ li {
 .menu-link {
 	text-decoration: none;
 	color: white;
-	padding: 10px;
+	padding: auto;
 	width: 100%;
 }
 
 #menu-link {
 	text-align: center;
+	padding: auto;
+	width: 100%;
 }
 
 .menu-link:hover {
@@ -330,6 +332,11 @@ li {
 	font-family: 'MesloLGS';
 	text-align: center;
 	margin: 50px;
+	user-select: none;
+}
+
+.parking-container * {
+	user-select: none;
 }
 
 #parkingZone {
@@ -369,10 +376,12 @@ li {
 .newtons-cradle {
 	--uib-size: 50px;
 	--uib-speed: 1.2s;
-	--uib-color: #474554;
+	--uib-color: white;
+	--uib-outline: black;
 	position: relative;
 	align-items: center;
 	justify-content: center;
+	margin: 0 auto;
 	width: var(--uib-size);
 	height: var(--uib-size);
    }
@@ -396,6 +405,7 @@ li {
 	height: 25%;
 	border-radius: 50%;
 	background-color: var(--uib-color);
+	outline: 1px solid var(--uib-outline);
    }
    
    .newtons-cradle__dot:first-child {
