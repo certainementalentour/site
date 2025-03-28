@@ -57,6 +57,45 @@ p {
   color: white;
 }
 
+.Formulaire {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 50px 0;
+}
+
+.Formulaire label {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 30px 0;
+  padding: 5px 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: grab;
+  border-radius: 5px;
+  user-select: none;
+  box-shadow: 0px 8px #59595F;
+}
+
+.submit {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: grab;
+  border-radius: 5px;
+  user-select: none;
+  box-shadow: 0px 8px #59595F;
+}
+
+.submit:active{
+  box-shadow: 0px 5px #313132;
+transform: translateY(3px);
+}
 
 
 /*
