@@ -73,7 +73,7 @@ function addParkingListeners() {
 			console.log("Erreur : startTime n'est pas défini correctement.");
 			return;
 		}
-		const duration = ((Date.now() - startTime) / 1000).toFixed(3);
+		const duration = ((Date.now() - startTime) / 1000).toFixed(30);
 		message.innerText = `Vous avez stationné ${duration} secondes, reposé ?`;
 	});
 }
