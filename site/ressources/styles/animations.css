@@ -1,15 +1,19 @@
 @import url('polices.css');
+
 @keyframes translationHorizontale {
-	0% {
-	  background-position: 0% 100%;
-	}
-	50% {
-	  background-position: 100% 50%;
-	}
-	100% {
-	  background-position: 0% 100%;
-	}
-  }
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
 /*
 @keyframes animationFondImages {
 	0%{	background-position: 0% 100%; background: linear-gradient(to right,orange,yellow,blue, red,indigo,violet, green)}
@@ -18,12 +22,27 @@
 	75%{background-position: 0% 75%;background: linear-gradient(to right,orange,green,blue,indigo,red,violet, yellow)}
 	100%{background-position: 100% 0%;background: linear-gradient(to left,red,orange,indigo,yellow,green, blue,violet)}
 } */
+
 @keyframes animationFondImages {
-	0%{	background-position: 0% 100%;}
-	25%{background-position: 75% 0%;}
-	50%{background-position: 50% 50%;}
-	75%{background-position: 0% 75%;}
-	100%{background-position: 100% 0%;}
+    0% {
+        background-position: 0% 100%;
+    }
+
+    25% {
+        background-position: 75% 0%;
+    }
+
+    50% {
+        background-position: 50% 50%;
+    }
+
+    75% {
+        background-position: 0% 75%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
 }
 
 @keyframes roundspin {
@@ -31,129 +50,182 @@
         transform: rotate(225deg);
         opacity: 1;
         animation-timing-function: ease-out;
-    } 7% {
+    }
+
+    7% {
         transform: rotate(345deg);
         animation-timing-function: linear;
-    } 30% {
+    }
+
+    30% {
         transform: rotate(455deg);
         animation-timing-function: ease-in-out;
-    } 39% {
+    }
+
+    39% {
         transform: rotate(690deg);
         animation-timing-function: linear;
-    } 70% {
+    }
+
+    70% {
         transform: rotate(815deg);
         opacity: 1;
         animation-timing-function: ease-out;
-    } 75% {
+    }
+
+    75% {
         transform: rotate(945deg);
         animation-timing-function: ease-out;
-    } 76% {
+    }
+
+    76% {
         transform: rotate(945deg);
         opacity: 0;
-    } 100% {
+    }
+
+    100% {
         transform: rotate(945deg);
         opacity: 0;
     }
 }
-@keyframes mask-animation {
-	0% {
-	  transform: rotate(45deg); }
-	100% {
-	  transform: rotate(-675deg); } }
-  
-  @keyframes mask-animation-sub-left {
-	0% {
-	  transform: rotate(0deg); }
-	50% {
-	  transform: rotate(90deg); }
-	100% {
-	  transform: rotate(0deg); } }
-  
-  @keyframes mask-animation-sub-right {
-	0% {
-	  transform: rotate(0deg); }
-	50% {
-	  transform: rotate(-90deg); }
-	100% {
-	  transform: rotate(0deg); } }
-  
-  @keyframes head-animation {
-	0% {
-	  transform: rotate(70deg); }
-	100% {
-	  transform: rotate(-650deg); } }
-  
-  @keyframes foot-animation {
-	0% {
-	  transform: rotate(25deg); }
-	100% {
-	  transform: rotate(-695deg); } }
-  
-  @keyframes eye-light-animation {
-	0% {
-	  opacity: 0;
-	  height: 6px; }
-	50% {
-	  opacity: .75;
-	  height: 50px; }
-	80% {
-	  opacity: 1;
-	  height: 6px; }
-	100% {
-	  opacity: 0; } }
-  
-  @keyframes mouth-animation {
-	0% {
-	  height: 0px; }
-	50% {
-	  height: 10px; }
-	100% {
-	  height: 0px; } }
 
+@keyframes mask-animation {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(-675deg);
+    }
+}
+
+@keyframes mask-animation-sub-left {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes mask-animation-sub-right {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes head-animation {
+    0% {
+        transform: rotate(70deg);
+    }
+
+    100% {
+        transform: rotate(-650deg);
+    }
+}
+
+@keyframes foot-animation {
+    0% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(-695deg);
+    }
+}
+
+@keyframes eye-light-animation {
+    0% {
+        opacity: 0;
+        height: 6px;
+    }
+
+    50% {
+        opacity: .75;
+        height: 50px;
+    }
+
+    80% {
+        opacity: 1;
+        height: 6px;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes mouth-animation {
+    0% {
+        height: 0px;
+    }
+
+    50% {
+        height: 10px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
 
 @keyframes rotate4 {
-	100% {
-	 transform: rotate(360deg);
-	}
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes dash4 {
-	0% {
-	 stroke-dasharray: 1, 200;
-	 stroke-dashoffset: 0;
-	}
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
 
-	50% {
-	 stroke-dasharray: 90, 200;
-	 stroke-dashoffset: -35px;
-	}
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
 
-	100% {
-	 stroke-dashoffset: -125px;
-	}
+    100% {
+        stroke-dashoffset: -125px;
+    }
 }
 
 @keyframes blinkCursor {
-  50% {
-    border-right-color: transparent;
-  }
+    50% {
+        border-right-color: transparent;
+    }
 }
 
 @keyframes typeAndDelete {
-  0%,
-  10% {
-    width: 28ch;
-  }
-  45%,
-  55% {
-    width: 2.2em; /* longueur de texte non effacé */
-  }
-  90%,
-  100% {
-    width: 28ch;
-  }
+    0%, 10% {
+        width: 28ch;
+    }
+
+    45%, 55% {
+        width: 2.2em;
+        /* longueur de texte non effacé */
+    }
+
+    90%, 100% {
+        width: 28ch;
+    }
 }
-  /*
+
+/*
   
 										   ___
 									   ,-""   `.
@@ -183,4 +255,3 @@
   Sauver le monde. On sait pas encore comment mais ma cousine connait le naturopathe d’Elon Musk.
   
 						   */
-  
