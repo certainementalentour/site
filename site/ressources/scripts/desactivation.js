@@ -6,8 +6,16 @@ document.addEventListener('contextmenu', (event) => {
   
 // Et les touches
 document.addEventListener('keydown', (event) => {
-	const allowedKeys = ["Tab"];
-
+  var allowedKeys = ["tab"];
+  
+  if (window.location.href === "https://certainementalentour.github.io/site/site/index.html#masquer") {
+	  allowedKeys = [
+      "a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m",
+      "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+      "(", ")", "«", "»", ".", ",", "?", "'", "\"", ":", "-", " ",
+      "shift", "suppr", "enter", "del"
+    ];
+  }
 	if (!allowedKeys.includes(event.key)) {
 		event.preventDefault();
 	}
