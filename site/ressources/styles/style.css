@@ -333,10 +333,16 @@ li {
 	text-align: center;
 	margin: 50px;
 	user-select: none;
+	width: 100%;
 }
 
-.parking-container * {
+.message {
+	font-family: 'MesloLGS';
 	user-select: none;
+}
+
+.small {
+	font-size: 10px;
 }
 
 #parkingZone {
@@ -349,6 +355,7 @@ li {
 	outline-color: white;
 	white-space: pre;
 	color: grey;
+	width: 100%;
 }
 
 #parkingZone:focus {
@@ -368,13 +375,16 @@ li {
 }
 
 #message {
-	font-size: 18px;
+	font-size: 12px;
+	font-family: 'MesloLGS';
+	min-height: 65px;
+	height: 65px;
 }
 
 
 
 .newtons-cradle {
-	--uib-size: 50px;
+	--uib-size: 70px;
 	--uib-speed: 1.2s;
 	--uib-color: white;
 	--uib-outline: black;

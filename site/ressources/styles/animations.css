@@ -232,7 +232,7 @@
 	}
    
 	25% {
-	 transform: rotate(70deg);
+	 transform: rotate(75deg);
 	 animation-timing-function: ease-in;
 	}
    
@@ -254,7 +254,7 @@
 	}
    
 	75% {
-	 transform: rotate(-70deg);
+	 transform: rotate(-75deg);
 	 animation-timing-function: ease-in;
 	}
    }

@@ -20,7 +20,8 @@ let dotCount = 0;
 function startDotsAnimation() {
 	if (!dots || !message) return;
 	dots.style.display = "flex";
-	message.innerText = ``;
+	message.innerText = `&nbsp;`;
+	message.style.display = 'none'
 }
 
 /**
@@ -62,7 +63,7 @@ function addParkingListeners() {
 
 	parking.addEventListener("focus", () => {
 	parking.classList.add("active");
-	startTime = Date.now();  // Avec cette méthode, le compteur se réinitialise lors d'un changement d'onglet
+	startTime = Date.now();  // ⚠️⚠️⚠️ Avec cette méthode, le compteur se réinitialise lors d'un changement d'onglet
 	startDotsAnimation();
 	});
 
@@ -70,11 +71,12 @@ function addParkingListeners() {
 		parking.classList.remove("active");
 		stopDotsAnimation();
 		if (startTime === 0) {
-			console.log("Erreur : startTime n'est pas défini correctement.");
+			console.log("startTime n'est pas défini correctement");
 			return;
 		}
-		const duration = ((Date.now() - startTime) / 1000).toFixed(16);
-		message.innerText = `Vous avez stationné ${duration} secondes, reposé ?`;
+		const duration = ((Date.now() - startTime) / 1000).toFixed(27);
+		message.innerHTML = `Vous avez perdu <span class='small'>${duration}</span> secondes, content ?`;
+		message.style.display = 'block';
 	});
 }
 addParkingListeners();
