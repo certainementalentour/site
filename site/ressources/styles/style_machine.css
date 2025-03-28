@@ -61,26 +61,29 @@ p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	margin: 50px 0;
+	justify-content: space-between;
+}
+
+#idee, #name {
+  margin: 5px 0 20px;
 }
 
 .Formulaire label {
   font-size: 18px;
   font-weight: 600;
-  margin: 30px 0;
-  padding: 5px 10px;
+  padding: 5px 10px 0;
+  width: 100%;
   border: none;
-  background: black;
+  background: gray;
   color: white;
   cursor: grab;
   border-radius: 5px;
   user-select: none;
-  box-shadow: 0px 8px #59595F;
+  box-shadow: 0px 3px #59595F;
 }
 
 .submit {
-  margin: 20px 0;
+  margin: 15px 0;
   padding: 10px 20px;
   font-size: 18px;
   border: none;
