@@ -6,6 +6,9 @@ const parking = document.getElementById("parkingZone");
 /** @type {HTMLElement | null} */
 const message = document.getElementById("message");
 
+/** @type {HTMLElement | null} */
+const dots = document.getElementById("newtons-cradle");
+
 let startTime = 0;
 let dotInterval = 0;
 let dotCount = 0;
@@ -15,19 +18,9 @@ let dotCount = 0;
  * Crée dynamiquement un conteneur fixe pour afficher l'animation.
  */
 function startDotsAnimation() {
-	if (!message) return;
-	message.innerText = "Stationnement en cours";
-	const dotContainer = document.createElement("span");
-	dotContainer.id = "dotContainer";
-	dotContainer.style.display = "inline-block";
-	dotContainer.style.width = "3ch";
-	message.appendChild(dotContainer);
-	
-	dotCount = 0;
-	dotInterval = window.setInterval(() => {
-	dotCount = (dotCount + 1) % 4; // cycle de 0 à 3 points
-	dotContainer.innerText = ".".repeat(dotCount);
-	}, 500);
+	if (!dots || !message) return;
+	dots.style.display = "flex";
+	message.innerText = ``;
 }
 
 /**
@@ -35,6 +28,8 @@ function startDotsAnimation() {
  */
 function stopDotsAnimation() {
 	clearInterval(dotInterval);
+	if (!dots) return;
+	dots.style.display = "none";	
 }
 
 /** @param {Event} e - évènement à annuler */
@@ -71,10 +66,14 @@ function addParkingListeners() {
 	startDotsAnimation();
 	});
 
-	parking.addEventListener("blur", () => {
+	parking.addEventListener("focusout", () => {
 		parking.classList.remove("active");
 		stopDotsAnimation();
-		const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+		if (startTime === 0) {
+			console.log("Erreur : startTime n'est pas défini correctement.");
+			return;
+		}
+		const duration = ((Date.now() - startTime) / 1000).toFixed(3);
 		message.innerText = `Vous avez stationné ${duration} secondes, reposé ?`;
 	});
 }
