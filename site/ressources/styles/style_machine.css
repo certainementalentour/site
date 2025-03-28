@@ -17,6 +17,7 @@ body {
 	flex-direction: column;
   height: calc(100dvh - 5%);  
   margin: 0;
+  font-display:  block;
 }
 
 main{
