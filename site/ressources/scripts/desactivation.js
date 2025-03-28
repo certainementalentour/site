@@ -1,25 +1,34 @@
 // @ts-check
 // Désactiver le clic droit
-document.addEventListener('contextmenu', (event) => {
+document.addEventListener('contextmenu', event => {
 	event.preventDefault();
   }, false);
   
 // Et les touches
-document.addEventListener('keydown', (event) => {
-  var allowedKeys = ["tab"];
-  
-  if (window.location.href === "https://certainementalentour.github.io/site/site/index.html#masquer") {
+document.addEventListener('keydown', event => {
+  var allowedKeys = ["Tab"];
+
+  if (window.location.href.includes("index.html")) {
 	  allowedKeys = [
       "a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m",
       "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+      "N", "D",
       "(", ")", "«", "»", ".", ",", "?", "'", "\"", ":", "-", " ",
-      "shift", "suppr", "enter", "del"
+      "Shift", "Enter", "Alt", "CapsLock",
+      "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowUp", "End", "Home",
+      "Clear", "Backspace", "Delete",
     ];
   }
 	if (!allowedKeys.includes(event.key)) {
 		event.preventDefault();
 	}
-});
+}, false);
+
+document.addEventListener('keydown', event => { // bloquer couper, copier, coller, sélectionner...
+  if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) {
+    event.preventDefault()
+  }
+})
 
 
 /*

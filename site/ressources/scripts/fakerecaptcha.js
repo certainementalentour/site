@@ -26,7 +26,7 @@ const close2025Btn = document.getElementById("close2025");
 const rawVerifyBtn = document.getElementById("fkrc-verifywin-verify-button");
 if (!(rawVerifyBtn instanceof HTMLButtonElement)) {
 	throw new Error("cette fois c'est verifyBtn");
-} console.clear() // tkt, erreurs réglées
+}// console.clear() // régler les erreurs
 const verifyBtn = rawVerifyBtn;
 const rawCheckboxBtn = document.getElementById("fkrc-checkbox");
 if (!(rawCheckboxBtn instanceof HTMLButtonElement)) {
