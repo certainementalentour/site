@@ -1,7 +1,7 @@
 // @ts-check
 var pages = [ // chemins absolus depuis Github/site/site
 	"FunFact.html",
-	"machine.html",
+	"idees.html",
 	"Pousse.html",
 	"Recolte.html",
   "index.html",
