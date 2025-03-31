@@ -611,3 +611,7 @@ a:visited {color: coral;}
 	stroke-linecap: round;
 	animation: dash4 3s ease-in-out infinite;
 }
+
+.vite {
+	padding: 10px 20px;
+}

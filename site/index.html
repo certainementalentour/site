@@ -189,7 +189,7 @@
 					</div>
 					<span class="boutons">
 					<button class="non" id="non" onclick="removeCookie('rcVerified');"><a href="#content"><div>Refuser</div></a></button>
-					<button id="ok"><a href="#masquer"><div>Accepter (j'ai rien lu)</div></a></button>
+					<button id="ok"><a href="#masquer"><span>Accepter (j'ai rien lu)</span></a></button>
 				</span>
 					<button id="plus"><a href="#page2"><span>choisir</span></a></button>
 				</div>
@@ -225,8 +225,10 @@
 							et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen
 							et du Listenbourg.</p>
 						<span class="boutons">
-						<button id="valider" onclick="document.getElementById('parking-container').style.display = 'none'">
-							<a href="#masquer">Valider mes choix de gros relou</a>
+						<button class="vite" id="valider" onclick="document.getElementById('parking-container').style.display = 'none'">
+							<span>
+								<a href="#masquer">Valider mes choix de gros relou</a>
+							</span>
 						</button>
 					</span>
 					</div>
