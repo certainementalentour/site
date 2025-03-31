@@ -198,9 +198,9 @@ h3 {
 }
 
 .TexteInfo {
-	color: #333333;
+	color: #6778b3;
 	text-align: justify;
-	font-family: 'Sevillana';
+	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 20px;
 	margin-top: 3px;
 	margin-bottom: 15px;
@@ -209,32 +209,32 @@ h3 {
 }
 
 .TexteInfoCentre {
-	color: #333333;
+	color: #6778b3;
 	text-align: center;
-	font-family: 'Sevillana';
+	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 20px;
 }
 
 .TextePreparation {
-	color: #333333;
+	color: #6778b3;
 	text-align: justify;
-	font-family: 'Sevillana';
+	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 20px;
 	margin-left: 10vw;
 	margin-right: 15px;
 }
 
 .TextePreparation2 {
-	color: #333333;
+	color: #6778b3;
 	text-align: center;
-	font-family: 'Sevillana';
+	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 25px;
 }
 
 .TitreInfo {
-	color: #0d0d0d;
+	color: #b36778;
 	text-align: center;
-	font-family: 'Sevillana';
+	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 30px;
 	text-decoration: underline;
 	margin-top: 0px;
@@ -242,9 +242,9 @@ h3 {
 }
 
 .TitreInfo2 {
-	color: #169bd8;
+	color: #b36778;
 	text-align: center;
-	font-family: 'Sevillana';
+	font-family: 'Segoe-Boot-Semilight', 'Sevillana';
 	font-size: 30px;
 	text-decoration: underline;
 	margin-top: 0px;
