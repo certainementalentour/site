@@ -1,11 +1,10 @@
 // @ts-check
 var pages = [ // chemins absolus depuis Github/site/site
-	"FunFact.html",
-	"idees.html",
 	"Pousse.html",
 	"Recolte.html",
-  "index.html",
   "Fabrication.html",
+  "FunFact.html",
+	"idees.html",
 ];
 
 function getCurrentIndex() {
